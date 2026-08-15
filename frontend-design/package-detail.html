@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Everest Base Camp Trek — Sagarmatha Treks & Expeditions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/package-detail.css">
+</head>
+<body>
+
+<!-- ============ HEADER (solid-on-load handled by package-detail.js) ============ -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="Sagarmatha Treks home">
+      <span class="brand-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></span>
+      <span class="brand-text"><strong>Sagarmatha Treks</strong><small>&amp; Expeditions</small></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#treks">Treks</a><a href="index.html#trip">Tours</a><a href="index.html#categories">Destinations</a><a href="index.html#about">About Us</a><a href="index.html#blog">Blog</a><a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="index.html#treks" class="wishlist-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span class="wl-text">Wishlist</span><span class="wl-count" id="wlCount">0</span></a>
+      <a href="https://wa.me/9779800000000" class="btn btn-wa btn-sm" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%27m%20planning%20a%20trek."><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm4.4 14.1c-.23.63-1.3 1.2-1.8 1.27-.47.07-1.05.1-1.7-.1-.44-.19-1.02-.44-1.54-.57a12.3 12.3 0 0 1-4.6-4.03 10.6 10.6 0 0 1-.7-1.03 7 7 0 0 1-.63-1.4c-.22-.63-.03-1.16.16-1.55l.5-.97c.17-.33.37-.4.55-.42l.63.02c.2.01.47-.05.66.5l.7 1.7c.08.2.13.45-.02.68l-.35.5-.36.42c-.12.14-.25.3-.12.55.13.26.6 1.05 1.32 1.77.93.92 1.75 1.25 2 1.37.26.12.41.1.56-.06l.78-.9c.2-.26.4-.2.63-.12l1.9.9c.26.13.44.2.5.32.07.12.07.7-.16 1.33Z"/></svg><span>Chat on WhatsApp</span></a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <nav><a href="index.html#treks">Treks</a><a href="index.html#trip">Tours</a><a href="index.html#categories">Destinations</a><a href="index.html#about">About Us</a><a href="index.html#blog">Blog</a><a href="index.html#contact">Contact</a></nav>
+    <div class="mobile-panel-ctas"><a href="#departures" class="btn btn-pine btn-sm">Check Availability</a><a href="https://wa.me/9779800000000" class="btn btn-wa btn-sm" data-lead-link="https://wa.me/9779800000000?text=Namaste!"><span>Chat on WhatsApp</span></a></div>
+  </div>
+</header>
+
+<main>
+<div class="container pd-top">
+
+  <!-- ============ 1. BREADCRUMBS ============ -->
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    <a href="#">Nepal</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    <a href="#">Nepal Trekking</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    <a href="#">Everest Region Trek</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    <span class="current">Everest Base Camp Trek</span>
+  </nav>
+
+  <!-- ============ 2. GALLERY MOSAIC ============ -->
+  <div class="pd-gallery reveal">
+    <div class="pd-gal-left">
+      <div class="pd-tile pd-gal-main"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1fa768619-9df4-4178-b78d-1e296613996c.png" alt="Trekkers at Everest Base Camp"></div>
+      <div class="pd-gal-small">
+        <div class="pd-tile"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1dc701fcb-3b2d-4bce-892f-792c84e87d5e.png" alt="On the trail to Base Camp"></div>
+        <div class="pd-tile"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1885ad880-8f91-402a-8117-348866c12eb8.png" alt="Himalayan sunrise over the Khumbu"></div>
+      </div>
+    </div>
+    <div class="pd-gal-right">
+      <div class="pd-tile"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1c658ea57-deeb-4400-83ef-02020712c84c.png" alt="Mountain views above Namche"></div>
+      <div class="pd-tile">
+        <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1f373039c-6f87-4586-8f8d-1b7b2a7f55bc.png" alt="Khumbu valley landscape">
+        <button class="view-pill gal-all" data-open-lightbox><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg> View All (14)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 3. TITLE / RATING / LEAD ============ -->
+  <div class="pd-title reveal">
+    <h1 class="pd-h1">Everest Base Camp Trek</h1>
+    <div class="pd-actions">
+      <button class="pd-icon-btn pd-heart" id="pdHeart" data-id="ebc" aria-pressed="false" aria-label="Save to wishlist"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button>
+      <button class="pd-icon-btn" id="shareBtn" aria-label="Share this trek"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    </div>
+  </div>
+  <div class="pd-rate reveal"><span class="stars" data-rating="4.9"></span><b>4.9/5</b> · 284 reviews <span class="meta-dot"></span> Recommended by 98% of trekkers</div>
+  <p class="pd-lead reveal">A classic Himalayan journey through Sherpa villages, rhododendron forest and the Khumbu Valley — to the foot of the world's highest mountain.</p>
+
+  <!-- ============ 4. MAIN + STICKY SIDEBAR ============ -->
+  <div class="pd-layout">
+    <div class="pd-main">
+
+      <!-- 5. TRIP FACTS -->
+      <section class="pd-facts reveal" aria-label="Trip facts">
+        <span class="facts-pill">Trip Facts</span>
+        <div class="facts-grid">
+          <div class="fact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><div><small>Duration</small><strong>14 Days</strong></div></div>
+          <div class="fact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><div><small>Difficulty</small><strong class="diff diff-challenging">Challenging</strong></div></div>
+          <div class="fact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg><div><small>Max Altitude</small><strong>5,364 m</strong></div></div>
+          <div class="fact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><div><small>Region</small><strong>Everest</strong></div></div>
+          <div class="fact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v18"/><path d="M2 22h20"/></svg><div><small>Start / End</small><strong>Kathmandu</strong></div></div>
+          <div class="fact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><div><small>Group Size</small><strong>Max 12</strong></div></div>
+          <div class="fact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><div><small>Best Season</small><strong>Mar–May · Sep–Nov</strong></div></div>
+          <div class="fact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M2 17h20"/></svg><div><small>Accommodation</small><strong>Teahouse &amp; Hotel</strong></div></div>
+          <div class="fact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg><div><small>Meals</small><strong>All meals on trek</strong></div></div>
+        </div>
+      </section>
+
+      <!-- 6. HIGHLIGHTS -->
+      <section class="pd-sec reveal">
+        <div class="eyebrow">Why this trek</div>
+        <h2 class="h2">Everest Base Camp Trek Highlights</h2>
+        <p class="sub">Not brochure promises — the moments our trekkers keep mentioning in their reviews, season after season.</p>
+        <div class="pd-hl">
+          <div class="hl-item"><span class="hl-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><p><b>Everest Base Camp (5,364 m)</b> — stand beside the Khumbu Icefall as prayer flags snap in the wind.</p></div>
+          <div class="hl-item"><span class="hl-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><p><b>Kala Patthar sunrise (5,555 m)</b> — Everest, Lhotse, Nuptse and Pumori burning gold at dawn.</p></div>
+          <div class="hl-item"><span class="hl-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><p><b>Lukla mountain flight</b> — 25 minutes into the world's most thrilling runway.</p></div>
+          <div class="hl-item"><span class="hl-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><p><b>Tengboche Monastery</b> — evening prayers at the Khumbu's greatest gompa, Ama Dablam framed behind.</p></div>
+          <div class="hl-item"><span class="hl-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><p><b>Sherpa culture</b> — acclimatization days in Namche Bazaar and the quiet villages of the Khumbu.</p></div>
+          <div class="hl-item"><span class="hl-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><p><b>Sagarmatha National Park</b> — UNESCO World Heritage trails through pine and rhododendron.</p></div>
+        </div>
+      </section>
+
+      <!-- 7. OVERVIEW -->
+      <section class="pd-sec reveal">
+        <div class="eyebrow">Overview</div>
+        <h2 class="h2">About the Everest Base Camp Trek</h2>
+        <blockquote class="pullquote">"Can I actually do this?"<small>The question we hear most in our Thamel office</small></blockquote>
+        <div class="prose">
+          <p>After guiding hundreds of trekkers a year through the Khumbu — every age, every fitness level — our honest answer is <strong>yes, if you can walk 5 to 7 hours a day on uneven ground and you take altitude seriously</strong>. No technical climbing is involved; the mountain asks for endurance and patience, not ropes.</p>
+          <p>You won't stand on the 8,848 m summit — that's an expedition. What you <strong>will</strong> do is stand at <strong>Everest Base Camp (5,364 m)</strong> beside the Khumbu Icefall, and climb <strong>Kala Patthar (5,555 m)</strong> the next morning for the photograph you came for.</p>
+          <p>Base Camp itself sits below the Icefall, where the summit hides behind Nuptse. Kala Patthar is the view — and our guides time the climb for sunrise or late afternoon depending on that week's cloud pattern, because they still photograph it themselves every trip.</p>
+          <p>Why 14 days? Two acclimatization nights — <strong>Namche Bazaar</strong> and <strong>Dingboche</strong> — plus a buffer for Lukla weather. The pacing is the product: it's the difference between surviving the trek and enjoying it.</p>
+          <p>The trail follows the <strong>Dudh Koshi</strong> from Lukla through pine forest and suspension bridges to Phakding, then climbs 800 m to Namche. At <strong>Tengboche</strong> the forest opens to alpine country and Everest finally shows himself; beyond Dingboche the moraine of the <strong>Khumbu Glacier</strong> leads to Base Camp, and the quieter return drops via <strong>Pheriche</strong>.</p>
+          <p>Expect stone staircases around Lukla, microspikes in snowy conditions, and Everest visibility that comes and goes until Gorak Shep. Read our guides on the <a href="blog-detail.html">best season to trek</a> and <a href="blog-detail.html">what to pack</a>, then walk it hour by hour in the <a href="#itinerary">day-by-day itinerary</a> below.</p>
+        </div>
+      </section>
+
+      <!-- TODO: Alternatives section (reference pending) -->
+
+      <!-- 8. WHY-US -->
+      <section class="pd-sec reveal">
+        <div class="eyebrow">Why Sagarmatha</div>
+        <h2 class="h2">Why book this trek with us</h2>
+        <div class="feat-grid" style="margin-top:34px">
+          <div class="feat"><span class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div><h3>Guides who know the Khumbu by name</h3><p>Pasang, Dawa, Nima, Mingmar — the same crew every season. They know which teahouse cooks the best dal bhat in Dingboche, when Tengboche puja is open, and who needs to slow down before anyone says it.</p></div></div>
+          <div class="feat"><span class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg></span><div><h3>100% guaranteed departures</h3><p>Every date on our calendar runs. No minimum group size — a solo booking still runs private at no extra cost, and we never cancel you off a date.</p></div></div>
+          <div class="feat"><span class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><div><h3>Safety is the plan, not an add-on</h3><p>Twice-daily oximeter checks from Namche, acclimatization nights built in, a Lukla weather buffer day, and a rehearsed heli-evac protocol.</p></div></div>
+          <div class="feat"><span class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><div><h3>Honest, all-inclusive pricing</h3><p>Permits, domestic flights, staff wages and taxes are in the price. No hidden charges — the promise we've kept since day one.</p></div></div>
+          <div class="feat"><span class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></span><div><h3>Small groups, fair porter wages</h3><p>Maximum 12 trekkers, one porter per two trekkers, fair wages and insurance for every crew member, and leave-no-trace on every trail.</p></div></div>
+          <div class="feat"><span class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><div><h3>24/7 Kathmandu support</h3><p>Flights, weather and lodges monitored by our office team — reachable at 2 a.m. in Lobuche, because someone is always awake.</p></div></div>
+        </div>
+        <div class="wa-strip">
+          <p>Questions at 2 a.m. in Lobuche? Our Kathmandu office answers.</p>
+          <a href="https://wa.me/9779800000000" class="btn btn-wa btn-sm" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%20have%20a%20question%20about%20the%20EBC%20trek."><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Z"/></svg><span>Chat With Us</span></a>
+        </div>
+      </section>
+
+      <!-- 9. ITINERARY -->
+      <section class="pd-sec" id="itinerary">
+        <div class="pd-sec-head reveal">
+          <div><div class="eyebrow">Day by day</div><h2 class="h2">Everest Base Camp Trek Itinerary</h2></div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-ghost-dark btn-sm" data-expand-all="#itinRoot">Expand all</button><a class="btn btn-ghost-dark btn-sm" href="#">Download PDF</a></div>
+        </div>
+        <div class="note-strip reveal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><p><strong>Rest days at Namche &amp; Dingboche are non-negotiable.</strong> Our tip: keep 2–3 buffer days in Kathmandu after the trek — Lukla weather decides your flight home.</p></div>
+        <div class="timeline reveal" id="itinRoot">
+          <div class="acc-item open"><button class="acc-head" aria-expanded="true"><span class="day-pill">01</span><span class="acc-title">Arrival in Kathmandu</span><span class="acc-meta">1,400 m</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>Private transfer to your Thamel hotel; evening trek briefing and gear check with your guide.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="day-pill">02</span><span class="acc-title">Fly to Lukla, trek to Phakding</span><span class="acc-meta">2,610 m · 3–4 h</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>A 25-minute mountain flight over the Himalaya, then a gentle first walk along the Dudh Koshi through pine and prayer flags.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="day-pill">03</span><span class="acc-title">Trek to Namche Bazaar</span><span class="acc-meta">3,440 m · 6–7 h</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>Cross the Hillary Bridge and climb 800 m through forest to the Sherpa capital, Everest teasing through the pines.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="day-pill">04</span><span class="acc-title">Acclimatization — Everest View Hotel</span><span class="acc-meta">3,880 m</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>Climb high, sleep low: a ridge hike to the world's highest luxury hotel and the Tenzing Norgay statue, coffee above the clouds.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="day-pill">05</span><span class="acc-title">Trek to Tengboche</span><span class="acc-meta">3,860 m · 5 h</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>Rhododendron forest opens to alpine views; catch the evening puja at the Khumbu's greatest monastery, Ama Dablam towering behind.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="day-pill">06</span><span class="acc-title">Trek to Dingboche</span><span class="acc-meta">4,410 m · 5–6 h</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>Past Pangboche's ancient gompa into stone-walled potato fields; the treeline falls away and the mountains close in.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="day-pill">07</span><span class="acc-title">Acclimatization — Nangkartshang</span><span class="acc-meta">5,083 m</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>A steady ridge hike with views of Makalu and Island Peak. Climb high, sleep low, hydrate, repeat.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="day-pill">08</span><span class="acc-title">Trek to Lobuche via Thukla Pass</span><span class="acc-meta">4,910 m · 5–6 h</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>A quiet pause at the Thukla Pass memorials, then moraine trails beside the Khumbu Glacier into high-alpine country.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="day-pill">09</span><span class="acc-title">Everest Base Camp → Gorak Shep</span><span class="acc-meta">5,364 m · 8–9 h</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>The big day: rocky moraine to the prayer flags and the Base Camp rock beside the Icefall; sleep at Gorak Shep (5,164 m).</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="day-pill">10</span><span class="acc-title">Kala Patthar sunrise → Pheriche</span><span class="acc-meta">5,555 m · 7 h</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>Pre-dawn climb for the classic Everest panorama, breakfast at Gorak Shep, then a long satisfying descent to Pheriche.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="day-pill">11</span><span class="acc-title">Descend to Namche Bazaar</span><span class="acc-meta">3,440 m · 6–7 h</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>A surprisingly fast return on warm, oxygen-rich trails — celebrate with a bakery stop in Namche.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="day-pill">12</span><span class="acc-title">Trek to Lukla</span><span class="acc-meta">2,860 m · 6 h</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>The final stroll down the Dudh Koshi; thank your crew and swap trail stories over a last teahouse dinner.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="day-pill">13</span><span class="acc-title">Fly to Kathmandu</span><span class="acc-meta">1,400 m</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>Morning flight out of the mountains; a free afternoon for souvenirs or a well-earned massage in Thamel.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="day-pill">14</span><span class="acc-title">Departure</span><span class="acc-meta">—</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>Private transfer to the airport three hours before your flight — certificate in hand, camera full, heart fuller.</p></div></div></div>
+        </div>
+        <div class="custom-strip reveal">
+          <p>Want a different pace? We build private itineraries around your days, your acclimatization, your budget.</p>
+          <a href="#" class="btn btn-pine" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%27d%20like%20to%20customize%20the%20EBC%20itinerary.">Customize This Trip</a>
+        </div>
+      </section>
+
+      <!-- 10. MAP & ELEVATION -->
+      <section class="pd-sec reveal">
+        <div class="pd-sec-head">
+          <div><div class="eyebrow">The route</div><h2 class="h2">Trek Map &amp; Elevation</h2></div>
+          <a class="read-more" href="#">Download map <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg></a>
+        </div>
+        <div class="map-card">
+          <div class="map-frame">
+            <!-- Drop branded asset at img/ebc-route-map.svg, then swap this frame for: <img src="img/ebc-route-map.svg" alt="EBC route map"> -->
+            <div><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="color:var(--pine)"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg><p style="font-weight:700">Branded route map drops here</p><p style="font-size:12.5px">img/ebc-route-map.svg</p></div>
+          </div>
+          <div class="legend">
+            <span class="legend-chip"><span class="swatch"></span> Main route</span>
+            <span class="legend-chip"><span class="swatch dash"></span> Acclimatization hike</span>
+            <span class="legend-chip"><span class="swatch dot"></span> Overnight stop</span>
+            <span class="legend-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg> Viewpoint / peak</span>
+          </div>
+          <svg class="elev-svg" viewBox="0 0 700 262" role="img" aria-label="Elevation profile of the 14-day trek">
+            <g stroke="var(--line)" stroke-dasharray="3 5"><line x1="30" y1="188" x2="680" y2="188"/><line x1="30" y1="146" x2="680" y2="146"/><line x1="30" y1="104" x2="680" y2="104"/><line x1="30" y1="62" x2="680" y2="62"/></g>
+            <g fill="var(--muted)" font-size="9" font-weight="700"><text x="0" y="191">2k</text><text x="0" y="149">3k</text><text x="0" y="107">4k</text><text x="0" y="65">5k</text></g>
+            <polygon fill="rgba(47,107,79,.12)" points="30,228 80,162 130,128 180,128 230,110 280,87 330,87 380,66 430,55 480,94 530,128 580,162 630,228 680,228 680,230 30,230"/>
+            <polyline fill="none" stroke="var(--pine)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" points="30,228 80,162 130,128 180,128 230,110 280,87 330,87 380,66 430,55 480,94 530,128 580,162 630,228 680,228"/>
+            <g stroke="var(--gold)" stroke-width="1.6" stroke-dasharray="2 4"><line x1="180" y1="128" x2="180" y2="109"/><line x1="330" y1="87" x2="330" y2="58"/><line x1="430" y1="55" x2="430" y2="47"/><line x1="480" y1="94" x2="480" y2="39"/></g>
+            <g fill="#fff" stroke="var(--gold)" stroke-width="2"><circle cx="180" cy="109" r="3.5"/><circle cx="330" cy="58" r="3.5"/><circle cx="430" cy="47" r="3.5"/><circle cx="480" cy="39" r="3.5"/></g>
+            <g fill="var(--pine)" stroke="#fff" stroke-width="1.6"><circle cx="30" cy="228" r="4"/><circle cx="80" cy="162" r="4"/><circle cx="130" cy="128" r="4"/><circle cx="180" cy="128" r="4"/><circle cx="230" cy="110" r="4"/><circle cx="280" cy="87" r="4"/><circle cx="330" cy="87" r="4"/><circle cx="380" cy="66" r="4"/><circle cx="430" cy="55" r="4"/><circle cx="480" cy="94" r="4"/><circle cx="530" cy="128" r="4"/><circle cx="580" cy="162" r="4"/><circle cx="630" cy="228" r="4"/><circle cx="680" cy="228" r="4"/></g>
+            <g fill="var(--ink)" font-size="9.5" font-weight="800"><text x="486" y="34">Kala Patthar 5,555 m</text><text x="438" y="50">EBC 5,364 m</text></g>
+            <g fill="var(--muted)" font-size="9" font-weight="700" text-anchor="middle"><text x="30" y="250">1</text><text x="80" y="250">2</text><text x="130" y="250">3</text><text x="180" y="250">4</text><text x="230" y="250">5</text><text x="280" y="250">6</text><text x="330" y="250">7</text><text x="380" y="250">8</text><text x="430" y="250">9</text><text x="480" y="250">10</text><text x="530" y="250">11</text><text x="580" y="250">12</text><text x="630" y="250">13</text><text x="680" y="250">14</text></g>
+          </svg>
+          <div class="stat-strip">
+            <div class="stat"><strong>5,555 m</strong><small>Highest point · Kala Patthar</small></div>
+            <div class="stat"><strong>5,164 m</strong><small>Highest sleep · Gorak Shep</small></div>
+            <div class="stat"><strong>~130 km</strong><small>On foot</small></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. INCLUDES / EXCLUDES -->
+      <section class="pd-sec reveal">
+        <div class="eyebrow">What's covered</div>
+        <h2 class="h2">Cost Includes &amp; Excludes</h2>
+        <div class="feat-grid" style="margin-top:34px">
+        <div class="feat" style="flex-direction:column;align-items:stretch"><span class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M2 17h20"/></svg></span><div><h3>Accommodation</h3><ul class="pd-checks"><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>2 Kathmandu hotel nights, twin-share (arrival + final)</li><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Teahouse lodges, twin-share, on trek</li><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Private bathroom + hot shower in Phakding, Namche, Lukla</li></ul></div></div>
+        <div class="feat" style="flex-direction:column;align-items:stretch"><span class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></span><div><h3>Meals</h3><ul class="pd-checks"><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Breakfasts on Kathmandu hotel days</li><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Full-board B/L/D on the trek, with tea or coffee</li><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fresh fruit snacks served after dinner on the trail</li></ul></div></div>
+        <div class="feat" style="flex-direction:column;align-items:stretch"><span class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2Z"/></svg></span><div><h3>Transport &amp; Flights</h3><ul class="pd-checks"><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>All airport transfers in a private vehicle</li><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Round-trip Kathmandu–Lukla flights</li><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Seasonal Ramechhap ground transfer, if applicable</li></ul></div></div>
+        <div class="feat" style="flex-direction:column;align-items:stretch"><span class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div><h3>Guide &amp; Staff</h3><ul class="pd-checks"><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Govt-licensed, English-speaking senior guide</li><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>1 porter per 2 trekkers, fair wages + insurance</li><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>First-aid kit + twice-daily oximeter checks</li></ul></div></div>
+        <div class="feat" style="flex-direction:column;align-items:stretch"><span class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg></span><div><h3>Permits &amp; Fees</h3><ul class="pd-checks"><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sagarmatha National Park entry permit</li><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Khumbu Pasang Lhamu Rural Municipality permit</li><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Tengboche Monastery entrance fee</li></ul></div></div>
+        <div class="feat" style="flex-direction:column;align-items:stretch"><span class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/></svg></span><div><h3>Gear &amp; Extras</h3><ul class="pd-checks"><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>–15° down jacket + –20° sleeping bag + 70 L duffel</li><li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Route map, Sagarmatha tee, cap + completion certificate</li></ul><p class="pack-note">…plus all government taxes and administrative charges.</p></div></div>
+      </div>
+      <h3 class="h4-sub" style="margin-top:42px">Not Included</h3>
+      <ul class="pd-excludes">
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>International airfare and Nepal visa</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>Travel insurance with 6,000 m + heli-evac cover</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>Lunches and dinners in Kathmandu</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>Personal gear, clothing and toiletries</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>Hot showers, Wi-Fi and charging above Namche</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>Snacks, alcohol, bottled drinking water</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>Excess baggage over 15 kg on Lukla flights</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>Optional helicopter upgrade to/from Lukla</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>Extra nights in Kathmandu</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>Tips for guide, porter and driver</li>
+      </ul>
+      <p class="no-hidden">No hidden charges — that's the whole list.</p>
+      </section>
+
+      <!-- 12. PACKING LIST -->
+      <section class="pd-sec reveal">
+        <div class="pd-sec-head">
+          <div><div class="eyebrow">Pack smart</div><h2 class="h2">Packing List for Everest Base Camp</h2><p class="sub">A starting point, not a rulebook — bring what's right for you and the season.</p></div>
+          <div class="pack-tools"><span class="pack-count" id="packCount">0 / 0 packed</span><button class="pack-reset" id="packReset" type="button">Reset list</button></div>
+        </div>
+        <div class="pack-grid">
+          <div class="pack-group"><div class="pack-head"><span class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/></svg></span><h3>Gear</h3></div>
+            <label class="pack-item"><input type="checkbox" id="pk1"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">25–30 L daypack + rain cover</span></label>
+            <label class="pack-item"><input type="checkbox" id="pk2"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">Headlamp + spare batteries</span></label>
+            <label class="pack-item"><input type="checkbox" id="pk3"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">Insulated water bottle</span></label>
+            <label class="pack-item"><input type="checkbox" id="pk4"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">Dry bags + ziplocks</span></label>
+            <label class="pack-item"><input type="checkbox" id="pk5"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">Trekking poles</span></label>
+            <label class="pack-item"><input type="checkbox" id="pk6"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">UV400 category-4 sunglasses</span></label>
+          </div>
+          <div class="pack-group"><div class="pack-head"><span class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6"/><path d="M6 8h12v14H6z"/><path d="M6 8V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"/></svg></span><h3>Upper Body</h3></div>
+            <label class="pack-item"><input type="checkbox" id="pk7"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">3–4 moisture-wicking base layers</span></label>
+            <label class="pack-item"><input type="checkbox" id="pk8"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">Fleece mid-layer</span></label>
+            <label class="pack-item"><input type="checkbox" id="pk9"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">Waterproof hardshell jacket</span></label>
+            <label class="pack-item"><input type="checkbox" id="pk10"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">Sun hat <span class="pack-note">· free Sagarmatha cap at briefing</span></span></label>
+            <label class="pack-item"><input type="checkbox" id="pk11"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">Warm beanie</span></label>
+          </div>
+          <div class="pack-group"><div class="pack-head"><span class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><polyline points="7.5 4.21 12 6.81 16.5 4.21"/><polyline points="7.5 19.79 7.5 14.6 3 12"/><polyline points="21 12 16.5 14.6 16.5 19.79"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></span><h3>Lower Body</h3></div>
+            <label class="pack-item"><input type="checkbox" id="pk12"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">2–3 pairs trekking pants</span></label>
+            <label class="pack-item"><input type="checkbox" id="pk13"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">Thermal base bottoms</span></label>
+            <label class="pack-item"><input type="checkbox" id="pk14"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">Waterproof over-trousers</span></label>
+          </div>
+          <div class="pack-group"><div class="pack-head"><span class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v4"/><path d="M2 10h20v10H2z"/><path d="M12 10v10"/></svg></span><h3>Footwear</h3></div>
+            <label class="pack-item"><input type="checkbox" id="pk15"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">Broken-in waterproof trekking boots</span></label>
+            <label class="pack-item"><input type="checkbox" id="pk16"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">Camp shoes / trainers</span></label>
+            <label class="pack-item"><input type="checkbox" id="pk17"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">4–5 pairs wool trekking socks</span></label>
+            <label class="pack-item"><input type="checkbox" id="pk18"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">Gaiters + microspikes <span class="pack-note">· winter / rentable</span></span></label>
+          </div>
+          <div class="pack-group"><div class="pack-head"><span class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span><h3>Personal &amp; Toiletries</h3></div>
+            <label class="pack-item"><input type="checkbox" id="pk19"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">SPF 50 sunscreen + lip balm</span></label>
+            <label class="pack-item"><input type="checkbox" id="pk20"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">Quick-dry towel</span></label>
+            <label class="pack-item"><input type="checkbox" id="pk21"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">Basic meds + Diamox <span class="pack-note">· consult your doctor</span></span></label>
+            <label class="pack-item"><input type="checkbox" id="pk22"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">Rehydration salts</span></label>
+          </div>
+          <div class="pack-group"><div class="pack-head"><span class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span><h3>Documents &amp; Money</h3></div>
+            <label class="pack-item"><input type="checkbox" id="pk23"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">Passport + visa copies</span></label>
+            <label class="pack-item"><input type="checkbox" id="pk24"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">Insurance docs (6,000 m + heli cover)</span></label>
+            <label class="pack-item"><input type="checkbox" id="pk25"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">NPR cash for extras (~25,000)</span></label>
+            <label class="pack-item"><input type="checkbox" id="pk26"><span class="pack-box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span class="pack-txt">2 passport photos</span></label>
+          </div>
+        </div>
+        <div style="margin-top:22px;display:flex;gap:18px;flex-wrap:wrap">
+          <a class="read-more" href="blog-detail.html">Read our complete packing guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <a class="read-more" href="#">Download PDF checklist <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg></a>
+        </div>
+      </section>
+
+      <!-- 13. DEPARTURES -->
+      <section class="pd-sec reveal" id="departures">
+        <div class="eyebrow">Dates &amp; prices</div>
+        <h2 class="h2">2026 &amp; 2027 Departures</h2>
+        <p class="sub">Trip duration: 14 days · all-inclusive pricing</p>
+        <div class="pd-tabs" role="tablist" style="margin-top:26px">
+          <button class="pd-tab active" data-tab="group" role="tab" aria-selected="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg> Group Departures</button>
+          <button class="pd-tab" data-tab="private" role="tab" aria-selected="false"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Private Trip</button>
+        </div>
+
+        <div class="pd-panel active" id="group">
+          <div class="urgency"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><p><strong>Travelers' Choice 2026.</strong> Our groups of max 12 trekkers — autumn seats fill fast, book early to secure your spot.</p></div>
+          <div class="dep-chips">
+            <button class="chip dep-chip chip-active" data-month="all">All dates</button>
+            <button class="chip dep-chip" data-month="aug">Aug</button>
+            <button class="chip dep-chip" data-month="sep">Sep</button>
+            <button class="chip dep-chip" data-month="oct">Oct</button>
+            <button class="chip dep-chip" data-month="nov">Nov</button>
+            <button class="chip dep-chip" data-month="mar">Mar</button>
+            <button class="chip dep-chip" data-month="apr">Apr</button>
+          </div>
+          <div class="dep-card">
+            <div class="dep-row" data-month="aug"><span class="dep-dates">Aug 22 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Sep 04</span><span class="dep-status st-guaranteed">Guaranteed</span><span class="dep-price">$1,290</span><a class="btn btn-pine btn-sm" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%27d%20like%20to%20book%20the%20Aug%2022%20EBC%20departure.">Book Now</a></div>
+            <div class="dep-row" data-month="sep"><span class="dep-dates">Sep 05 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Sep 18</span><span class="dep-status st-filling">Filling fast</span><span class="dep-price">$1,290</span><a class="btn btn-pine btn-sm" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%27d%20like%20to%20book%20the%20Sep%2005%20EBC%20departure.">Book Now</a></div>
+            <div class="dep-row" data-month="sep"><span class="dep-dates">Sep 12 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Sep 25</span><span class="dep-status st-available">Available</span><span class="dep-price">$1,290</span><a class="btn btn-pine btn-sm" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%27d%20like%20to%20book%20the%20Sep%2012%20EBC%20departure.">Book Now</a></div>
+            <div class="dep-row" data-month="sep"><span class="dep-dates">Sep 19 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Oct 02</span><span class="dep-status st-guaranteed">Guaranteed</span><span class="dep-price">$1,290</span><a class="btn btn-pine btn-sm" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%27d%20like%20to%20book%20the%20Sep%2019%20EBC%20departure.">Book Now</a></div>
+            <div class="dep-row" data-month="oct"><span class="dep-dates">Oct 03 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Oct 16</span><span class="dep-status st-filling">Filling fast</span><span class="dep-price">$1,290</span><a class="btn btn-pine btn-sm" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%27d%20like%20to%20book%20the%20Oct%2003%20EBC%20departure.">Book Now</a></div>
+            <div class="dep-row" data-month="oct"><span class="dep-dates">Oct 10 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Oct 23</span><span class="dep-status st-available">Available</span><span class="dep-price">$1,290</span><a class="btn btn-pine btn-sm" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%27d%20like%20to%20book%20the%20Oct%2010%20EBC%20departure.">Book Now</a></div>
+            <div class="dep-row" data-month="oct"><span class="dep-dates">Oct 17 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Oct 30</span><span class="dep-status st-guaranteed">Guaranteed</span><span class="dep-price">$1,290</span><a class="btn btn-pine btn-sm" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%27d%20like%20to%20book%20the%20Oct%2017%20EBC%20departure.">Book Now</a></div>
+            <div class="dep-row" data-month="nov"><span class="dep-dates">Nov 01 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Nov 14</span><span class="dep-status st-available">Available</span><span class="dep-price">$1,290</span><a class="btn btn-pine btn-sm" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%27d%20like%20to%20book%20the%20Nov%2001%20EBC%20departure.">Book Now</a></div>
+            <div class="dep-row" data-month="mar"><span class="dep-dates">Mar 14 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Mar 27, 2027</span><span class="dep-status st-available">Available</span><span class="dep-price">$1,290</span><a class="btn btn-pine btn-sm" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%27d%20like%20to%20book%20the%20Mar%2014%202027%20EBC%20departure.">Book Now</a></div>
+            <div class="dep-row" data-month="apr"><span class="dep-dates">Apr 04 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> Apr 17, 2027</span><span class="dep-status st-available">Available</span><span class="dep-price">$1,290</span><a class="btn btn-pine btn-sm" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%27d%20like%20to%20book%20the%20Apr%2004%202027%20EBC%20departure.">Book Now</a></div>
+          </div>
+        </div>
+
+        <div class="pd-panel" id="private">
+          <div class="dep-card" style="padding:32px 34px">
+            <h3 style="font-family:var(--serif,'Fraunces');font-size:22px;margin-bottom:10px">Pick any date — we'll build it around you.</h3>
+            <p style="color:var(--muted);max-width:560px;font-size:15px">Private trips run on your schedule, solo to 12 trekkers, with the same crew and the same safety standards. No minimum group size, no surcharge for going alone.</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:22px">
+              <a class="btn btn-pine" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%27d%20like%20a%20private%20EBC%20trek.">Check Availability</a>
+              <a class="btn btn-ghost-dark" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20Let%27s%20chat%20about%20a%20private%20EBC.">Talk to an Expert</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 14. REVIEWS (skeleton — reference pending) -->
+      <section class="pd-sec reveal">
+        <div class="eyebrow">Trekker voices</div>
+        <h2 class="h2">Reviews from the Trail</h2>
+        <p class="sub">Real feedback from verified trekkers. Full reference section builds once the reviews template is locked.</p>
+      </section>
+
+      <!-- 15. VIDEO FACADE -->
+      <section class="pd-sec reveal">
+        <div class="eyebrow">See it in motion</div>
+        <h2 class="h2">The Journey, In Motion</h2>
+        <p class="sub">Three minutes of trail, teahouses and summit light — filmed on our autumn departures.</p>
+        <div class="video-facade" data-yt="YOUR_VIDEO_ID" style="margin-top:26px">
+          <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1fa768619-9df4-4178-b78d-1e296613996c.png" alt="Everest Base Camp trek film poster">
+          <div class="video-shade"></div>
+          <div class="play-btn"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="m8 5 12 7-12 7z"/></svg></div>
+          <span class="video-chip">▶ 3:12 · filmed autumn 2025</span>
+        </div>
+      </section>
+
+      <!-- 16. FAQs -->
+      <section class="pd-sec reveal" id="faqs">
+        <div class="pd-sec-head">
+          <div><div class="eyebrow">Good to know</div><h2 class="h2">Everest Base Camp Trek FAQs</h2></div>
+          <button class="btn btn-ghost-dark btn-sm" data-expand-all="#faqRoot">Expand all</button>
+        </div>
+        <div class="timeline" id="faqRoot" style="margin-top:14px">
+          <h3 class="faq-cat">Fitness &amp; Difficulty</h3>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="acc-title">Can a beginner complete this trek?</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>Yes — with proper preparation. The EBC trek requires endurance, not technical climbing. If you can walk 5 to 7 hours a day on uneven ground and take altitude seriously, first-timers complete it every season.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="acc-title">How fit do I need to be?</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>Good baseline fitness with the ability to walk sustained hours. Prepare with regular walking, light cardio and hill work — consistency matters more than intensity.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="acc-title">What makes this trek challenging?</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>Altitude, not terrain. Above 3,500 m oxygen levels drop, and long walking days compound fatigue. Our pacing and acclimatization nights manage both.</p></div></div></div>
+
+          <h3 class="faq-cat">Best Time &amp; Weather</h3>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="acc-title">When is the best season?</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>Spring (March–May) and autumn (September–November) give the clearest skies, most reliable Lukla flights and most comfortable daytime temperatures. Autumn in particular produces the sharpest mountain views.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="acc-title">What about winter and monsoon?</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>Both are possible. Winter is colder with icy trails; monsoon brings cloud cover and a higher chance of Lukla delays. Both seasons require more schedule flexibility.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="acc-title">How often are Lukla flights delayed?</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>Delays are normal, even in peak season. We include a buffer day and keep your international connections protected. Early morning flights are most reliable.</p></div></div></div>
+
+          <h3 class="faq-cat">Altitude &amp; Safety</h3>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="acc-title">What is altitude sickness and how common is it?</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>Mild symptoms are common above 3,000 m; serious cases are rare with proper pacing. Our twice-daily oximeter checks catch trends early, and descent is always the first response.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="acc-title">What insurance do I need?</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>A policy covering high-altitude trekking to 6,000 m plus emergency helicopter evacuation is mandatory. Arrange it before you fly to Nepal — many providers won't issue cover after arrival.</p></div></div></div>
+
+          <h3 class="faq-cat">Cost &amp; Booking</h3>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="acc-title">How do I book?</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>A 20% deposit confirms your place; the balance is payable on arrival in Kathmandu, by cash or card (card carries a 3.5% bank fee). Flight details can be added later.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="acc-title">Can I postpone my trek?</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>Yes. The deposit is non-refundable but becomes a lifetime credit toward any future trek with us — no expiry, no paperwork.</p></div></div></div>
+
+          <h3 class="faq-cat">Accommodation &amp; Food</h3>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="acc-title">What are teahouses like?</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>Locally run lodges with twin-share rooms, simple bedding, and a warm dining hall that's the social heart of each village. Lower villages have attached bathrooms; higher ones share facilities.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="acc-title">What's the food like?</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>Warm, filling and designed for long walking days — dal bhat, pasta, soups, noodle dishes. Above Namche, vegetarian meals are the safer choice. Vegan and gluten-free options with advance notice.</p></div></div></div>
+
+          <h3 class="faq-cat">Gear &amp; Luggage</h3>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="acc-title">How much luggage can I bring?</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>One porter per two trekkers, carrying up to 25 kg total (~12–13 kg per person). You carry a small daypack. Lukla flights have a strict 15 kg limit including hand luggage.</p></div></div></div>
+          <div class="acc-item"><button class="acc-head" aria-expanded="false"><span class="acc-title">What do you provide?</span><svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="acc-body"><div><p>A –15° down jacket, –20° sleeping bag and 70 L duffel at your Kathmandu briefing — included, no rental fee. Returned at the end of the trek.</p></div></div></div>
+        </div>
+        <div class="faq-cta">
+          <span>Still curious?</span>
+          <a class="btn btn-pine" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%20have%20a%20question%20about%20EBC.">Talk to a local expert</a>
+        </div>
+      </section>
+
+      <!-- 17. RELATED TREKS (skeleton — reference pending) -->
+      <section class="pd-sec reveal">
+        <div class="eyebrow">You may also like</div>
+        <h2 class="h2">Related Treks in the Everest Region</h2>
+        <p class="sub">Shorter routes, high-pass extensions and helicopter variations of this trek.</p>
+      </section>
+
+    </div>
+
+    <!-- ============ STICKY SIDEBAR ============ -->
+    <aside class="pd-aside">
+      <div class="pd-book">
+        <span class="feat-pill">Featured Trip</span>
+        <div class="book-price-label">Price per person</div>
+        <div class="book-price"><strong>$1,290</strong><s>$1,450</s></div>
+        <div class="book-sub">14 days · all-inclusive</div>
+
+        <button class="tiers-toggle" id="tiersToggle" aria-expanded="false">Group discounts <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="tiers-wrap" id="tiersWrap"><div>
+          <div class="tier-list">
+            <div class="tier-row"><span>Solo traveler</span><span class="tier-dots"></span><strong>$1,450</strong></div>
+            <div class="tier-row"><span>2 – 5 travelers</span><span class="tier-dots"></span><strong>$1,290</strong></div>
+            <div class="tier-row"><span>6 – 9 travelers</span><span class="tier-dots"></span><strong>$1,190</strong></div>
+            <div class="tier-row"><span>10 + travelers</span><span class="tier-dots"></span><strong>$1,090</strong></div>
+          </div>
+        </div></div>
+
+        <div class="book-cta-row">
+          <a href="#departures" class="btn btn-pine">Check Availability</a>
+          <a href="#" class="btn btn-ghost-dark" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%20want%20to%20inquire%20about%20EBC.">Make an Inquiry</a>
+        </div>
+
+        <ul class="book-trust">
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Instant booking confirmed</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Secure payments</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> No hidden costs</li>
+        </ul>
+
+        <div class="book-rate">
+          <span class="stars" data-rating="4.9"></span><span><strong>4.9</strong> · 284</span><a href="#reviews">Read reviews</a>
+        </div>
+
+        <div class="book-utils">
+          <a href="#" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%27d%20like%20to%20customize%20EBC."><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4z"/></svg> Customize</a>
+          <a href="#"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg> Download PDF</a>
+        </div>
+      </div>
+    </aside>
+
+  </div><!-- /pd-layout -->
+
+</div><!-- /container pd-top -->
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-ridge"><svg viewBox="0 0 1440 76" preserveAspectRatio="none"><path d="M0 76V46l120 10 180-22 240 20 180-18 240 24 200-20 160 16 120-14V76z" fill="#141714"/></svg></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="brand" style="color:#fff"><span class="brand-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></span><span class="brand-text"><strong>Sagarmatha Treks</strong><small>&amp; Expeditions</small></span></a><p class="footer-blurb">A locally owned Nepali trekking company crafting safe, personal and responsible Himalayan journeys since 2011.</p><div class="socials"><a class="social-btn" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a class="social-btn" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a class="social-btn" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#fff"/></svg></a></div><div class="badges"><span class="badge-chip">Govt. Licensed</span><span class="badge-chip">NMA Member</span><span class="badge-chip">TAN Member</span><span class="badge-chip">Tripadvisor 4.9/5</span></div></div>
+      <div class="footer-col"><h4>Company</h4><a href="index.html#about">About Us</a><a href="#">Our Team</a><a href="#">Responsible Tourism</a><a href="index.html#contact">Contact</a></div>
+      <div class="footer-col"><h4>Explore</h4><a href="index.html#categories">Everest</a><a href="index.html#categories">Annapurna</a><a href="index.html#categories">Langtang</a><a href="index.html#categories">Mustang</a><a href="index.html#categories">Manaslu</a></div>
+      <div class="footer-col"><h4>Resources</h4><a href="index.html#blog">Trekking Guide</a><a href="#">Travel Information</a><a href="index.html#blog">Blog</a><a href="#faqs">FAQs</a></div>
+      <div class="footer-col footer-contact"><h4>Contact</h4><div class="f-line"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Thamel, Kathmandu, Nepal</div><div class="f-line"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>hello@sagarmathatreks.com</div><div class="f-line"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+977 9800000000</div><a href="https://wa.me/9779800000000" class="btn btn-wa btn-sm" data-lead-link="https://wa.me/9779800000000?text=Namaste!"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Z"/></svg><span>Chat With Us</span></a><div class="emergency"><div class="em-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><strong>24/7 Emergency Support</strong><small>+977 9800000000 · always on call</small></div></div></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Sagarmatha Treks &amp; Expeditions Pvt. Ltd. All rights reserved.</span>
+    <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+  </div>
+</footer>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast" style="display:none">
+  <div class="toast-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+  <span id="toastMsg">Notification</span>
+</div>
+
+<!-- ============ LEAD MODAL ============ -->
+<div class="modal-overlay lead-modal" id="leadModal" style="display:none">
+  <div class="modal lead-modal">
+    <button class="modal-close" id="lClose" aria-label="Close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <div class="modal-body lead-body">
+      <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="var(--pine)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <h3>Talk to a local expert</h3>
+      <p>Leave your details and we'll open WhatsApp for you — a real Himalayan guide replies within 2 hours.</p>
+      <form id="leadForm">
+        <div class="lead-field"><label for="leadName">Name</label><input type="text" id="leadName" placeholder="Your full name"></div>
+        <div class="lead-field"><label for="leadEmail">Email</label><input type="email" id="leadEmail" placeholder="you@example.com"></div>
+        <div class="lead-error" id="leadError" style="display:none"></div>
+        <button type="submit" class="btn btn-pine">Continue to WhatsApp</button>
+      </form>
+      <p class="lead-note">No spam — just one reply from our Kathmandu office.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ LIGHTBOX MODAL ============ -->
+<div class="modal-overlay lightbox" id="lightbox" style="display:none">
+  <div class="modal">
+    <button class="modal-close" id="lbClose" aria-label="Close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <div class="modal-body">
+      <div class="lb-main"><img id="lbMain" src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1fa768619-9df4-4178-b78d-1e296613996c.png" alt="Everest Base Camp Trek photo"></div>
+      <div class="lb-thumbs">
+        <button class="lb-thumb active" data-full="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1fa768619-9df4-4178-b78d-1e296613996c.png"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1fa768619-9df4-4178-b78d-1e296613996c.png" alt=""></button>
+        <button class="lb-thumb" data-full="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1dc701fcb-3b2d-4bce-892f-792c84e87d5e.png"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1dc701fcb-3b2d-4bce-892f-792c84e87d5e.png" alt=""></button>
+        <button class="lb-thumb" data-full="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1885ad880-8f91-402a-8117-348866c12eb8.png"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1885ad880-8f91-402a-8117-348866c12eb8.png" alt=""></button>
+        <button class="lb-thumb" data-full="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1c658ea57-deeb-4400-83ef-02020712c84c.png"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1c658ea57-deeb-4400-83ef-02020712c84c.png" alt=""></button>
+        <button class="lb-thumb" data-full="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1f373039c-6f87-4586-8f8d-1b7b2a7f55bc.png"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1f373039c-6f87-4586-8f8d-1b7b2a7f55bc.png" alt=""></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/package-detail.js"></script>
+</body>
+</html>
