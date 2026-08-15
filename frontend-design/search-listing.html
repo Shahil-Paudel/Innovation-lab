@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Results — Sagarmatha Treks & Expeditions</title>
+<meta name="description" content="Browse trekking packages matched to your search. Sort by duration, price, difficulty and rating.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== HEADER (solid variant for inner page) ===== -->
+<header class="header scrolled" id="header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></span>
+      <span class="brand-text"><strong>Sagarmatha</strong><small>Treks &amp; Expeditions</small></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#treks">Treks</a>
+      <a href="index.html#trip">Tours</a>
+      <a href="index.html#categories">Destinations</a>
+      <a href="index.html#about">About Us</a>
+      <a href="blog-list.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="wishlist-pill" href="#sGrid" aria-label="Wishlist">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        <span class="wl-text">Wishlist</span><span class="wl-count" id="wlCount">0</span>
+      </a>
+      <a class="btn btn-wa btn-sm" href="https://wa.me/9779800000000" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>Chat on WhatsApp</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
+    </div>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <nav>
+      <a href="index.html#treks">Treks</a><a href="index.html#trip">Tours</a><a href="index.html#categories">Destinations</a>
+      <a href="index.html#about">About Us</a><a href="blog-list.html">Blog</a><a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="mobile-panel-ctas">
+      <a class="btn btn-wa btn-sm" href="https://wa.me/9779800000000" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ===== PAGE HEAD : breadcrumb + title + re-search ===== -->
+  <section class="page-head">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        <span class="current" id="crumbQuery">Search results for “everest”</span>
+      </nav>
+      <div class="page-head-row">
+        <div>
+          <h1 class="page-title">You searched for <em id="queryEcho">“everest”</em></h1>
+          <p class="page-sub"><b id="resultCount">0</b> adventures matched · hand-checked by our Kathmandu team</p>
+        </div>
+        <form class="head-search" id="headSearchForm" role="search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="headSearchInput" type="text" placeholder="Search treks, regions, styles…" aria-label="Search treks">
+          <button class="btn btn-pine btn-sm" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SORT BAR + RESULTS ===== -->
+  <section class="container" style="padding-bottom:clamp(72px,9vw,110px)">
+    <div class="sort-bar">
+      <p class="filter-count">Showing <b id="totalCount">0</b> curated journeys · sorted your way</p>
+      <div class="sort-fields">
+        <div class="sort-field"><select id="sortDuration" aria-label="Sort by duration">
+          <option value="">Sort By Duration</option><option value="asc">Duration · Shortest first</option><option value="desc">Duration · Longest first</option>
+        </select></div>
+        <div class="sort-field"><select id="sortPrice" aria-label="Sort by price">
+          <option value="">Sort By Price</option><option value="asc">Price · Low to High</option><option value="desc">Price · High to Low</option>
+        </select></div>
+        <div class="sort-field"><select id="sortDiff" aria-label="Sort by difficulty">
+          <option value="">Sort By Difficulty</option><option value="asc">Difficulty · Easiest first</option><option value="desc">Difficulty · Hardest first</option>
+        </select></div>
+        <div class="sort-field"><select id="sortRating" aria-label="Sort by rating">
+          <option value="">Sort By Rating</option><option value="desc">Rating · Top rated first</option>
+        </select></div>
+      </div>
+    </div>
+
+    <div class="trek-grid" id="sGrid">
+
+      <!-- 1 -->
+      <article class="trek-card s-card reveal" data-id="ebc" data-days="14" data-price="1290" data-difficulty="Challenging" data-rating="4.9" data-region="Everest Region" data-search="everest base camp ebc khumbu sagarmatha classic trek">
+        <div class="trek-media">
+          <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1fa768619-9df4-4178-b78d-1e296613996c.png" alt="Everest Base Camp Trek" loading="lazy">
+          <button class="heart-btn" aria-label="Save to wishlist" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button>
+          <button class="quick-view" aria-label="Quick view"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
+        </div>
+        <div class="trek-body">
+          <div class="s-meta-row">
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/></svg>14 Days</span>
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>4.9 <i>(284 reviews)</i></span>
+            <span class="diff diff-challenging">Challenging</span>
+          </div>
+          <h3 class="trek-title"><a href="package-detail.html">Everest Base Camp Trek</a></h3>
+          <div class="s-loc-row">
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Kathmandu</span>
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Everest Region</span>
+          </div>
+          <div class="s-more"><div class="s-more-inner">
+            <p>The classic pilgrimage to the foot of the world's highest mountain, via Namche Bazaar and Tengboche.</p>
+            <ul>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Kathmandu–Lukla mountain flights</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sherpa culture &amp; Tengboche Monastery</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Kala Patthar sunrise (5,545 m)</li>
+            </ul>
+          </div></div>
+          <div class="s-foot">
+            <div class="s-price"><small>Per Person</small><div><s>$1,450</s><strong>$1,290</strong></div></div>
+            <a class="btn btn-pine btn-sm" href="package-detail.html">Trip Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="trek-card s-card reveal" data-id="heli" data-days="4" data-price="2899" data-difficulty="Easy" data-rating="5.0" data-region="Everest Region" data-search="everest heli helicopter view tour luxury namche base camp">
+        <div class="trek-media">
+          <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1f373039c-6f87-4586-8f8d-1b7b2a7f55bc.png" alt="Everest View Trek with Helicopter Return" loading="lazy">
+          <button class="heart-btn" aria-label="Save to wishlist" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button>
+          <button class="quick-view" aria-label="Quick view"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
+        </div>
+        <div class="trek-body">
+          <div class="s-meta-row">
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/></svg>4 Days</span>
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>5.0 <i>(61 reviews)</i></span>
+            <span class="diff diff-easy">Easy</span>
+          </div>
+          <h3 class="trek-title"><a href="package-detail.html">Everest View Trek with Helicopter Return</a></h3>
+          <div class="s-loc-row">
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Kathmandu</span>
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Everest Region</span>
+          </div>
+          <div class="s-more"><div class="s-more-inner">
+            <p>Trek in through pine forests to Namche, then fly back with a sunrise helicopter panorama of Everest.</p>
+            <ul>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Private helicopter charter back</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Breakfast at Hotel Everest View</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Perfect when days are limited</li>
+            </ul>
+          </div></div>
+          <div class="s-foot">
+            <div class="s-price"><small>Per Person</small><div><s>$3,200</s><strong>$2,899</strong></div></div>
+            <a class="btn btn-pine btn-sm" href="package-detail.html">Trip Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="trek-card s-card reveal" data-id="gokyo" data-days="5" data-price="2190" data-difficulty="Moderate" data-rating="4.9" data-region="Everest Region" data-search="everest gokyo ri lake helicopter turquoise cho">
+        <div class="trek-media">
+          <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1885ad880-8f91-402a-8117-348866c12eb8.png" alt="Gokyo Ri Helicopter Trek" loading="lazy">
+          <button class="heart-btn" aria-label="Save to wishlist" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button>
+          <button class="quick-view" aria-label="Quick view"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
+        </div>
+        <div class="trek-body">
+          <div class="s-meta-row">
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/></svg>5 Days</span>
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>4.9 <i>(77 reviews)</i></span>
+            <span class="diff diff-moderate">Moderate</span>
+          </div>
+          <h3 class="trek-title"><a href="package-detail.html">Gokyo Ri Helicopter Trek</a></h3>
+          <div class="s-loc-row">
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Kathmandu</span>
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Everest Region</span>
+          </div>
+          <div class="s-more"><div class="s-more-inner">
+            <p>Combine a short valley trek with a helicopter hop to the turquoise Gokyo Lakes and Ngozumpa Glacier.</p>
+            <ul>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Gokyo Ri viewpoint (5,357 m)</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Six sacred turquoise lakes</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Scenic heli return to Kathmandu</li>
+            </ul>
+          </div></div>
+          <div class="s-foot">
+            <div class="s-price"><small>Per Person</small><div><s>$2,450</s><strong>$2,190</strong></div></div>
+            <a class="btn btn-pine btn-sm" href="package-detail.html">Trip Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="trek-card s-card reveal" data-id="evtrek" data-days="6" data-price="690" data-difficulty="Easy" data-rating="4.7" data-region="Everest Region" data-search="everest view trek namche panorama luxury lodge short">
+        <div class="trek-media">
+          <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1dc701fcb-3b2d-4bce-892f-792c84e87d5e.png" alt="Everest View Trek" loading="lazy">
+          <button class="heart-btn" aria-label="Save to wishlist" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button>
+          <button class="quick-view" aria-label="Quick view"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
+        </div>
+        <div class="trek-body">
+          <div class="s-meta-row">
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/></svg>6 Days</span>
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>4.7 <i>(143 reviews)</i></span>
+            <span class="diff diff-easy">Easy</span>
+          </div>
+          <h3 class="trek-title"><a href="package-detail.html">Everest View Trek</a></h3>
+          <div class="s-loc-row">
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Kathmandu</span>
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Everest Region</span>
+          </div>
+          <div class="s-more"><div class="s-more-inner">
+            <p>A gentle luxury-lodge trek to Namche Bazaar with first light on Everest from Syangboche ridge.</p>
+            <ul>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Namche Bazaar weekend market</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Everest View Hotel terrace</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Great first Himalayan trek</li>
+            </ul>
+          </div></div>
+          <div class="s-foot">
+            <div class="s-price"><small>Per Person</small><div><s>$780</s><strong>$690</strong></div></div>
+            <a class="btn btn-pine btn-sm" href="package-detail.html">Trip Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="trek-card s-card reveal" data-id="passes" data-days="18" data-price="2090" data-difficulty="Strenuous" data-rating="4.9" data-region="Everest Region" data-search="everest three passes kongma la cho la renjo la epic circuit">
+        <div class="trek-media">
+          <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/14caac0d7-edad-48c7-a03e-66d4542197ed.png" alt="Everest Three Passes Trek" loading="lazy">
+          <button class="heart-btn" aria-label="Save to wishlist" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button>
+          <button class="quick-view" aria-label="Quick view"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
+        </div>
+        <div class="trek-body">
+          <div class="s-meta-row">
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/></svg>18 Days</span>
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>4.9 <i>(88 reviews)</i></span>
+            <span class="diff diff-strenuous">Strenuous</span>
+          </div>
+          <h3 class="trek-title"><a href="package-detail.html">Everest Three Passes Trek</a></h3>
+          <div class="s-loc-row">
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Kathmandu</span>
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Everest Region</span>
+          </div>
+          <div class="s-more"><div class="s-more-inner">
+            <p>The ultimate Everest trifecta — Kongma La, Cho La and Renjo La strung into one epic loop.</p>
+            <ul>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Three 5,000 m+ high passes</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>EBC + Gokyo in a single trip</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Far fewer crowds than EBC</li>
+            </ul>
+          </div></div>
+          <div class="s-foot">
+            <div class="s-price"><small>Per Person</small><div><s>$2,350</s><strong>$2,090</strong></div></div>
+            <a class="btn btn-pine btn-sm" href="package-detail.html">Trip Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="trek-card s-card reveal" data-id="island" data-days="16" data-price="2390" data-difficulty="Strenuous" data-rating="4.8" data-region="Everest Region" data-search="everest island peak imja tse climbing expedition summit">
+        <div class="trek-media">
+          <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1c658ea57-deeb-4400-83ef-02020712c84c.png" alt="Island Peak Climbing with Everest Base Camp" loading="lazy">
+          <button class="heart-btn" aria-label="Save to wishlist" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button>
+          <button class="quick-view" aria-label="Quick view"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
+        </div>
+        <div class="trek-body">
+          <div class="s-meta-row">
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/></svg>16 Days</span>
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>4.8 <i>(54 reviews)</i></span>
+            <span class="diff diff-strenuous">Strenuous</span>
+          </div>
+          <h3 class="trek-title"><a href="package-detail.html">Island Peak Climbing with EBC</a></h3>
+          <div class="s-loc-row">
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Kathmandu</span>
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Everest Region</span>
+          </div>
+          <div class="s-more"><div class="s-more-inner">
+            <p>Add a 6,189 m climbing summit to your Base Camp journey with full expedition support.</p>
+            <ul>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fixed ropes &amp; climbing sherpa</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Summit of Imja Tse (Island Peak)</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Includes EBC &amp; Kala Patthar</li>
+            </ul>
+          </div></div>
+          <div class="s-foot">
+            <div class="s-price"><small>Per Person</small><div><s>$2,650</s><strong>$2,390</strong></div></div>
+            <a class="btn btn-pine btn-sm" href="package-detail.html">Trip Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 7 -->
+      <article class="trek-card s-card reveal" data-id="abc" data-days="11" data-price="940" data-difficulty="Moderate" data-rating="4.8" data-region="Annapurna Region" data-search="annapurna base camp abc pokhara sanctuary machapuchare">
+        <div class="trek-media">
+          <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/12b3da831-07ef-4718-918e-9e890831c35e.png" alt="Annapurna Base Camp Trek" loading="lazy">
+          <button class="heart-btn" aria-label="Save to wishlist" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button>
+          <button class="quick-view" aria-label="Quick view"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
+        </div>
+        <div class="trek-body">
+          <div class="s-meta-row">
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/></svg>11 Days</span>
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>4.8 <i>(312 reviews)</i></span>
+            <span class="diff diff-moderate">Moderate</span>
+          </div>
+          <h3 class="trek-title"><a href="package-detail.html">Annapurna Base Camp Trek</a></h3>
+          <div class="s-loc-row">
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Pokhara</span>
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Annapurna Region</span>
+          </div>
+          <div class="s-more"><div class="s-more-inner">
+            <p>Walk into the Annapurna Sanctuary beneath 8,091 m walls of ice and rock.</p>
+            <ul>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>360° amphitheatre of peaks</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Natural hot springs at Jhinu</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Gurung &amp; Magar villages</li>
+            </ul>
+          </div></div>
+          <div class="s-foot">
+            <div class="s-price"><small>Per Person</small><div><s>$1,090</s><strong>$940</strong></div></div>
+            <a class="btn btn-pine btn-sm" href="package-detail.html">Trip Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 8 -->
+      <article class="trek-card s-card reveal" data-id="langtang" data-days="9" data-price="780" data-difficulty="Moderate" data-rating="4.9" data-region="Langtang Region" data-search="langtang valley kyanjin gompa tamang closest kathmandu">
+        <div class="trek-media">
+          <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/196d28169-128d-4da0-9622-702344878c98.png" alt="Langtang Valley Trek" loading="lazy">
+          <button class="heart-btn" aria-label="Save to wishlist" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button>
+          <button class="quick-view" aria-label="Quick view"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
+        </div>
+        <div class="trek-body">
+          <div class="s-meta-row">
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/></svg>9 Days</span>
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>4.9 <i>(198 reviews)</i></span>
+            <span class="diff diff-moderate">Moderate</span>
+          </div>
+          <h3 class="trek-title"><a href="package-detail.html">Langtang Valley Trek</a></h3>
+          <div class="s-loc-row">
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Kathmandu</span>
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Langtang Region</span>
+          </div>
+          <div class="s-more"><div class="s-more-inner">
+            <p>The nearest Himalaya to Kathmandu — rhododendron forests, yak pastures and Tamang villages.</p>
+            <ul>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Kyanjin Gompa &amp; cheese factory</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Tserko Ri sunrise (4,984 m)</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No flights needed — drive in</li>
+            </ul>
+          </div></div>
+          <div class="s-foot">
+            <div class="s-price"><small>Per Person</small><div><s>$850</s><strong>$780</strong></div></div>
+            <a class="btn btn-pine btn-sm" href="package-detail.html">Trip Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 9 -->
+      <article class="trek-card s-card reveal" data-id="gosaikunda" data-days="12" data-price="1190" data-difficulty="Moderate" data-rating="4.9" data-region="Langtang Region" data-search="langtang gosaikunda sacred lake pilgrimage autumn">
+        <div class="trek-media">
+          <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1c10c8850-772e-41c6-9193-076f55e9d3dc.png" alt="Langtang Gosaikunda Trek" loading="lazy">
+          <button class="heart-btn" aria-label="Save to wishlist" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button>
+          <button class="quick-view" aria-label="Quick view"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
+        </div>
+        <div class="trek-body">
+          <div class="s-meta-row">
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/></svg>12 Days</span>
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>4.9 <i>(163 reviews)</i></span>
+            <span class="diff diff-moderate">Moderate</span>
+          </div>
+          <h3 class="trek-title"><a href="package-detail.html">Langtang Gosaikunda Trek</a></h3>
+          <div class="s-loc-row">
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Kathmandu</span>
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Langtang Region</span>
+          </div>
+          <div class="s-more"><div class="s-more-inner">
+            <p>Pair the forested Langtang Valley with sacred alpine lakes draped in prayer flags at 4,380 m.</p>
+            <ul>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>108 holy alpine lakes</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Laurebina La pass (4,610 m)</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Our Trip of the Month pick</li>
+            </ul>
+          </div></div>
+          <div class="s-foot">
+            <div class="s-price"><small>Per Person</small><div><s>$1,350</s><strong>$1,190</strong></div></div>
+            <a class="btn btn-pine btn-sm" href="package-detail.html">Trip Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 10 -->
+      <article class="trek-card s-card reveal" data-id="manaslu" data-days="16" data-price="1590" data-difficulty="Strenuous" data-rating="4.7" data-region="Manaslu Region" data-search="manaslu circuit larkya la restricted area tea house">
+        <div class="trek-media">
+          <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1b1ee017e-6731-4045-b996-f1ac331a6053.png" alt="Manaslu Circuit Trek" loading="lazy">
+          <button class="heart-btn" aria-label="Save to wishlist" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button>
+          <button class="quick-view" aria-label="Quick view"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
+        </div>
+        <div class="trek-body">
+          <div class="s-meta-row">
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/></svg>16 Days</span>
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>4.7 <i>(156 reviews)</i></span>
+            <span class="diff diff-strenuous">Strenuous</span>
+          </div>
+          <h3 class="trek-title"><a href="package-detail.html">Manaslu Circuit Trek</a></h3>
+          <div class="s-loc-row">
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Kathmandu</span>
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Manaslu Region</span>
+          </div>
+          <div class="s-more"><div class="s-more-inner">
+            <p>A restricted-area circuit around the eighth-highest mountain, crossing the glacier Larkya La.</p>
+            <ul>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Larkya La (5,106 m) crossing</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Tibetan-influenced villages</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>True off-the-beaten-path feel</li>
+            </ul>
+          </div></div>
+          <div class="s-foot">
+            <div class="s-price"><small>Per Person</small><div><s>$1,790</s><strong>$1,590</strong></div></div>
+            <a class="btn btn-pine btn-sm" href="package-detail.html">Trip Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 11 -->
+      <article class="trek-card s-card reveal" data-id="mardi" data-days="6" data-price="640" data-difficulty="Easy" data-rating="4.8" data-region="Annapurna Region" data-search="mardi himal short ridge sunrise annapurna pokhara beginner">
+        <div class="trek-media">
+          <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1aaa55904-71ec-47cd-a664-ade9d97bb10e.png" alt="Mardi Himal Trek" loading="lazy">
+          <button class="heart-btn" aria-label="Save to wishlist" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button>
+          <button class="quick-view" aria-label="Quick view"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
+        </div>
+        <div class="trek-body">
+          <div class="s-meta-row">
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/></svg>6 Days</span>
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>4.8 <i>(241 reviews)</i></span>
+            <span class="diff diff-easy">Easy</span>
+          </div>
+          <h3 class="trek-title"><a href="package-detail.html">Mardi Himal Trek</a></h3>
+          <div class="s-loc-row">
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Pokhara</span>
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Annapurna Region</span>
+          </div>
+          <div class="s-more"><div class="s-more-inner">
+            <p>A short, scenic ridge walk with sunrise views over Machapuchare and the Annapurna massif.</p>
+            <ul>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>High Camp ridge (4,500 m)</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Least crowded Annapurna trek</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fits inside one week</li>
+            </ul>
+          </div></div>
+          <div class="s-foot">
+            <div class="s-price"><small>Per Person</small><div><s>$720</s><strong>$640</strong></div></div>
+            <a class="btn btn-pine btn-sm" href="package-detail.html">Trip Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 12 -->
+      <article class="trek-card s-card reveal" data-id="mustang" data-days="13" data-price="1890" data-difficulty="Challenging" data-rating="4.9" data-region="Mustang Region" data-search="upper mustang lo manthang desert kingdom restricted cave">
+        <div class="trek-media">
+          <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/182831355-4138-4630-821e-a1c189e9393d.png" alt="Upper Mustang Trek" loading="lazy">
+          <button class="heart-btn" aria-label="Save to wishlist" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button>
+          <button class="quick-view" aria-label="Quick view"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
+        </div>
+        <div class="trek-body">
+          <div class="s-meta-row">
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/></svg>13 Days</span>
+            <span class="s-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>4.9 <i>(127 reviews)</i></span>
+            <span class="diff diff-challenging">Challenging</span>
+          </div>
+          <h3 class="trek-title"><a href="package-detail.html">Upper Mustang Trek</a></h3>
+          <div class="s-loc-row">
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Pokhara</span>
+            <span class="s-loc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Mustang Region</span>
+          </div>
+          <div class="s-more"><div class="s-more-inner">
+            <p>A desert kingdom beyond the rain shadow — the walled city of Lo Manthang and cliff caves.</p>
+            <ul>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Walled city of Lo Manthang</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Tibetan Buddhist culture</li>
+              <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Rain-shadow: trek in monsoon</li>
+            </ul>
+          </div></div>
+          <div class="s-foot">
+            <div class="s-price"><small>Per Person</small><div><s>$2,150</s><strong>$1,890</strong></div></div>
+            <a class="btn btn-pine btn-sm" href="package-detail.html">Trip Details <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- empty state -->
+    <div class="failsafe" id="failsafe" style="display:none">
+      <div class="failsafe-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
+      <h3>We couldn't find a trek for "<span id="failQuery"></span>"</h3>
+      <p>No worries — our local experts match travelers to the perfect trail every day. Try another keyword or browse everything we offer.</p>
+      <div class="failsafe-row">
+        <button class="btn btn-pine" id="clearSearch">Clear Search</button>
+        <a class="btn btn-ghost-dark" href="package-list.html">View All Treks</a>
+      </div>
+    </div>
+
+    <!-- pagination (design) -->
+    <nav class="pagination" id="pagination" aria-label="Pagination">
+      <button class="page-btn current">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <button class="page-btn">Next <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+    </nav>
+  </section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand-footer" href="index.html">
+          <span class="brand-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></span>
+          <span class="brand-text"><strong>Sagarmatha</strong><small>Treks &amp; Expeditions</small></span>
+        </a>
+        <p class="footer-blurb">A locally owned Nepali trekking company crafting safe, personal and responsible Himalayan journeys since 2011.</p>
+        <div class="badges">
+          <span class="badge-chip">Govt. Licensed</span><span class="badge-chip">NMA Member</span><span class="badge-chip">TAN Member</span><span class="badge-chip">Tripadvisor 4.9/5</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="index.html#about">About Us</a><a href="#">Our Team</a><a href="#">Responsible Tourism</a><a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="package-list.html">Everest</a><a href="package-list.html">Annapurna</a><a href="package-list.html">Langtang</a><a href="package-list.html">Mustang</a><a href="package-list.html">Manaslu</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="blog-list.html">Trekking Guide</a><a href="#">Travel Information</a><a href="blog-list.html">Blog</a><a href="#">FAQs</a>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <p class="f-line"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Thamel, Kathmandu, Nepal</p>
+        <p class="f-line"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:hello@exampletreks.com">hello@exampletreks.com</a></p>
+        <p class="f-line"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+9779800000000">+977 9800000000</a></p>
+        <a class="btn btn-wa btn-sm" href="https://wa.me/9779800000000" target="_blank" rel="noopener">Chat With Us</a>
+        <div class="emergency">
+          <span class="em-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <div><strong>24/7 Emergency Support</strong><small>+977 9800000000 · always on call</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Sagarmatha Treks &amp; Expeditions Pvt. Ltd. All rights reserved.</span>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- toast -->
+<div class="toast" id="toast" style="display:none">
+  <span class="toast-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span>
+  <span id="toastMsg"></span>
+</div>
+
+<script src="js/search-listing.js"></script>
+</body>
+</html>
