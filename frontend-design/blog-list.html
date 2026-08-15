@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Travel Stories | Sagarmatha Treks</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+
+    <!-- HEADER (Consistent with index.html) -->
+    <header id="header" class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand">
+                <div class="brand-mark">ST</div>
+                <div class="brand-text">
+                    <strong>Sagarmatha</strong>
+                    <small>Treks & Expeditions</small>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="index.html#treks">Treks</a>
+                <a href="index.html#trip">Tours</a>
+                <a href="index.html#categories">Destinations</a>
+                <a href="blog-list.html" style="opacity:1; background:rgba(255,255,255,.15);">Blog</a>
+                <a href="index.html#about">About Us</a>
+            </nav>
+            <div class="header-actions">
+                <a href="index.html#contact" class="btn btn-pine btn-sm">Plan Trip</a>
+                <button id="menuBtn" class="menu-btn" aria-label="Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE PANEL -->
+    <div id="mobilePanel" class="mobile-panel">
+        <nav>
+            <a href="index.html#treks">Treks</a>
+            <a href="index.html#trip">Tours</a>
+            <a href="index.html#categories">Destinations</a>
+            <a href="blog-list.html">Blog</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="blog-hero">
+            <img src="https://images.unsplash.com/photo-1544644181-1bc9da4f69c8?q=80&w=2000&auto=format&fit=crop" 
+                 alt="Majestic Himalayan Mountains" 
+                 class="blog-hero-bg">
+            <div class="blog-hero-shade"></div>
+            
+            <div class="container blog-hero-body">
+                <span class="hero-eyebrow d1 hero-anim">Stories & Guides</span>
+                <h1 class="hero-title d2 hero-anim">The Himalayan Journal</h1>
+                <p class="hero-sub d3 hero-anim">Expert advice, gear guides, and inspiration for your next adventure.</p>
+                
+                <!-- SEARCH BAR -->
+                <div class="blog-search-wrapper d4 hero-anim">
+                    <div class="blog-search-box">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        <input type="text" id="blogSearchInput" placeholder="Try 'Packing List' or 'Best Time to Visit'..." autocomplete="off">
+                        <button id="clearSearch" class="clear-btn hidden" aria-label="Clear search">&times;</button>
+                    </div>
+                    
+                    <!-- SUGGESTION BOX -->
+                    <div id="searchSuggestions" class="search-suggestions hidden">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STICKY TABS -->
+        <div class="sticky-tabs-wrapper">
+            <div class="container">
+                <ul class="blog-tabs" id="categoryTabs">
+                    <li><button class="tab-btn active" data-category="all">All Stories</button></li>
+                    <li><button class="tab-btn" data-category="planning">Planning</button></li>
+                    <li><button class="tab-btn" data-category="gear">Gear & Kit</button></li>
+                    <li><button class="tab-btn" data-category="guides">Trail Guides</button></li>
+                    <li><button class="tab-btn" data-category="culture">Culture</button></li>
+                    <li><button class="tab-btn" data-category="news">Company News</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CONTENT SECTION -->
+        <section class="section blog-content-section">
+            <div class="container">
+                
+                <div class="results-info reveal">
+                    <p id="resultText">Showing latest articles</p>
+                </div>
+
+                <!-- BLOG GRID -->
+                <div id="blogGrid" class="blog-grid">
+                    <!-- Blogs injected via JS -->
+                </div>
+
+                <!-- EMPTY STATE -->
+                <div id="emptyState" class="empty hidden">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <h3>No stories found</h3>
+                    <p>We couldn't find any articles matching your criteria.</p>
+                    <button onclick="resetFilters()" class="btn btn-ghost-dark btn-sm" style="margin-top:16px;">Clear Filters</button>
+                </div>
+
+                <!-- PAGINATION -->
+                <div id="pagination" class="pagination reveal"></div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-bottom" style="justify-content:center; padding: 40px 0;">
+            <p>&copy; 2026 Sagarmatha Treks & Expeditions Pvt. Ltd.</p>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>
