@@ -1,0 +1,124 @@
+/* =====================================================
+   SAGARMATHA TREKS — shared site header + mega menu
+   (sub-pages only; index.html keeps its hero header)
+   ===================================================== */
+
+/* ---------- shell ---------- */
+.site-header{position:sticky;top:0;z-index:900;color:var(--ink);background:rgba(252,250,245,.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:box-shadow .3s}
+.site-header.scrolled{box-shadow:0 1px 0 rgba(20,22,20,.08),0 10px 28px rgba(20,22,20,.07)}
+
+/* ---------- top bar ---------- */
+.topbar{background:var(--ink);color:rgba(255,255,255,.82);font-size:13px;font-weight:600}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:42px;padding-top:5px;padding-bottom:5px}
+.topbar-msg{display:flex;align-items:center;gap:10px;min-width:0}
+.topbar-msg svg{color:var(--gold);flex:none}
+.topbar-msg span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar-msg a{color:#fff;font-weight:800;border-bottom:1px dashed rgba(255,255,255,.4)}
+.topbar-msg a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+.topbar-right{display:flex;align-items:center;gap:14px;flex:none}
+.topbar-right a{display:inline-flex;align-items:center;gap:7px}
+.topbar-right a:hover{color:#fff}
+.topbar-div{width:1px;height:16px;background:rgba(255,255,255,.25)}
+.topbar-close{width:26px;height:26px;border-radius:999px;display:grid;place-items:center;color:rgba(255,255,255,.6)}
+.topbar-close:hover{background:rgba(255,255,255,.12);color:#fff}
+
+/* ---------- main bar ---------- */
+.navbar-inner{display:flex;align-items:center;gap:18px;height:78px}
+.main-nav{display:flex;margin-inline:auto}
+.nav-list{display:flex;align-items:center;gap:2px}
+.nav-item{position:relative}
+.nav-link{display:inline-flex;align-items:center;gap:6px;font-size:14.5px;font-weight:800;padding:10px 15px;border-radius:999px;transition:.25s;color:var(--ink)}
+.nav-link:hover{background:rgba(20,22,20,.06)}
+.nav-link .chev{transition:transform .25s}
+.nav-item.open>.nav-link{background:var(--pine-soft);color:var(--pine-dark)}
+.nav-item.open>.nav-link .chev{transform:rotate(180deg)}
+
+/* ---------- right actions ---------- */
+.nav-actions{display:flex;align-items:center;gap:10px;flex:none}
+.icon-btn{width:42px;height:42px;border-radius:12px;border:1px solid var(--line);display:grid;place-items:center;color:var(--ink);transition:.25s}
+.icon-btn:hover{background:var(--pine-soft);color:var(--pine);border-color:transparent;transform:translateY(-1px)}
+.site-header .wishlist-pill{border:1px solid rgba(20,22,20,.18)}
+.site-header .wishlist-pill:hover{background:rgba(20,22,20,.05)}
+.mnav-toggle{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:12px;place-items:center;color:var(--ink)}
+
+/* ---------- mega panels (full width) ---------- */
+.mega{position:absolute;top:100%;left:0;right:0;background:#fcfaf5;border-top:1px solid var(--line);box-shadow:0 32px 64px rgba(15,18,15,.14);animation:megaIn .28s cubic-bezier(.16,1,.3,1)}
+.mega[hidden],.drop[hidden]{display:none!important}
+@keyframes megaIn{from{opacity:0;transform:translateY(-8px)}}
+.mega-inner{display:grid;grid-template-columns:236px minmax(0,1fr) 288px;padding-bottom:30px}
+.mega-inner-cols{grid-template-columns:minmax(0,1fr) 288px}
+
+/* left rail */
+.mega-rail{border-right:1px solid var(--line);padding:16px 0;display:flex;flex-direction:column}
+.rail-tab{display:flex;justify-content:space-between;align-items:center;gap:10px;text-align:left;padding:12px 24px;font-weight:800;font-size:14.5px;color:var(--ink-soft);border-left:3px solid transparent;transition:.2s}
+.rail-tab svg{color:var(--muted);transition:.2s}
+.rail-tab:hover{background:rgba(20,22,20,.04)}
+.rail-tab.active{background:#fff;color:var(--pine);border-left-color:var(--pine)}
+.rail-tab.active svg{color:var(--pine);transform:translateX(2px)}
+.rail-foot{margin-top:auto;padding:14px 24px 0;font-size:13px;font-weight:800;color:var(--pine);display:inline-flex;align-items:center;gap:7px}
+.rail-foot:hover{color:var(--pine-dark)}
+
+/* panels with link columns */
+.mega-panels{padding:24px 38px;min-width:0}
+.mega-panel{display:none;grid-template-columns:1fr 1fr;gap:4px 48px}
+.mega-panel.active{display:grid;animation:megaIn .25s cubic-bezier(.16,1,.3,1)}
+.mega-h4{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--pine);margin:4px 0 8px;display:flex;align-items:center;gap:12px}
+.mega-h4::after{content:"";flex:1;height:1px;background:var(--line)}
+.mega-list a{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:8.5px 0;font-size:14px;font-weight:700;color:var(--ink-soft);border-bottom:1px dashed var(--line);transition:.2s}
+.mega-list a small{color:var(--muted);font-weight:700;font-size:12px;flex:none}
+.mega-list a:hover{color:var(--pine);transform:translateX(3px)}
+.mega-list a:hover small{color:var(--pine)}
+.mega-more{grid-column:1/-1;margin-top:14px;display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:800;color:var(--pine)}
+.mega-more:hover{color:var(--pine-dark);gap:10px}
+
+/* column-style mega (Treks) */
+.mega-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 40px;padding:26px 40px;min-width:0}
+
+/* promo / helper card */
+.mega-promo{border-left:1px solid var(--line);padding:26px 28px;display:flex;flex-direction:column;gap:12px}
+.mega-promo figure{border-radius:16px;overflow:hidden;aspect-ratio:16/10}
+.mega-promo img{width:100%;height:100%;object-fit:cover}
+.mega-promo h4{font-family:"Fraunces",Georgia,serif;font-size:20px;font-weight:600}
+.mega-promo p{font-size:13.5px;color:var(--muted)}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:#c98f2b}
+.finder-card{background:linear-gradient(160deg,var(--pine-soft),#fff);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.finder-icon{width:42px;height:42px;border-radius:12px;background:var(--pine);color:#fff;display:grid;place-items:center}
+
+/* ---------- small dropdowns ---------- */
+.drop{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);min-width:264px;background:#fcfaf5;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow-lift);padding:10px;z-index:5;animation:megaIn .25s cubic-bezier(.16,1,.3,1)}
+.nav-item:nth-last-child(-n+2) .drop{left:auto;right:0;transform:none}
+.drop a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:11px;font-size:14px;font-weight:700;color:var(--ink-soft)}
+.drop a small{color:var(--muted);font-weight:700;font-size:12px}
+.drop a:hover{background:var(--pine-soft);color:var(--pine-dark)}
+.drop-foot{margin-top:6px;border-top:1px solid var(--line);border-radius:0;color:var(--pine)!important;font-weight:800!important}
+
+/* ---------- mobile drawer ---------- */
+.mnav{position:absolute;top:100%;left:0;right:0;background:#fcfaf5;color:var(--ink);box-shadow:0 30px 60px rgba(0,0,0,.18);display:none;flex-direction:column;max-height:calc(100vh - 120px);overflow:auto;padding:6px 22px 26px;animation:megaIn .3s cubic-bezier(.16,1,.3,1)}
+.mnav.open{display:flex}
+.mnav-sec{border-bottom:1px solid var(--line)}
+.mnav-acc{display:flex;justify-content:space-between;align-items:center;width:100%;padding:15px 4px;font-weight:800;font-size:15.5px}
+.mnav-acc svg{transition:transform .3s;color:var(--muted)}
+.mnav-sec.open .mnav-acc svg{transform:rotate(180deg);color:var(--pine)}
+.mnav-sub{display:none;padding:0 4px 14px}
+.mnav-sec.open .mnav-sub{display:block}
+.mnav-sub a{display:flex;justify-content:space-between;gap:12px;padding:9px 0;font-size:14px;font-weight:600;color:var(--muted)}
+.mnav-sub a small{font-size:12px;font-weight:700}
+.mnav-sub a:hover{color:var(--pine)}
+.mnav-link{display:flex;justify-content:space-between;align-items:center;padding:15px 4px;font-weight:800;font-size:15.5px}
+.mnav-ctas{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+
+/* ---------- responsive ---------- */
+@media(max-width:1280px){
+  .mega-inner{grid-template-columns:206px minmax(0,1fr) 260px}
+  .mega-inner-cols{grid-template-columns:minmax(0,1fr) 260px}
+  .mega-panels{padding:22px 28px}
+  .mega-cols{padding:22px 28px;gap:4px 28px}
+}
+@media(max-width:1100px){
+  .main-nav,.nav-cta{display:none}
+  .mnav-toggle{display:grid}
+}
+@media(max-width:860px){.topbar-right a[href^="mailto"],.topbar-right .topbar-div:first-of-type{display:none}}
+@media(max-width:560px){.topbar-msg span{white-space:normal}}
+@media(prefers-reduced-motion:reduce){.mega,.drop,.mnav{animation:none}}
