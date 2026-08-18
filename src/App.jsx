@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/home";
-import Everest from "./pages/Everest";
-import Blogs from "./pages/Blogs";
+import Home from "./pages/Home.jsx";
+import Everest from "./pages/Everest.jsx";
+import Blogs from "./pages/Blogs.jsx";
 
 
 function App() {
