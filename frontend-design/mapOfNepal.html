@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Nepal — Interactive Map</title>
+  <link rel="stylesheet" href="css/mapOfNepal.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>Explore Nepal</h1>
+    <p class="subtitle">Filter by category and hover over a marker to see details.</p>
+  </header>
+
+  <main class="page-main">
+    <div class="filter-bar" role="toolbar" aria-label="Destination category filters">
+      <button class="filter-btn active" data-category="all" aria-pressed="true">All</button>
+      <button class="filter-btn" data-category="trekking" aria-pressed="false">Trekking</button>
+      <button class="filter-btn" data-category="tours" aria-pressed="false">Tours</button>
+      <button class="filter-btn" data-category="pilgrimage" aria-pressed="false">Pilgrimage</button>
+      <button class="filter-btn" data-category="premium-offbeat" aria-pressed="false">Premium/Offbeat</button>
+      <button class="filter-btn" data-category="adventure" aria-pressed="false">Adventure</button>
+    </div>
+
+    <div class="map-wrapper" id="mapWrapper">
+      <img
+        src="img/nepal-map.png"
+        alt="Stylized map of Nepal showing trekking routes, tours, pilgrimage sites and adventure destinations"
+        class="map-image"
+        id="mapImage"
+        width="1536"
+        height="864"
+      >
+      <div class="map-error" id="mapError" hidden>
+        <p>Map image could not be loaded. Please check that nepal-map.png is in the same directory.</p>
+      </div>
+      <div class="markers-layer" id="markersLayer" aria-hidden="true"></div>
+    </div>
+
+    <div class="tooltip" id="tooltip" role="tooltip" aria-hidden="true"></div>
+
+    <div class="legend" role="list" aria-label="Map legend">
+      <div class="legend-item" role="listitem">
+        <span class="legend-swatch legend-swatch--trekking" aria-hidden="true"></span>
+        <span>Trekking</span>
+      </div>
+      <div class="legend-item" role="listitem">
+        <span class="legend-swatch legend-swatch--tours" aria-hidden="true"></span>
+        <span>Tours</span>
+      </div>
+      <div class="legend-item" role="listitem">
+        <span class="legend-swatch legend-swatch--pilgrimage" aria-hidden="true"></span>
+        <span>Pilgrimage</span>
+      </div>
+      <div class="legend-item" role="listitem">
+        <span class="legend-swatch legend-swatch--premium" aria-hidden="true"></span>
+        <span>Premium/Offbeat</span>
+      </div>
+      <div class="legend-item" role="listitem">
+        <span class="legend-swatch legend-swatch--adventure" aria-hidden="true"></span>
+        <span>Adventure</span>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/mapOfNepal.js"></script>
+</body>
+</html>
