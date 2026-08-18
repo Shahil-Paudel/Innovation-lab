@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 
 const MainLayout = ({ children }) => {
   return (
-    <>
+    <div>
       <Navbar />
 
       <main>
@@ -11,7 +11,7 @@ const MainLayout = ({ children }) => {
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 };
 
