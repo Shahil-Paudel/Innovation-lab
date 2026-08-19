@@ -65,7 +65,7 @@ const Navbar = () => {
         >
           {/* Home */}
           <a
-            href="#home"
+            href="/"
             className={`rounded-full px-4 py-2 text-sm font-medium transition ${
               scrolled
                 ? "text-[#0b2418] hover:bg-white hover:text-[#4f8f3a]"
