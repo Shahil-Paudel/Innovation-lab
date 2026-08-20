@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Meet Pasang Sherpa — Senior Mountain Guide at Sagarmatha Treks. IFMGA certified with 18 years leading treks across the Himalaya." />
+<title>Guide Profile — Pasang Sherpa | Sagarmatha Treks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/team-detail.css">
+<style>
+  /* =====================================================
+     TEAM DETAIL — scoped additions (on top of style.css)
+     ===================================================== */
+
+  /* ===== PROFILE HERO ===== */
+  .profile-hero{
+    position:relative;
+    padding:clamp(120px,14vh,170px) 0 clamp(60px,8vh,90px);
+    background:
+      radial-gradient(900px 500px at 85% -10%, rgba(47,107,79,.22), transparent 60%),
+      linear-gradient(180deg, #141714 0%, #1b1f1b 100%);
+    color:#fff;
+    overflow:hidden;
+  }
+  .profile-hero::before{
+    content:"";
+    position:absolute;inset:0;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(226,164,60,.08), transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(47,107,79,.15), transparent 45%);
+    pointer-events:none;
+  }
+  .profile-grid{
+    position:relative;
+    display:grid;
+    grid-template-columns:.95fr 1.05fr;
+    gap:clamp(32px,5vw,72px);
+    align-items:center;
+  }
+  .profile-media{
+    position:relative;
+    aspect-ratio:4/5;
+    max-width:520px;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 40px 80px rgba(0,0,0,.45);
+  }
+  .profile-media img{
+    width:100%;height:100%;object-fit:cover;
+    transition:transform 1.2s cubic-bezier(.16,1,.3,1);
+  }
+  .profile-media:hover img{ transform:scale(1.04); }
+  .profile-media-badge{
+    position:absolute;left:22px;bottom:-22px;
+    background:#fff;color:var(--ink);
+    border-radius:16px;padding:14px 20px;
+    display:flex;align-items:center;gap:12px;
+    box-shadow:var(--shadow-lift);
+  }
+  .profile-media-badge .pm-icon{
+    width:42px;height:42px;border-radius:12px;
+    background:var(--pine-soft);color:var(--pine);
+    display:grid;place-items:center;flex:none;
+  }
+  .profile-media-badge strong{display:block;font-size:15px;line-height:1.2;}
+  .profile-media-badge small{font-size:12px;color:var(--muted);font-weight:600;}
+
+  .profile-copy .eyebrow{ color:#9fd0b1; }
+  .profile-name{
+    font-family:"Fraunces",Georgia,serif;
+    font-weight:600;
+    font-size:clamp(2.4rem,5vw,4rem);
+    line-height:1.05;
+    letter-spacing:-.015em;
+    margin:18px 0 10px;
+  }
+  .profile-name em{ font-style:italic; color:#f6e7c6; font-weight:500; }
+  .profile-role{
+    font-size:17px;
+    color:rgba(255,255,255,.78);
+    font-weight:600;
+    margin-bottom:22px;
+  }
+  .profile-meta-row{
+    display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;
+  }
+  .profile-pill{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:700;
+    color:rgba(255,255,255,.9);
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.16);
+    padding:8px 14px;border-radius:999px;
+  }
+  .profile-pill svg{ color:#9fd0b1; flex:none; }
+  .profile-bio-short{
+    color:rgba(255,255,255,.78);
+    font-size:16.5px;
+    max-width:560px;
+    margin-bottom:28px;
+  }
+  .profile-ctas{ display:flex;gap:12px;flex-wrap:wrap; }
+
+  /* ===== FULL BIO ===== */
+  .bio-section{ background:var(--paper); }
+  .bio-grid{
+    display:grid;
+    grid-template-columns:1fr 1.6fr;
+    gap:clamp(32px,5vw,72px);
+    align-items:flex-start;
+  }
+  .bio-side{
+    position:sticky;top:110px;
+    display:flex;flex-direction:column;gap:22px;
+  }
+  .bio-side h3{
+    font-family:"Fraunces",Georgia,serif;
+    font-size:22px;font-weight:600;
+    margin-bottom:4px;
+  }
+  .bio-side p{ color:var(--muted); font-size:14.5px; }
+  .bio-quote{
+    border-left:3px solid var(--pine);
+    padding:4px 0 4px 20px;
+    font-family:"Fraunces",Georgia,serif;
+    font-style:italic;
+    font-size:18px;
+    color:var(--ink);
+    line-height:1.4;
+  }
+  .bio-body p{
+    color:var(--ink-soft);
+    font-size:16.5px;
+    line-height:1.75;
+    margin-bottom:18px;
+  }
+  .bio-body p:first-child::first-letter{
+    font-family:"Fraunces",Georgia,serif;
+    font-size:3.4rem;
+    font-weight:600;
+    float:left;
+    line-height:.9;
+    padding:6px 10px 0 0;
+    color:var(--pine);
+  }
+  .bio-body h4{
+    font-family:"Fraunces",Georgia,serif;
+    font-size:20px;font-weight:600;
+    margin:28px 0 12px;
+  }
+
+  /* ===== FUN FACTS (trust-row variant) ===== */
+  .facts-section{
+    background:var(--cream);
+  }
+  .facts-row{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+  }
+  .fact-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:24px 22px;
+    display:flex;gap:16px;align-items:flex-start;
+    transition:transform .35s, box-shadow .35s;
+  }
+  .fact-card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow-card);
+  }
+  .fact-icon{
+    width:46px;height:46px;flex:none;
+    border-radius:14px;
+    background:var(--pine-soft);color:var(--pine);
+    display:grid;place-items:center;
+  }
+  .fact-card strong{
+    display:block;
+    font-family:"Fraunces",Georgia,serif;
+    font-size:22px;font-weight:600;
+    line-height:1.1;
+  }
+  .fact-card span{
+    font-size:12.5px;color:var(--muted);
+    font-weight:700;letter-spacing:.06em;
+    text-transform:uppercase;
+    margin-top:4px;display:block;
+  }
+
+  /* ===== SPECIALTIES ===== */
+  .spec-section{ background:var(--paper); }
+  .spec-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+  }
+  .spec-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:26px;
+    transition:transform .35s, box-shadow .35s, border-color .35s;
+    position:relative;
+    overflow:hidden;
+  }
+  .spec-card::before{
+    content:"";
+    position:absolute;top:0;left:0;right:0;height:3px;
+    background:var(--pine);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform .4s cubic-bezier(.16,1,.3,1);
+  }
+  .spec-card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow-card);
+    border-color:rgba(47,107,79,.25);
+  }
+  .spec-card:hover::before{ transform:scaleX(1); }
+  .spec-icon{
+    width:52px;height:52px;
+    border-radius:14px;
+    background:var(--pine-soft);color:var(--pine);
+    display:grid;place-items:center;
+    margin-bottom:18px;
+  }
+  .spec-card h3{
+    font-family:"Fraunces",Georgia,serif;
+    font-size:18px;font-weight:600;
+    margin-bottom:8px;
+  }
+  .spec-card p{
+    font-size:14px;color:var(--muted);
+    line-height:1.6;
+  }
+
+  /* ===== TESTIMONIALS ===== */
+  .testi-section{ background:var(--cream); }
+  .testi-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+  }
+  .testi-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:28px;
+    display:flex;flex-direction:column;gap:18px;
+    position:relative;
+  }
+  .testi-quote-mark{
+    position:absolute;top:20px;right:24px;
+    font-family:"Fraunces",Georgia,serif;
+    font-size:72px;line-height:1;
+    color:var(--pine-soft);
+    font-weight:700;
+  }
+  .testi-stars{ display:inline-flex;gap:2px;color:var(--gold); }
+  .testi-text{
+    font-size:15px;line-height:1.65;
+    color:var(--ink-soft);
+    flex:1;
+    position:relative;z-index:1;
+  }
+  .testi-author{
+    display:flex;align-items:center;gap:12px;
+    padding-top:16px;
+    border-top:1px solid var(--line);
+  }
+  .testi-avatar{
+    width:44px;height:44px;border-radius:999px;
+    background:var(--pine-soft);color:var(--pine);
+    display:grid;place-items:center;
+    font-family:"Fraunces",Georgia,serif;
+    font-weight:600;font-size:16px;
+    flex:none;
+  }
+  .testi-author strong{ display:block; font-size:14px; }
+  .testi-author small{ font-size:12px; color:var(--muted); font-weight:600; }
+
+  /* ===== AVAILABILITY STRIP ===== */
+  .avail-strip{
+    background:var(--pine);
+    color:#fff;
+    border-radius:20px;
+    padding:28px 32px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    flex-wrap:wrap;
+    margin-top:40px;
+  }
+  .avail-strip h3{
+    font-family:"Fraunces",Georgia,serif;
+    font-size:22px;font-weight:600;
+    margin-bottom:4px;
+  }
+  .avail-strip p{
+    color:rgba(255,255,255,.78);
+    font-size:14.5px;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:1080px){
+    .facts-row{ grid-template-columns:repeat(2,1fr); }
+    .spec-grid{ grid-template-columns:repeat(2,1fr); }
+    .testi-grid{ grid-template-columns:repeat(2,1fr); }
+    .bio-grid{ grid-template-columns:1fr; }
+    .bio-side{ position:static; }
+  }
+  @media (max-width:960px){
+    .profile-grid{ grid-template-columns:1fr; }
+    .profile-media{ max-width:420px; margin:0 auto; }
+  }
+  @media (max-width:700px){
+    .facts-row{ grid-template-columns:1fr; }
+    .spec-grid{ grid-template-columns:1fr; }
+    .testi-grid{ grid-template-columns:1fr; }
+    .avail-strip{ flex-direction:column; align-items:flex-start; }
+  }
+  @media (prefers-reduced-motion:reduce){
+    .spec-card::before{ transition:none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="Sagarmatha Treks — home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+      </span>
+      <span class="brand-text">
+        <strong>Sagarmatha</strong>
+        <small>Treks &amp; Expeditions</small>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#treks">Treks</a>
+      <a href="index.html#trip">Tours</a>
+      <a href="index.html#categories">Destinations</a>
+      <a href="index.html#about">About Us</a>
+      <a href="blog-list.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="index.html#treks" class="wishlist-pill" aria-label="Open wishlist">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        <span class="wl-text">Wishlist</span>
+        <span class="wl-count" id="wlCount">0</span>
+      </a>
+      <a href="https://wa.me/9779800000000" class="btn btn-pine btn-sm" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I'd%20like%20to%20book%20a%20trek%20with%20Pasang.">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3 1.8.7 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        Chat on WhatsApp
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-panel" id="mobilePanel" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a href="index.html#treks">Treks <span>→</span></a>
+      <a href="index.html#trip">Tours <span>→</span></a>
+      <a href="index.html#categories">Destinations <span>→</span></a>
+      <a href="index.html#about">About Us <span>→</span></a>
+      <a href="blog-list.html">Blog <span>→</span></a>
+      <a href="index.html#contact">Contact <span>→</span></a>
+    </nav>
+    <div class="mobile-panel-ctas">
+      <a href="index.html#treks" class="btn btn-pine">Explore Treks</a>
+      <a href="https://wa.me/9779800000000" class="btn btn-ghost-dark" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I'd%20like%20to%20book%20a%20trek%20with%20Pasang.">Chat on WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ PROFILE HERO ============ -->
+  <section class="profile-hero" aria-labelledby="profileName">
+    <div class="container">
+      <div class="profile-grid">
+        <div class="profile-media reveal">
+          <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1f6b16199-0d1a-4e9f-991b-08f7ee825a01.png" alt="Portrait of Pasang Sherpa, Senior Mountain Guide, smiling on a Himalayan ridge at sunrise" />
+          <div class="profile-media-badge">
+            <span class="pm-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <div>
+              <strong>IFMGA Certified</strong>
+              <small>Mountain Guide</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-copy reveal">
+          <span class="eyebrow eyebrow-light">Meet Your Guide</span>
+          <h1 class="profile-name" id="profileName">Pasang <em>Sherpa</em></h1>
+          <p class="profile-role">Senior Mountain Guide · Khumbu Specialist</p>
+
+          <ul class="profile-meta-row" aria-label="Guide credentials">
+            <li class="profile-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              18 Years Experience
+            </li>
+            <li class="profile-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg>
+              IFMGA Certified
+            </li>
+            <li class="profile-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              Wilderness First Responder
+            </li>
+            <li class="profile-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              NMA Licensed
+            </li>
+          </ul>
+
+          <p class="profile-bio-short">
+            Born in Namche Bazaar and raised on the trails to Everest Base Camp, Pasang has spent nearly two decades leading trekkers through the Khumbu, Langtang and Manaslu regions. He combines deep Sherpa heritage with internationally certified mountain skills — and a calm, patient style that puts first-timers at ease.
+          </p>
+
+          <div class="profile-ctas">
+            <a href="#treks-by-pasang" class="btn btn-light">See Treks Led by Pasang</a>
+            <a href="https://wa.me/9779800000000" class="btn btn-ghost" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I'd%20like%20to%20book%20a%20trek%20with%20Pasang.">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3 1.8.7 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+              Message Pasang
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PERSONAL BIO ============ -->
+  <section class="section bio-section" aria-labelledby="bioTitle">
+    <div class="container">
+      <div class="bio-grid">
+        <aside class="bio-side reveal">
+          <div>
+            <h3>From Namche to the World</h3>
+            <p>Pasang's story is the story of the Khumbu itself — one written in footsteps, prayer flags, and the rhythm of the seasons.</p>
+          </div>
+          <blockquote class="bio-quote">
+            "The mountain doesn't care how fast you climb. It cares that you arrive whole."
+          </blockquote>
+          <div>
+            <h3>Philosophy</h3>
+            <p>Slow is smooth. Smooth is safe. Safe is how you come home with the best photographs — and the best memories.</p>
+          </div>
+        </aside>
+
+        <div class="bio-body reveal">
+          <h2 class="h2" id="bioTitle" style="margin-bottom:22px;">A Life Measured in Mountain Passes</h2>
+
+          <p>Pasang Sherpa was twelve years old when he carried his first trekker's daypack up the trail from Phakding to Namche Bazaar. It was 2008, the autumn season, and the rhododendron forest was still green at the lower elevations. He remembers the weight of that pack — and the weight of the responsibility he felt when the trekker, a retired teacher from Lyon, stumbled on the stones above the Dudh Koshi and Pasang steadied him with a hand on the shoulder. That small moment, he says, is when he knew he wanted to guide for a living.</p>
+
+          <p>Today, eighteen years and more than four hundred treks later, Pasang is one of the most experienced senior guides at Sagarmatha Treks. He holds the IFMGA International Mountain Guide certification — one of fewer than a dozen Nepali guides to do so — and maintains a current Wilderness First Responder credential. He has summited Everest twice (without supplemental oxygen on the second ascent), led expeditions to Ama Dablam and Island Peak, and guided the Manaslu Circuit more times than he can comfortably count.</p>
+
+          <h4>How he guides</h4>
+          <p>Pasang's style is quiet, observant, and deeply personal. He learns your name on day one and your pace by day two. He notices when someone's water bottle is running low before they do. He knows which teahouse in Dingboche has the best dal bhat, which corner of Tengboche Monastery catches the late afternoon light, and when to suggest an extra rest day — even when the group insists they're fine.</p>
+
+          <p>His approach to altitude is conservative by design. Twice-daily oximeter checks are non-negotiable on his trips. Acclimatization days are treated as part of the itinerary, not optional extras. "The mountain doesn't care how fast you climb," he says. "It cares that you arrive whole." That philosophy has earned him a 4.96 average rating across more than 280 verified reviews.</p>
+
+          <h4>Beyond the trail</h4>
+          <p>When he's not in the hills, Pasang runs the Sagarmatha Guide Training Program in Kathmandu, mentoring the next generation of licensed guides. He's also an active member of the Khumbu Environmental Committee, helping design the waste-management protocols now used across the national park. He lives in Boudha with his wife, two daughters, and a very patient golden retriever named Tenzing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FUN FACTS / STATS ============ -->
+  <section class="section facts-section" aria-labelledby="factsTitle">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">By The Numbers</span>
+        <h2 class="h2" id="factsTitle">A Few Fun Facts</h2>
+        <p class="sub">The stats that don't make it onto a CV — but tell you who Pasang really is on the trail.</p>
+      </div>
+
+      <ul class="facts-row" role="list">
+        <li class="fact-card reveal">
+          <span class="fact-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+          </span>
+          <div>
+            <strong>12</strong>
+            <span>Peaks Summited</span>
+          </div>
+        </li>
+        <li class="fact-card reveal">
+          <span class="fact-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </span>
+          <div>
+            <strong>Annapurna Circuit</strong>
+            <span>Favorite Trek</span>
+          </div>
+        </li>
+        <li class="fact-card reveal">
+          <span class="fact-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14M5 12h14M5 16h10"/></svg>
+          </span>
+          <div>
+            <strong>Nepali · English · Hindi</strong>
+            <span>Languages Spoken</span>
+          </div>
+        </li>
+        <li class="fact-card reveal">
+          <span class="fact-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          <div>
+            <strong>2,400+</strong>
+            <span>Trekkers Guided</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ SPECIALTIES ============ -->
+  <section class="section spec-section" aria-labelledby="specTitle">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">What Pasang Does Best</span>
+        <h2 class="h2" id="specTitle">Specialties &amp; Skills</h2>
+        <p class="sub">Every guide has a strength. These are the areas where Pasang is the person you want on your team.</p>
+      </div>
+
+      <div class="spec-grid">
+        <article class="spec-card reveal">
+          <span class="spec-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/><path d="m9 12 2 2 4-4"/></svg>
+          </span>
+          <h3>High Altitude Rescue</h3>
+          <p>Trained in helicopter-evac coordination, GAMOW bag deployment, and advanced field triage above 5,000 m. First-responder on three Khumbu rescues in the last five seasons.</p>
+        </article>
+
+        <article class="spec-card reveal">
+          <span class="spec-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg>
+          </span>
+          <h3>Cultural Interpretation</h3>
+          <p>Born into Sherpa culture, Pasang translates monastery rituals, mani stones and prayer-flag symbolism into stories that make the Khumbu feel alive — not just scenic.</p>
+        </article>
+
+        <article class="spec-card reveal">
+          <span class="spec-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          </span>
+          <h3>Mountain Photography</h3>
+          <p>Knows every sunrise vantage point between Lukla and Gorak Shep. Will help you frame the shot — and then hand you back your phone so you can enjoy the view yourself.</p>
+        </article>
+
+        <article class="spec-card reveal">
+          <span class="spec-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          </span>
+          <h3>Bird &amp; Wildlife Watching</h3>
+          <p>Can spot a Himalayan monal at 200 paces and identify the call of a blood pheasant before you hear it. Keeps a small field guide in his daypack at all times.</p>
+        </article>
+
+        <article class="spec-card reveal">
+          <span class="spec-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
+          </span>
+          <h3>First-Timer Mentorship</h3>
+          <p>Specialist in easing nervous first-timers through their inaugural Himalayan trek. Patient, encouraging, and expert at pacing a group with mixed fitness levels.</p>
+        </article>
+
+        <article class="spec-card reveal">
+          <span class="spec-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </span>
+          <h3>Private Itinerary Design</h3>
+          <p>Co-designs custom routes for families, photographers, and experienced trekkers who want something beyond the standard circuit. Acclimatization built around your days.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED TREKS LED BY PASANG ============ -->
+  <section class="section treks-section" id="treks-by-pasang" aria-labelledby="treksTitle">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">On The Trail</span>
+        <h2 class="h2" id="treksTitle">Treks Led by Pasang</h2>
+        <p class="sub">Pasang personally leads a small number of departures each season. These are the journeys he knows best.</p>
+      </div>
+
+      <div class="trek-grid" id="trekGrid">
+        <!-- Card 1 -->
+        <article class="trek-card reveal" data-id="got"
+          data-region="Everest Region" data-difficulty="Challenging" data-days="14"
+          data-elevation="5,364 m" data-rating="4.9" data-reviews="284"
+          data-old-price="1450" data-price="1290"
+          data-desc="A classic Himalayan journey through Sherpa villages, rhododendron forest and the Khumbu Valley — to the foot of the world's highest mountain."
+          data-highlights='["Everest Base Camp (5,364 m)","Kala Patthar sunrise (5,555 m)","Tengboche Monastery","Sagarmatha National Park"]'
+          data-featured="true">
+          <div class="trek-media">
+            <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1fa768619-9df4-4178-b78d-1e296613996c.png" alt="Everest Base Camp Trek — Khumbu Valley at sunrise" />
+            <span class="save-badge">Save 11%</span>
+            <button class="heart-btn" aria-label="Save to wishlist" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </button>
+            <div class="trek-hover"><span class="view-pill">View Trip →</span></div>
+          </div>
+          <div class="trek-body">
+            <div class="trek-top-row">
+              <span class="region">Everest Region</span>
+              <span class="diff diff-challenging">Challenging</span>
+            </div>
+            <h3 class="trek-title">Everest Base Camp Trek</h3>
+            <div class="trek-meta">
+              <span>14 Days</span><span class="meta-dot"></span><span>5,364 m</span>
+            </div>
+            <div class="trek-rating">
+              <span class="stars" data-rating="4.9" aria-label="4.9 out of 5"></span>
+              <span><b>4.9</b> (284 reviews)</span>
+            </div>
+            <div class="trek-foot">
+              <div class="prices">
+                <span class="price"><s>$1,450</s> <strong>$1,290</strong><span class="per">/ person</span></span>
+              </div>
+              <span class="mini-cta">View Trip
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="trek-card reveal" data-id="abc"
+          data-region="Annapurna Region" data-difficulty="Moderate" data-days="11"
+          data-elevation="4,130 m" data-rating="4.8" data-reviews="312"
+          data-old-price="1090" data-price="940"
+          data-desc="A classic teahouse trek into the heart of the Annapurna Sanctuary — surrounded by 8,000 m peaks on every side."
+          data-highlights='["Annapurna Sanctuary (4,130 m)","Machhapuchhre base camp","Rhododendron forest","Hot springs at Jhinu"]'
+          data-featured="true">
+          <div class="trek-media">
+            <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/12b3da831-07ef-4718-918e-9e890831c35e.png" alt="Annapurna Base Camp Trek — sanctuary at dawn" />
+            <span class="save-badge">Save 14%</span>
+            <button class="heart-btn" aria-label="Save to wishlist" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </button>
+            <div class="trek-hover"><span class="view-pill">View Trip →</span></div>
+          </div>
+          <div class="trek-body">
+            <div class="trek-top-row">
+              <span class="region">Annapurna Region</span>
+              <span class="diff diff-moderate">Moderate</span>
+            </div>
+            <h3 class="trek-title">Annapurna Base Camp Trek</h3>
+            <div class="trek-meta">
+              <span>11 Days</span><span class="meta-dot"></span><span>4,130 m</span>
+            </div>
+            <div class="trek-rating">
+              <span class="stars" data-rating="4.8" aria-label="4.8 out of 5"></span>
+              <span><b>4.8</b> (312 reviews)</span>
+            </div>
+            <div class="trek-foot">
+              <div class="prices">
+                <span class="price"><s>$1,090</s> <strong>$940</strong><span class="per">/ person</span></span>
+              </div>
+              <span class="mini-cta">View Trip
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="trek-card reveal" data-id="langtang"
+          data-region="Langtang Region" data-difficulty="Moderate" data-days="9"
+          data-elevation="4,984 m" data-rating="4.9" data-reviews="198"
+          data-old-price="850" data-price="780"
+          data-desc="A quieter, deeply authentic valley trek close to Kathmandu — Tamang villages, alpine pastures, and views of Langtang Lirung."
+          data-highlights='["Langtang Valley","Kyanjin Gompa","Tserko Ri viewpoint","Tamang culture"]'
+          data-featured="true">
+          <div class="trek-media">
+            <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/196d28169-128d-4da0-9622-702344878c98.png" alt="Langtang Valley Trek — valley with Langtang Lirung in the background" />
+            <button class="heart-btn" aria-label="Save to wishlist" aria-pressed="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </button>
+            <div class="trek-hover"><span class="view-pill">View Trip →</span></div>
+          </div>
+          <div class="trek-body">
+            <div class="trek-top-row">
+              <span class="region">Langtang Region</span>
+              <span class="diff diff-moderate">Moderate</span>
+            </div>
+            <h3 class="trek-title">Langtang Valley Trek</h3>
+            <div class="trek-meta">
+              <span>9 Days</span><span class="meta-dot"></span><span>4,984 m</span>
+            </div>
+            <div class="trek-rating">
+              <span class="stars" data-rating="4.9" aria-label="4.9 out of 5"></span>
+              <span><b>4.9</b> (198 reviews)</span>
+            </div>
+            <div class="trek-foot">
+              <div class="prices">
+                <span class="price"><s>$850</s> <strong>$780</strong><span class="per">/ person</span></span>
+              </div>
+              <span class="mini-cta">View Trip
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="avail-strip reveal">
+        <div>
+          <h3>Want Pasang on your dates?</h3>
+          <p>He leads a limited number of private and group departures each season. Tell us your dates and we'll check his calendar.</p>
+        </div>
+        <a href="https://wa.me/9779800000000" class="btn btn-light" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I'd%20like%20to%20check%20Pasang's%20availability.">Check Availability</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section testi-section" aria-labelledby="testiTitle">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Trekker Voices</span>
+        <h2 class="h2" id="testiTitle">What Trekkers Say About Pasang</h2>
+        <p class="sub">Real words from real people who've shared the trail with him. Names and countries verified.</p>
+      </div>
+
+      <div class="testi-grid">
+        <article class="testi-card reveal">
+          <span class="testi-quote-mark" aria-hidden="true">"</span>
+          <div class="testi-stars" aria-label="5 out of 5 stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testi-text">Pasang is the reason I made it to Base Camp. I was terrified of the altitude, and he noticed before I did. He slowed the pace without making me feel slow, and by Gorak Shep I was the strongest person in the group. Quiet, kind, and absolutely unflappable.</p>
+          <div class="testi-author">
+            <span class="testi-avatar" aria-hidden="true">EM</span>
+            <div>
+              <strong>Emma M.</strong>
+              <small>Everest Base Camp · Oct 2025 · UK</small>
+            </div>
+          </div>
+        </article>
+
+        <article class="testi-card reveal">
+          <span class="testi-quote-mark" aria-hidden="true">"</span>
+          <div class="testi-stars" aria-label="5 out of 5 stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testi-text">We booked Pasang for a private family trek with our two teenagers. He turned it into a masterclass — explaining Sherpa culture, pointing out birds I'd never have noticed, and keeping the kids engaged the whole way. Worth every rupee.</p>
+          <div class="testi-author">
+            <span class="testi-avatar" aria-hidden="true">RK</span>
+            <div>
+              <strong>Rajiv K.</strong>
+              <small>Langtang Valley · Apr 2025 · India</small>
+            </div>
+          </div>
+        </article>
+
+        <article class="testi-card reveal">
+          <span class="testi-quote-mark" aria-hidden="true">"</span>
+          <div class="testi-stars" aria-label="5 out of 5 stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testi-text">I've trekked in Peru, Patagonia and the Alps. Pasang is, without exaggeration, the best guide I've ever had. He reads the weather, reads the group, and reads the mountain. I'll be back — and I'll ask for him by name.</p>
+          <div class="testi-author">
+            <span class="testi-avatar" aria-hidden="true">SL</span>
+            <div>
+              <strong>Sophie L.</strong>
+              <small>Annapurna Circuit · Nov 2024 · France</small>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta" aria-labelledby="ctaTitle">
+    <img class="cta-bg" src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/14caac0d7-edad-48c7-a03e-66d4542197ed.png" alt="" />
+    <div class="cta-shade" aria-hidden="true"></div>
+    <div class="cta-body">
+      <span class="eyebrow eyebrow-light">Ready To Walk With Pasang?</span>
+      <h2 class="cta-title" id="ctaTitle">Your Himalayan Story Starts With a Conversation.</h2>
+      <p class="cta-sub">Tell us the trek you're dreaming of. We'll match you with Pasang — or one of our other senior guides — and build an itinerary around your dates, your pace, and your budget.</p>
+      <div class="cta-buttons">
+        <a href="index.html#treks" class="btn btn-light">Explore All Treks</a>
+        <a href="https://wa.me/9779800000000" class="btn btn-wa" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I'd%20like%20to%20plan%20a%20trek%20with%20Pasang.">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3 1.8.7 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          <span>Talk to Pasang</span>
+        </a>
+      </div>
+      <p class="cta-note">Free consultation · No booking fees · Replies within 2 hours</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="contact">
+  <div class="footer-ridge" aria-hidden="true">
+    <svg viewBox="0 0 1440 76" preserveAspectRatio="none"><path d="M0 76 V30 Q180 0 360 24 T720 18 T1080 28 T1440 14 V76 Z" fill="#141714"/></svg>
+  </div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand brand-footer" aria-label="Sagarmatha Treks — home">
+          <span class="brand-mark">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+          </span>
+          <span class="brand-text">
+            <strong>Sagarmatha</strong>
+            <small>Treks &amp; Expeditions</small>
+          </span>
+        </a>
+        <p class="footer-blurb">A locally owned Nepali trekking company crafting safe, personal and responsible Himalayan journeys since 2011.</p>
+        <div class="badges">
+          <span class="badge-chip">Govt. Licensed</span>
+          <span class="badge-chip">NMA Member</span>
+          <span class="badge-chip">TAN Member</span>
+          <span class="badge-chip">Tripadvisor 4.9/5</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="index.html#about">About Us</a>
+        <a href="#">Our Team</a>
+        <a href="#">Responsible Tourism</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="index.html#categories">Everest</a>
+        <a href="index.html#categories">Annapurna</a>
+        <a href="index.html#categories">Langtang</a>
+        <a href="index.html#categories">Mustang</a>
+        <a href="index.html#categories">Manaslu</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="index.html#blog">Trekking Guide</a>
+        <a href="#">Travel Information</a>
+        <a href="blog-list.html">Blog</a>
+        <a href="#">FAQs</a>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <div class="f-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Thamel, Kathmandu, Nepal
+        </div>
+        <div class="f-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+          hello@sagarmathatreks.com
+        </div>
+        <div class="f-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +977 9800000000
+        </div>
+        <a href="https://wa.me/9779800000000" class="btn btn-wa btn-sm" data-lead-link="https://wa.me/9779800000000?text=Namaste!">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3 1.8.7 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          <span>Chat With Us</span>
+        </a>
+        <div class="emergency">
+          <span class="em-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <div>
+            <strong>24/7 Emergency Support</strong>
+            <small>+977 9800000000 · always on call</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Sagarmatha Treks &amp; Expeditions Pvt. Ltd. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ TREK MODAL ============ -->
+<div class="modal-overlay" id="trekModal" role="dialog" aria-modal="true" aria-labelledby="mTitle" style="display:none;">
+  <div class="modal">
+    <div class="modal-hero">
+      <img id="mImg" src="" alt="" />
+      <div class="modal-hero-shade"></div>
+      <button class="modal-close" id="mClose" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <div class="modal-hero-text">
+        <span class="region region-light" id="mRegion"></span>
+        <h3 id="mTitle"></h3>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-meta">
+        <span class="m-meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span id="mDays"></span> Days</span>
+        <span class="diff" id="mDiff"></span>
+        <span class="m-meta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>Max <span id="mElev"></span></span>
+        <span class="m-meta"><span class="stars" id="mStars"></span><b id="mRating"></b> <span id="mReviews"></span></span>
+      </div>
+      <p class="modal-desc" id="mDesc"></p>
+
+      <h4 class="modal-h4">Trip Highlights</h4>
+      <ul class="modal-highlights" id="mHighlights"></ul>
+
+      <div class="modal-foot">
+        <div class="prices">
+          <span id="mOld" style="text-decoration:line-through;opacity:.6;"></span>
+          <span class="price"><strong id="mPrice"></strong><span class="per">/ person</span></span>
+        </div>
+        <div class="modal-foot-btns">
+          <button class="btn btn-ghost-dark" id="mWish" aria-pressed="false">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            <span id="mWishLabel">Save</span>
+          </button>
+          <a href="#" class="btn btn-wa" id="mWa" data-lead-link="">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3 1.8.7 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+            <span>Request This Trek</span>
+          </a>
+        </div>
+      </div>
+      <p class="modal-includes">Includes: licensed guide · permits · teahouse lodges · all meals on trek · airport transfers</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ LEAD MODAL ============ -->
+<div class="modal-overlay" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="leadTitle" style="display:none;">
+  <div class="modal lead-modal">
+    <button class="modal-close" id="lClose" aria-label="Close" style="top:14px;right:14px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+    <div class="lead-body">
+      <span class="pm-icon" style="width:56px;height:56px;border-radius:16px;background:var(--pine-soft);color:var(--pine);display:grid;place-items:center;" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3 1.8.7 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+      </span>
+      <h3 id="leadTitle">Talk to a local expert</h3>
+      <p>Leave your details and we'll open WhatsApp for you — a real Himalayan guide replies within 2 hours.</p>
+      <form id="leadForm" novalidate>
+        <div class="lead-field">
+          <label for="leadName">Name</label>
+          <input type="text" id="leadName" name="name" autocomplete="name" placeholder="Your name" required />
+        </div>
+        <div class="lead-field">
+          <label for="leadEmail">Email</label>
+          <input type="email" id="leadEmail" name="email" autocomplete="email" placeholder="you@example.com" required />
+        </div>
+        <div class="lead-error" id="leadError" style="display:none;" role="alert"></div>
+        <button type="submit" class="btn btn-wa" style="width:100%;justify-content:center;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3 1.8.7 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          Continue to WhatsApp
+        </button>
+      </form>
+      <p class="lead-note">No spam — just one reply from our Kathmandu office.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast" role="status" aria-live="polite" style="display:none;">
+  <span class="toast-icon" aria-hidden="true">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+  </span>
+  <span id="toastMsg"></span>
+</div>
+
+<!-- ============ SCRIPTS ============ -->
+ <script src="team-detail.js"></script>
+<script>
+/* =====================================================
+   TEAM DETAIL — page-scoped JS (mirrors index.js behavior
+   for trek cards, wishlist, modals & lead capture)
+   ===================================================== */
+const $ = (sel, root = document) => root.querySelector(sel);
+const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+const showToast = (msg) => {
+  const t = $("#toast");
+  $("#toastMsg").textContent = msg;
+  t.style.display = "flex";
+  clearTimeout(showToast._t);
+  showToast._t = setTimeout(() => (t.style.display = "none"), 2600);
+};
+
+/* Header scroll */
+const header = $("#header");
+window.addEventListener("scroll", () => {
+  header.classList.toggle("scrolled", window.scrollY > 24);
+}, { passive: true });
+
+/* Reveal on scroll */
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+  $$(".reveal").forEach((el) => io.observe(el));
+} else {
+  $$(".reveal").forEach((el) => el.classList.add("in"));
+}
+
+/* Stars */
+const starSvg = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
+const emptyStarSvg = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="opacity:.35"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
+$$(".stars").forEach((el) => {
+  const r = parseFloat(el.dataset.rating) || 0;
+  el.innerHTML = "";
+  for (let i = 0; i < 5; i++) el.insertAdjacentHTML("beforeend", i < Math.floor(r) ? starSvg : emptyStarSvg);
+});
+
+/* Wishlist */
+let wishlist = (() => { try { return JSON.parse(localStorage.getItem("wishlist")) || []; } catch { return []; } })();
+const saveWishlist = () => {
+  localStorage.setItem("wishlist", JSON.stringify(wishlist));
+  $("#wlCount").textContent = wishlist.length;
+  $$(".trek-card").forEach((card) => {
+    const id = card.dataset.id;
+    const btn = $(".heart-btn", card);
+    if (wishlist.includes(id)) { btn.classList.add("active"); btn.setAttribute("aria-pressed", "true"); }
+    else { btn.classList.remove("active"); btn.setAttribute("aria-pressed", "false"); }
+  });
+  if ($("#trekModal").style.display !== "none") {
+    const id = $("#trekModal").dataset.currentId;
+    const label = $("#mWishLabel");
+    const btn = $("#mWish");
+    if (wishlist.includes(id)) { label.textContent = "Saved"; btn.classList.add("wished"); }
+    else { label.textContent = "Save"; btn.classList.remove("wished"); }
+  }
+};
+saveWishlist();
+
+/* Trek card interactions */
+$("#trekGrid").addEventListener("click", (e) => {
+  const heart = e.target.closest(".heart-btn");
+  const card = e.target.closest(".trek-card");
+  if (!card) return;
+  const id = card.dataset.id;
+  if (heart) {
+    e.stopPropagation();
+    if (wishlist.includes(id)) {
+      wishlist = wishlist.filter((x) => x !== id);
+      showToast("Removed from your wishlist");
+    } else {
+      wishlist.push(id);
+      showToast("Added to your wishlist");
+    }
+    saveWishlist();
+    return;
+  }
+  openTrekModal(card);
+});
+
+/* Trek modal */
+const trekModal = $("#trekModal");
+let currentTrekCard = null;
+const openTrekModal = (card) => {
+  currentTrekCard = card;
+  const d = card.dataset;
+  trekModal.dataset.currentId = d.id;
+  $("#mImg").src = $("img", $(".trek-media", card)).src;
+  $("#mImg").alt = $(".trek-title", card).textContent;
+  $("#mRegion").textContent = d.region;
+  $("#mTitle").textContent = $(".trek-title", card).textContent;
+  $("#mDays").textContent = d.days;
+  const diff = $("#mDiff"); diff.textContent = d.difficulty; diff.className = "diff diff-" + d.difficulty.toLowerCase();
+  $("#mElev").textContent = d.elevation;
+  $("#mRating").textContent = d.rating;
+  $("#mReviews").textContent = d.reviews + " reviews";
+  $("#mStars").innerHTML = "";
+  const r = parseFloat(d.rating);
+  for (let i = 0; i < 5; i++) $("#mStars").insertAdjacentHTML("beforeend", i < Math.floor(r) ? starSvg : emptyStarSvg);
+  $("#mDesc").textContent = d.desc;
+  $("#mOld").textContent = "$" + parseInt(d.oldPrice).toLocaleString();
+  $("#mPrice").textContent = "$" + parseInt(d.price).toLocaleString();
+  const hl = $("#mHighlights"); hl.innerHTML = "";
+  try {
+    const items = JSON.parse(d.highlights || "[]");
+    items.forEach((h) => {
+      hl.insertAdjacentHTML("beforeend", `<li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> ${h}</li>`);
+    });
+  } catch {}
+  $("#mWa").dataset.leadLink = "https://wa.me/9779800000000?text=" + encodeURIComponent("Namaste! I'm interested in the " + $(".trek-title", card).textContent + " led by Pasang.");
+  trekModal.style.display = "flex";
+  document.body.classList.add("no-scroll");
+  $("#mClose").focus();
+  saveWishlist();
+};
+$("#mClose").addEventListener("click", closeTrekModal);
+$("#mWish").addEventListener("click", () => {
+  if (!currentTrekCard) return;
+  const id = currentTrekCard.dataset.id;
+  if (wishlist.includes(id)) { wishlist = wishlist.filter((x) => x !== id); showToast("Removed from your wishlist"); }
+  else { wishlist.push(id); showToast("Added to your wishlist"); }
+  saveWishlist();
+});
+function closeTrekModal() { trekModal.style.display = "none"; document.body.classList.remove("no-scroll"); }
+
+/* Lead modal */
+const leadModal = $("#leadModal");
+let pendingLink = "";
+document.addEventListener("click", (e) => {
+  const trigger = e.target.closest("[data-lead-link]");
+  if (!trigger) return;
+  e.preventDefault();
+  pendingLink = trigger.dataset.leadLink;
+  leadModal.style.display = "flex";
+  document.body.classList.add("no-scroll");
+  $("#leadName").focus();
+});
+$("#lClose").addEventListener("click", closeLeadModal);
+function closeLeadModal() {
+  leadModal.style.display = "none";
+  document.body.classList.remove("no-scroll");
+  $("#leadError").style.display = "none";
+  $("#leadForm").reset();
+}
+$("#leadForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name = $("#leadName").value.trim();
+  const email = $("#leadEmail").value.trim();
+  const err = $("#leadError");
+  if (!name) { err.textContent = "Please tell us your name."; err.style.display = "block"; return; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { err.textContent = "That email doesn't look right."; err.style.display = "block"; return; }
+  try { localStorage.setItem("lead", JSON.stringify({ name, email, at: Date.now() })); } catch {}
+  window.open(pendingLink, "_blank", "noopener");
+  closeLeadModal();
+});
+
+/* Mobile menu */
+const menuBtn = $("#menuBtn");
+const mobilePanel = $("#mobilePanel");
+menuBtn.addEventListener("click", () => {
+  const open = mobilePanel.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", open);
+  mobilePanel.setAttribute("aria-hidden", !open);
+  document.body.classList.toggle("no-scroll", open);
+});
+$$(".mobile-panel a").forEach((a) => a.addEventListener("click", () => {
+  mobilePanel.classList.remove("open");
+  mobilePanel.setAttribute("aria-hidden", "true");
+  menuBtn.setAttribute("aria-expanded", "false");
+  document.body.classList.remove("no-scroll");
+}));
+
+/* Escape closes modals */
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape") return;
+  if (leadModal.style.display !== "none") closeLeadModal();
+  else if (trekModal.style.display !== "none") closeTrekModal();
+  else if (mobilePanel.classList.contains("open")) {
+    mobilePanel.classList.remove("open");
+    mobilePanel.setAttribute("aria-hidden", "true");
+    menuBtn.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("no-scroll");
+  }
+});
+trekModal.addEventListener("click", (e) => { if (e.target === trekModal) closeTrekModal(); });
+leadModal.addEventListener("click", (e) => { if (e.target === leadModal) closeLeadModal(); });
+</script>
+<script src="js/index.js"></script>
+</body>
+</html>

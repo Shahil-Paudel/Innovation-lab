@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Meet Our Team — Sagarmatha Treks</title>
+<meta name="description" content="Meet the guides, porters and local experts behind Sagarmatha Treks — the team making your Himalayan journey safe and unforgettable." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/team-list.css" />
+<link rel="stylesheet" href="css/style.css" />
+
+<!-- Team page scoped styles (kept separate so style.css stays untouched) -->
+<style>
+  .team-hero {
+    position: relative;
+    padding: clamp(120px, 14vw, 170px) 0 clamp(60px, 8vw, 90px);
+    color: #fff;
+    overflow: hidden;
+  }
+  .team-hero-bg {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; z-index: 0;
+  }
+  .team-hero-shade {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(10,12,10,.55) 0%, rgba(10,12,10,.78) 100%);
+    z-index: 1;
+  }
+  .team-hero-body {
+    position: relative; z-index: 2;
+    max-width: 760px;
+  }
+  .team-hero h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2.4rem, 5.4vw, 4.4rem);
+    line-height: 1.05;
+    letter-spacing: -.015em;
+    margin-top: 18px;
+  }
+  .team-hero h1 em { font-style: italic; color: #f6e7c6; font-weight: 500; }
+  .team-hero p {
+    font-size: clamp(15px, 1.4vw, 18px);
+    color: rgba(255,255,255,.85);
+    max-width: 560px;
+    margin-top: 16px;
+  }
+  .team-hero .eyebrow { color: #f0c878; }
+  .team-hero .eyebrow::before { background: currentColor; }
+
+  .team-breadcrumb {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13px; font-weight: 600;
+    color: rgba(255,255,255,.7);
+    margin-bottom: 22px;
+  }
+  .team-breadcrumb a { color: rgba(255,255,255,.7); transition: .2s; }
+  .team-breadcrumb a:hover { color: #fff; }
+  .team-breadcrumb span { opacity: .5; }
+
+  /* Stats row */
+  .team-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 40px;
+    max-width: 720px;
+  }
+  .team-stat {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.18);
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
+    padding: 16px 18px;
+  }
+  .team-stat strong {
+    display: block;
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.1;
+  }
+  .team-stat small {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.7);
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* Search panel */
+  .team-search {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    box-shadow: var(--shadow-card);
+    padding: 10px;
+    margin: -40px auto 0;
+    max-width: 980px;
+    position: relative;
+    z-index: 5;
+  }
+  .team-search-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+  }
+  .team-search-icon {
+    color: var(--muted);
+    flex: none;
+    display: grid;
+    place-items: center;
+  }
+  .team-search-input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--ink);
+    padding: 10px 6px;
+    outline: none;
+  }
+  .team-search-input::placeholder { color: #9a9d95; font-weight: 500; }
+  .team-search-input:focus-visible {
+    outline: 2px solid var(--pine);
+    outline-offset: 2px;
+    border-radius: 8px;
+  }
+  .team-search-clear {
+    width: 30px; height: 30px;
+    border-radius: 999px;
+    display: none;
+    place-items: center;
+    color: var(--muted);
+  }
+  .team-search-clear:hover { background: rgba(20,22,20,.06); color: var(--ink); }
+  .team-search-clear.visible { display: grid; }
+
+  .team-filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 28px 0 24px;
+  }
+  .team-filter-count {
+    font-size: 13.5px;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .team-filter-count b { color: var(--ink); font-weight: 800; }
+  .team-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .team-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--pine-soft);
+    color: var(--pine-dark);
+    font-size: 12.5px;
+    font-weight: 800;
+    padding: 7px 13px;
+    border-radius: 999px;
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+  }
+  .team-chip:hover { background: #d5e4d9; }
+  .team-chip.active { background: var(--pine); color: #fff; }
+  .team-chip svg { width: 12px; height: 12px; }
+
+  /* Team grid */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .team-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform .45s cubic-bezier(.16,1,.3,1), box-shadow .45s;
+  }
+  .team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lift);
+  }
+  .team-card.hidden { display: none !important; }
+
+  .team-media {
+    position: relative;
+    aspect-ratio: 4/4.4;
+    overflow: hidden;
+    background: var(--pine-soft);
+  }
+  .team-media img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .9s cubic-bezier(.16,1,.3,1);
+  }
+  .team-card:hover .team-media img { transform: scale(1.07); }
+
+  .team-role-badge {
+    position: absolute;
+    top: 14px; left: 14px;
+    background: rgba(255,255,255,.94);
+    backdrop-filter: blur(4px);
+    color: var(--pine-dark);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 999px;
+  }
+  .team-socials {
+    position: absolute;
+    bottom: 14px; right: 14px;
+    display: flex;
+    gap: 6px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: .35s;
+  }
+  .team-card:hover .team-socials { opacity: 1; transform: none; }
+  .team-social-btn {
+    width: 34px; height: 34px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.94);
+    backdrop-filter: blur(4px);
+    color: var(--ink);
+    display: grid;
+    place-items: center;
+    transition: .2s;
+  }
+  .team-social-btn:hover { background: var(--pine); color: #fff; }
+
+  .team-body {
+    padding: 20px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+  .team-name {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .team-role {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--pine);
+    letter-spacing: .02em;
+  }
+  .team-bio {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.55;
+    margin-top: 4px;
+    flex: 1;
+  }
+  .team-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 600;
+    margin-top: 6px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+  .team-meta-row span { display: inline-flex; align-items: center; gap: 5px; }
+  .team-meta-row svg { color: var(--pine); }
+
+  .team-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--pine);
+    margin-top: 14px;
+    transition: .25s;
+  }
+  .team-cta svg { transition: transform .3s; }
+  .team-card:hover .team-cta svg { transform: translateX(4px); }
+
+  /* Empty state */
+  .team-empty {
+    grid-column: 1 / -1;
+    background: #fff;
+    border: 1px dashed var(--line);
+    border-radius: 20px;
+    padding: 64px 28px;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+  }
+  .team-empty.visible { display: flex; }
+  .team-empty h3 {
+    font-family: "Fraunces", Georgia, serif;
+    color: var(--ink);
+    font-size: 22px;
+  }
+  .team-empty-icon {
+    width: 56px; height: 56px;
+    border-radius: 999px;
+    background: var(--pine-soft);
+    color: var(--pine);
+    display: grid;
+    place-items: center;
+  }
+
+  /* CTA strip */
+  .team-cta-strip {
+    margin-top: 80px;
+    background: linear-gradient(160deg, var(--pine), var(--pine-dark));
+    border-radius: 24px;
+    padding: clamp(36px, 5vw, 56px);
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .team-cta-strip h2 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    line-height: 1.15;
+    letter-spacing: -.01em;
+  }
+  .team-cta-strip p {
+    color: rgba(255,255,255,.82);
+    font-size: 15px;
+    margin-top: 12px;
+    max-width: 520px;
+  }
+  .team-cta-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+
+  @media (max-width: 1080px) {
+    .team-grid { grid-template-columns: repeat(3, 1fr); }
+    .team-stats { grid-template-columns: repeat(2, 1fr); }
+    .team-cta-strip { grid-template-columns: 1fr; }
+    .team-cta-actions { justify-content: flex-start; }
+  }
+  @media (max-width: 700px) {
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+    .team-hero { padding-top: 110px; }
+  }
+  @media (max-width: 480px) {
+    .team-grid { grid-template-columns: 1fr; }
+    .team-stats { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="index.html#top" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+      </span>
+      <span class="brand-text">
+        <strong>Sagarmatha</strong>
+        <small>Treks &amp; Expeditions</small>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#treks">Treks</a>
+      <a href="index.html#trip">Tours</a>
+      <a href="index.html#categories">Destinations</a>
+      <a href="index.html#about">About Us</a>
+      <a href="blog-list.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="index.html#treks" class="wishlist-pill" aria-label="Wishlist">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span class="wl-text">Wishlist</span>
+        <span class="wl-count" id="wlCount">0</span>
+      </a>
+      <a href="https://wa.me/9779800000000" class="btn btn-pine btn-sm" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I'd%20like%20to%20chat%20with%20your%20team.">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.04 0C5.46 0 .12 5.34.12 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.28-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.58 0 11.92-5.34 11.92-11.92 0-3.18-1.24-6.17-3.45-8.42zM12.05 21.8h-.01a9.86 9.86 0 0 1-5.03-1.38l-.36-.21-3.73.98 1-3.63-.23-.38a9.88 9.88 0 0 1-1.51-5.26c0-5.46 4.44-9.9 9.9-9.9 2.65 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 6.99c0 5.46-4.44 9.89-9.93 9.89zm5.42-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+        <span>Chat on WhatsApp</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-panel" id="mobilePanel" aria-hidden="true">
+    <nav>
+      <a href="index.html#treks">Treks <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></a>
+      <a href="index.html#trip">Tours <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></a>
+      <a href="index.html#categories">Destinations <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></a>
+      <a href="index.html#about">About Us <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></a>
+      <a href="blog-list.html">Blog <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></a>
+      <a href="index.html#contact">Contact <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></a>
+    </nav>
+    <div class="mobile-panel-ctas">
+      <a href="https://wa.me/9779800000000" class="btn btn-pine btn-sm">Chat on WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="team-hero">
+    <img class="team-hero-bg" src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1f373039c-6f87-4586-8f8d-1b7b2a7f55bc.png" alt="Himalayan team on trail" />
+    <div class="team-hero-shade"></div>
+    <div class="container team-hero-body">
+      <div class="team-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span style="color:#fff">Our Team</span>
+      </div>
+      <span class="eyebrow eyebrow-light">The people behind the trail</span>
+      <h1>Meet the <em>Team</em> that guides your journey.</h1>
+      <p>From senior mountain guides born in the Khumbu to our Kathmandu operations crew — every member of our team is handpicked, licensed, and deeply passionate about the Himalaya.</p>
+
+      <ul class="team-stats">
+        <li class="team-stat"><strong>32</strong><small>Team Members</small></li>
+        <li class="team-stat"><strong>15+</strong><small>Years Experience</small></li>
+        <li class="team-stat"><strong>10,000+</strong><small>Happy Trekkers</small></li>
+        <li class="team-stat"><strong>4.9/5</strong><small>Traveler Rating</small></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ SEARCH ============ -->
+  <section class="container" style="position:relative">
+    <div class="team-search">
+      <div class="team-search-row">
+        <span class="team-search-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </span>
+        <input type="text" id="teamSearch" class="team-search-input" placeholder="Search by name, role, region or specialty..." aria-label="Search team members" />
+        <button class="team-search-clear" id="teamSearchClear" aria-label="Clear search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEAM GRID ============ -->
+  <section class="section" id="team" style="padding-top:40px">
+    <div class="container">
+
+      <div class="team-filter-bar">
+        <div class="team-filter-count">
+          Showing <b id="teamCount">12</b> of <b>12</b> team members
+        </div>
+        <div class="team-chips" id="teamChips">
+          <button class="team-chip active" data-filter="all">All</button>
+          <button class="team-chip" data-filter="guide">Guides</button>
+          <button class="team-chip" data-filter="operations">Operations</button>
+          <button class="team-chip" data-filter="support">Support</button>
+          <button class="team-chip" data-filter="leadership">Leadership</button>
+        </div>
+      </div>
+
+      <div class="team-grid" id="teamGrid">
+
+        <!-- 1. Founder -->
+        <article class="team-card" data-category="leadership" data-name="Tenzing Lama" data-role="Founder & Lead Guide" data-search="tenzing lama founder lead guide kathmandu khumbu">
+          <div class="team-media">
+            <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1f6b16199-0d1a-4e9f-991b-08f7ee825a01.png" alt="Tenzing Lama" />
+            <span class="team-role-badge">Founder</span>
+            <div class="team-socials">
+              <a href="#" class="team-social-btn" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+              <a href="#" class="team-social-btn" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="team-name">Tenzing Lama</h3>
+            <div class="team-role">Founder &amp; Lead Guide</div>
+            <p class="team-bio">Born in the Khumbu, Tenzing has summited Everest twice and led over 400 expeditions. He founded Sagarmatha Treks in 2011.</p>
+            <div class="team-meta-row">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg> Everest</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 15 yrs</span>
+            </div>
+            <a href="team-detail.html?id=1" class="team-cta">View Profile <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- 2. Pasang -->
+        <article class="team-card" data-category="guide" data-name="Pasang Sherpa" data-role="Senior Mountain Guide" data-search="pasang sherpa senior mountain guide everest manaslu">
+          <div class="team-media">
+            <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1fa768619-9df4-4178-b78d-1e296613996c.png" alt="Pasang Sherpa" />
+            <span class="team-role-badge">Senior Guide</span>
+            <div class="team-socials">
+              <a href="#" class="team-social-btn" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+              <a href="#" class="team-social-btn" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="team-name">Pasang Sherpa</h3>
+            <div class="team-role">Senior Mountain Guide</div>
+            <p class="team-bio">IFMGA-certified with 12 years on the trail. Pasang specializes in high-altitude routes across Everest and Manaslu regions.</p>
+            <div class="team-meta-row">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg> Everest · Manaslu</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 12 yrs</span>
+            </div>
+            <a href="team-detail.html?id=2" class="team-cta">View Profile <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- 3. Dawa -->
+        <article class="team-card" data-category="guide" data-name="Dawa Sherpa" data-role="Senior Mountain Guide" data-search="dawa sherpa senior mountain guide annapurna langtang">
+          <div class="team-media">
+            <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/12b3da831-07ef-4718-918e-9e890831c35e.png" alt="Dawa Sherpa" />
+            <span class="team-role-badge">Senior Guide</span>
+            <div class="team-socials">
+              <a href="#" class="team-social-btn" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+              <a href="#" class="team-social-btn" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="team-name">Dawa Sherpa</h3>
+            <div class="team-role">Senior Mountain Guide</div>
+            <p class="team-bio">A native of the Annapurna foothills, Dawa leads our most popular circuits and is known for his calm, patient guiding style.</p>
+            <div class="team-meta-row">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg> Annapurna · Langtang</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 10 yrs</span>
+            </div>
+            <a href="team-detail.html?id=3" class="team-cta">View Profile <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- 4. Nima -->
+        <article class="team-card" data-category="guide" data-name="Nima Sherpa" data-role="Mountain Guide" data-search="nima sherpa mountain guide mustang manaslu">
+          <div class="team-media">
+            <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/196d28169-128d-4da0-9622-702344878c98.png" alt="Nima Sherpa" />
+            <span class="team-role-badge">Guide</span>
+            <div class="team-socials">
+              <a href="#" class="team-social-btn" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+              <a href="#" class="team-social-btn" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="team-name">Nima Sherpa</h3>
+            <div class="team-role">Mountain Guide</div>
+            <p class="team-bio">Specialist in the remote Mustang and Manaslu circuits. Nima speaks four languages and is a certified wilderness first responder.</p>
+            <div class="team-meta-row">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg> Mustang · Manaslu</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 yrs</span>
+            </div>
+            <a href="team-detail.html?id=4" class="team-cta">View Profile <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- 5. Mingmar -->
+        <article class="team-card" data-category="guide" data-name="Mingmar Sherpa" data-role="Mountain Guide" data-search="mingmar sherpa mountain guide langtang annapurna">
+          <div class="team-media">
+            <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1b1ee017e-6731-4045-b996-f1ac331a6053.png" alt="Mingmar Sherpa" />
+            <span class="team-role-badge">Guide</span>
+            <div class="team-socials">
+              <a href="#" class="team-social-btn" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+              <a href="#" class="team-social-btn" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="team-name">Mingmar Sherpa</h3>
+            <div class="team-role">Mountain Guide</div>
+            <p class="team-bio">Known for his encyclopedic knowledge of flora and fauna, Mingmar turns every trek into a naturalist's journey.</p>
+            <div class="team-meta-row">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg> Langtang · Annapurna</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 yrs</span>
+            </div>
+            <a href="team-detail.html?id=5" class="team-cta">View Profile <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- 6. Pemba - Operations -->
+        <article class="team-card" data-category="operations" data-name="Pemba Tamang" data-role="Operations Manager" data-search="pemba tamang operations manager logistics kathmandu">
+          <div class="team-media">
+            <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/182831355-4138-4630-821e-a1c189e9393d.png" alt="Pemba Tamang" />
+            <span class="team-role-badge">Operations</span>
+            <div class="team-socials">
+              <a href="#" class="team-social-btn" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+              <a href="#" class="team-social-btn" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="team-name">Pemba Tamang</h3>
+            <div class="team-role">Operations Manager</div>
+            <p class="team-bio">The logistical brain behind every departure. Pemba coordinates flights, permits, porters and teahouse bookings with precision.</p>
+            <div class="team-meta-row">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg> Kathmandu HQ</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9 yrs</span>
+            </div>
+            <a href="team-detail.html?id=6" class="team-cta">View Profile <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- 7. Lakpa - Logistics -->
+        <article class="team-card" data-category="operations" data-name="Lakpa Sherpa" data-role="Logistics Coordinator" data-search="lakpa sherpa logistics coordinator porter management">
+          <div class="team-media">
+            <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1aaa55904-71ec-47cd-a664-ade9d97bb10e.png" alt="Lakpa Sherpa" />
+            <span class="team-role-badge">Logistics</span>
+            <div class="team-socials">
+              <a href="#" class="team-social-btn" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+              <a href="#" class="team-social-btn" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="team-name">Lakpa Sherpa</h3>
+            <div class="team-role">Logistics Coordinator</div>
+            <p class="team-bio">Lakpa manages our porter crew of 80+ and ensures every team member is insured, equipped and paid fairly — no exceptions.</p>
+            <div class="team-meta-row">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg> Kathmandu HQ</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 yrs</span>
+            </div>
+            <a href="team-detail.html?id=7" class="team-cta">View Profile <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- 8. Sonam - Base Camp -->
+        <article class="team-card" data-category="support" data-name="Sonam Sherpa" data-role="Base Camp Manager" data-search="sonam sherpa base camp manager everest safety">
+          <div class="team-media">
+            <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1c10c8850-772e-41c6-9193-076f55e9d3dc.png" alt="Sonam Sherpa" />
+            <span class="team-role-badge">Base Camp</span>
+            <div class="team-socials">
+              <a href="#" class="team-social-btn" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+              <a href="#" class="team-social-btn" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="team-name">Sonam Sherpa</h3>
+            <div class="team-role">Base Camp Manager</div>
+            <p class="team-bio">Sonam runs our Everest base camp operations each season — tents, kitchens, waste management and weather monitoring.</p>
+            <div class="team-meta-row">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg> Everest BC</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 11 yrs</span>
+            </div>
+            <a href="team-detail.html?id=8" class="team-cta">View Profile <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- 9. Kaji - Head Porter -->
+        <article class="team-card" data-category="support" data-name="Kaji Tamang" data-role="Head Porter & Sirdar" data-search="kaji tamang head porter sirdar crew leader">
+          <div class="team-media">
+            <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1dc701fcb-3b2d-4bce-892f-792c84e87d5e.png" alt="Kaji Tamang" />
+            <span class="team-role-badge">Sirdar</span>
+            <div class="team-socials">
+              <a href="#" class="team-social-btn" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+              <a href="#" class="team-social-btn" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="team-name">Kaji Tamang</h3>
+            <div class="team-role">Head Porter &amp; Sirdar</div>
+            <p class="team-bio">Kaji leads our porter teams on every expedition. A Tamang from Langtang, he's walked every trail we operate — hundreds of times.</p>
+            <div class="team-meta-row">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg> All regions</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 18 yrs</span>
+            </div>
+            <a href="team-detail.html?id=9" class="team-cta">View Profile <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- 10. Diki - Guest Relations -->
+        <article class="team-card" data-category="support" data-name="Diki Sherpa" data-role="Guest Relations Manager" data-search="diki sherpa guest relations manager customer service">
+          <div class="team-media">
+            <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/178045681-7112-40fd-90e0-498f3bd73c92.png" alt="Diki Sherpa" />
+            <span class="team-role-badge">Guest Relations</span>
+            <div class="team-socials">
+              <a href="#" class="team-social-btn" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+              <a href="#" class="team-social-btn" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="team-name">Diki Sherpa</h3>
+            <div class="team-role">Guest Relations Manager</div>
+            <p class="team-bio">From first inquiry to post-trek follow-up, Diki makes sure every traveler feels welcomed, informed and cared for.</p>
+            <div class="team-meta-row">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg> Kathmandu HQ</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 5 yrs</span>
+            </div>
+            <a href="team-detail.html?id=10" class="team-cta">View Profile <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- 11. Ang Dorje - Safety -->
+        <article class="team-card" data-category="support" data-name="Ang Dorje Sherpa" data-role="Safety & Medical Officer" data-search="ang dorje sherpa safety medical officer wilderness first responder">
+          <div class="team-media">
+            <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1885ad880-8f91-402a-8117-348866c12eb8.png" alt="Ang Dorje Sherpa" />
+            <span class="team-role-badge">Safety</span>
+            <div class="team-socials">
+              <a href="#" class="team-social-btn" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+              <a href="#" class="team-social-btn" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="team-name">Ang Dorje Sherpa</h3>
+            <div class="team-role">Safety &amp; Medical Officer</div>
+            <p class="team-bio">A certified wilderness first responder and former nurse, Ang Dorje runs our safety protocols, oximeter checks and heli-evac plans.</p>
+            <div class="team-meta-row">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg> All regions</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 8 yrs</span>
+            </div>
+            <a href="team-detail.html?id=11" class="team-cta">View Profile <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- 12. Chhiring - Marketing -->
+        <article class="team-card" data-category="leadership" data-name="Chhiring Sherpa" data-role="Marketing & Partnerships" data-search="chhiring sherpa marketing partnerships digital">
+          <div class="team-media">
+            <img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1c658ea57-deeb-4400-83ef-02020712c84c.png" alt="Chhiring Sherpa" />
+            <span class="team-role-badge">Marketing</span>
+            <div class="team-socials">
+              <a href="#" class="team-social-btn" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+              <a href="#" class="team-social-btn" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a>
+            </div>
+          </div>
+          <div class="team-body">
+            <h3 class="team-name">Chhiring Sherpa</h3>
+            <div class="team-role">Marketing &amp; Partnerships</div>
+            <p class="team-bio">Chhiring tells our story online and builds partnerships with travel agencies, gear brands and responsible tourism networks worldwide.</p>
+            <div class="team-meta-row">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg> Kathmandu HQ</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 4 yrs</span>
+            </div>
+            <a href="team-detail.html?id=12" class="team-cta">View Profile <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Empty state -->
+        <div class="team-empty" id="teamEmpty">
+          <div class="team-empty-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <h3>No team members match your search</h3>
+          <p>Try a different name, role, or clear the filters to see everyone.</p>
+          <button class="btn btn-pine btn-sm" id="teamEmptyClear">Clear search</button>
+        </div>
+
+      </div>
+
+      <!-- CTA strip -->
+      <div class="team-cta-strip reveal">
+        <div>
+          <h2>Want to trek with our team?</h2>
+          <p>Chat with a local expert and we'll match you with the guide and crew that fits your style, fitness and schedule.</p>
+        </div>
+        <div class="team-cta-actions">
+          <a href="index.html#treks" class="btn btn-light">Explore Treks</a>
+          <a href="https://wa.me/9779800000000" class="btn btn-wa" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I'd%20like%20to%20speak%20with%20your%20team.">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.04 0C5.46 0 .12 5.34.12 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.28-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.58 0 11.92-5.34 11.92-11.92 0-3.18-1.24-6.17-3.45-8.42z"/></svg>
+            <span>Chat With Us</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-ridge" aria-hidden="true">
+    <svg viewBox="0 0 1440 76" preserveAspectRatio="none">
+      <path d="M0 76 V40 L120 18 L240 48 L360 22 L480 54 L600 14 L720 42 L840 20 L960 52 L1080 16 L1200 46 L1320 24 L1440 50 V76 Z" fill="#141714"/>
+    </svg>
+  </div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html#top" class="brand brand-footer">
+          <span class="brand-mark">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+          </span>
+          <span class="brand-text">
+            <strong>Sagarmatha</strong>
+            <small>Treks &amp; Expeditions</small>
+          </span>
+        </a>
+        <p class="footer-blurb">A locally owned Nepali trekking company crafting safe, personal and responsible Himalayan journeys since 2011.</p>
+        <div class="badges">
+          <span class="badge-chip">Govt. Licensed</span>
+          <span class="badge-chip">NMA Member</span>
+          <span class="badge-chip">TAN Member</span>
+          <span class="badge-chip">Tripadvisor 4.9/5</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="index.html#about">About Us</a>
+        <a href="team-list.html">Our Team</a>
+        <a href="#">Responsible Tourism</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="index.html#categories">Everest</a>
+        <a href="index.html#categories">Annapurna</a>
+        <a href="index.html#categories">Langtang</a>
+        <a href="index.html#categories">Mustang</a>
+        <a href="index.html#categories">Manaslu</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="index.html#blog">Trekking Guide</a>
+        <a href="#">Travel Information</a>
+        <a href="blog-list.html">Blog</a>
+        <a href="#">FAQs</a>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <div class="f-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Thamel, Kathmandu, Nepal
+        </div>
+        <a href="mailto:hello@sagarmathatreks.com" class="f-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+          hello@sagarmathatreks.com
+        </a>
+        <a href="tel:+9779800000000" class="f-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +977 9800000000
+        </a>
+        <a href="https://wa.me/9779800000000" class="btn btn-wa btn-sm" data-lead-link="https://wa.me/9779800000000?text=Namaste!">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.04 0C5.46 0 .12 5.34.12 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.28-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.58 0 11.92-5.34 11.92-11.92 0-3.18-1.24-6.17-3.45-8.42z"/></svg>
+          <span>Chat With Us</span>
+        </a>
+        <div class="emergency">
+          <div class="em-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+          </div>
+          <div>
+            <strong>24/7 Emergency Support</strong>
+            <small>+977 9800000000 · always on call</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 Sagarmatha Treks &amp; Expeditions Pvt. Ltd. All rights reserved.</div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LEAD MODAL (reused from index.html structure) ============ -->
+<div class="modal-overlay" id="leadModal" style="display:none" role="dialog" aria-modal="true" aria-labelledby="leadTitle">
+  <div class="modal lead-modal">
+    <button class="modal-close" id="lClose" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+    <div class="lead-body">
+      <h3 id="leadTitle">Talk to a local expert</h3>
+      <p>Leave your details and we'll open WhatsApp for you — a real Himalayan guide replies within 2 hours.</p>
+      <form id="leadForm">
+        <div class="lead-field">
+          <label for="leadName">Name</label>
+          <input type="text" id="leadName" placeholder="Your name" />
+        </div>
+        <div class="lead-field">
+          <label for="leadEmail">Email</label>
+          <input type="email" id="leadEmail" placeholder="you@example.com" />
+        </div>
+        <div class="lead-error" id="leadError" style="display:none"></div>
+        <button type="submit" class="btn btn-wa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.04 0C5.46 0 .12 5.34.12 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.28-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.58 0 11.92-5.34 11.92-11.92 0-3.18-1.24-6.17-3.45-8.42z"/></svg>
+          Continue to WhatsApp
+        </button>
+      </form>
+      <p class="lead-note">No spam — just one reply from our Kathmandu office.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast" style="display:none" role="status" aria-live="polite">
+  <div class="toast-icon">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+  </div>
+  <span id="toastMsg">Saved</span>
+</div>
+
+<!-- Load global JS (untouched) -->
+<script src="js/index.js"></script>
+
+<!-- Page-scoped team JS -->
+<script>
+(function () {
+  const $ = (sel, root = document) => root.querySelector(sel);
+  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+  const searchInput = $("#teamSearch");
+  const searchClear = $("#teamSearchClear");
+  const grid = $("#teamGrid");
+  const cards = $$(".team-card");
+  const countEl = $("#teamCount");
+  const emptyEl = $("#teamEmpty");
+  const emptyClear = $("#teamEmptyClear");
+  const chips = $$(".team-chip");
+
+  let activeFilter = "all";
+  let activeQuery = "";
+
+  const apply = () => {
+    const q = activeQuery.toLowerCase().trim();
+    let visible = 0;
+    cards.forEach((card) => {
+      const cat = card.dataset.category;
+      const hay = (card.dataset.search || "").toLowerCase();
+      const name = (card.dataset.name || "").toLowerCase();
+      const role = (card.dataset.role || "").toLowerCase();
+
+      const matchFilter = activeFilter === "all" || cat === activeFilter;
+      const matchQuery = !q || hay.includes(q) || name.includes(q) || role.includes(q);
+
+      const show = matchFilter && matchQuery;
+      card.classList.toggle("hidden", !show);
+      if (show) visible++;
+    });
+
+    countEl.textContent = visible;
+    emptyEl.classList.toggle("visible", visible === 0);
+  };
+
+  // Search input
+  searchInput.addEventListener("input", () => {
+    activeQuery = searchInput.value;
+    searchClear.classList.toggle("visible", !!activeQuery);
+    apply();
+  });
+  searchClear.addEventListener("click", () => {
+    searchInput.value = "";
+    activeQuery = "";
+    searchClear.classList.remove("visible");
+    apply();
+    searchInput.focus();
+  });
+  emptyClear.addEventListener("click", () => {
+    searchInput.value = "";
+    activeQuery = "";
+    searchClear.classList.remove("visible");
+    activeFilter = "all";
+    chips.forEach((c) => c.classList.toggle("active", c.dataset.filter === "all"));
+    apply();
+    searchInput.focus();
+  });
+
+  // Filter chips
+  chips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      chips.forEach((c) => c.classList.remove("active"));
+      chip.classList.add("active");
+      activeFilter = chip.dataset.filter;
+      apply();
+    });
+  });
+
+  // Reveal on scroll (lightweight, self-contained)
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("in");
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+    $$(".reveal").forEach((el) => io.observe(el));
+  } else {
+    $$(".reveal").forEach((el) => el.classList.add("in"));
+  }
+
+  apply();
+})();
+</script>
+<script src="js/team-list.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
