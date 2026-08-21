@@ -54,7 +54,6 @@ const Navbar = () => {
             </p>
           </div>
         </a>
-
         {/* Desktop Navigation */}
         <div
           className={`hidden items-center gap-1 rounded-full px-2 py-2 md:flex ${

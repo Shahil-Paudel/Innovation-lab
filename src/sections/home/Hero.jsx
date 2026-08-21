@@ -1,5 +1,5 @@
 import NepalMap from "./NepalMap";
-import Packages from "./Packages";
+import PopularPackages from "./PopularPackages";
 import Tripofmonth from "./Tripofmonth";
 import GuideExpert from "./GuideExpert";
 import TourCategories from "./TourCategories";
@@ -151,7 +151,7 @@ const Hero = () => {
           TREKKING / PACKAGES
       ===================================================== */}
       <section id="trekking" className="bg-white">
-        <Packages />
+        <PopularPackages />
       </section>
 
       {/* =====================================================
