@@ -111,7 +111,7 @@ const Footer = () => {
               <ul className="space-y-3 text-sm text-white/70">
 
                 <li>
-                  <a href="#" className="transition hover:text-[#86efac]">
+                  <a href="/" className="transition hover:text-[#86efac]">
                     About Us
                   </a>
                 </li>
