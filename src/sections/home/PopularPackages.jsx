@@ -204,10 +204,8 @@ const PopularPackages = () => {
 
           {packages.map((pkg) => {
 
-            // =================================================
+            
             // DATA FROM GATEWAY API
-            // =================================================
-
             const id = pkg.id;
 
             const title =

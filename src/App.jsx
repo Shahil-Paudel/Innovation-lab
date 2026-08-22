@@ -13,7 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Blogs" element={<Blogs />} />
           <Route path="/everest" element={<Everest />} />
-          <Route path="/packages/:slug" element={<PackageDetail />} />
+          <Route path="/packages/:id" element={<PackageDetail />} />
         </Routes>
       </MainLayout>
     </BrowserRouter>
