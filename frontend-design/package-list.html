@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trekking in Nepal — 12 Curated Treks | Sagarmatha Treks</title>
+<meta name="description" content="Handpicked trekking journeys across six Himalayan regions. Filter by region, season and style — vetted in person by local guides.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/package-list.css">
+</head>
+<body>
+
+<!-- ===== HEADER (solid variant) ===== -->
+<header class="header" id="header" data-solid="true">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></span>
+      <span class="brand-text"><strong>Sagarmatha</strong><small>Treks &amp; Expeditions</small></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#treks">Treks</a><a href="index.html#trip">Tours</a><a href="index.html#categories">Destinations</a><a href="index.html#about">About Us</a><a href="index.html#blog">Blog</a><a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="wishlist-pill" href="#packages"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span class="wl-text">Wishlist</span><span class="wl-count" id="wlCount">0</span></a>
+      <a class="btn btn-wa btn-sm" href="https://wa.me/9779800000000" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%27m%20planning%20a%20trek%20in%20Nepal."><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg><span>Chat on WhatsApp</span></a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <nav><a href="index.html#treks">Treks</a><a href="index.html#trip">Tours</a><a href="index.html#categories">Destinations</a><a href="index.html#about">About Us</a><a href="index.html#blog">Blog</a><a href="index.html#contact">Contact</a></nav>
+    <div class="mobile-panel-ctas"><a class="btn btn-pine btn-sm" href="#packages">Explore Treks</a><a class="btn btn-wa btn-sm" href="https://wa.me/9779800000000" data-lead-link="https://wa.me/9779800000000">Chat on WhatsApp</a></div>
+  </div>
+</header>
+
+<!-- ===== CATEGORY SWITCHER (sticky on desktop) ===== -->
+<div class="cat-switcher">
+  <div class="container cat-switcher-inner">
+    <span class="switcher-label">Browse</span>
+    <nav class="switcher-pills" aria-label="Activity categories">
+      <a class="pill active" aria-current="page" href="package-list.html">Trekking</a>
+      <a class="pill" href="package-list.html?category=bird-watching">Bird Watching</a>
+      <a class="pill" href="package-list.html?category=bike-tours">Bike Tours</a>
+      <a class="pill" href="package-list.html?category=heli-tours">Heli Tours</a>
+      <a class="pill" href="package-list.html?category=city-tours">City Tours</a>
+    </nav>
+  </div>
+</div>
+
+<!-- ===== LIGHT HERO ===== -->
+<section class="page-hero">
+  <div class="container">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="index.html#categories">Adventures</a><span>/</span><b>Trekking</b></nav>
+    <div class="page-hero-row">
+      <div>
+        <p class="eyebrow">Trekking in Nepal</p>
+        <h1 class="page-title">Walk the <em>Himalayas.</em></h1>
+        <p class="sub">Handpicked journeys from short ridge walks to full circuit expeditions — every trail vetted in person by our guides.</p>
+      </div>
+      <div class="hero-stats" aria-label="Trekking statistics">
+        <span class="stat-pill">12 journeys</span><span class="stat-pill">6 regions</span><span class="stat-pill">4.9★ average</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REGIONS: TILES ⇄ MAP ===== -->
+<section class="section regions-section" id="regions">
+  <div class="container">
+    <div class="section-head region-head">
+      <div>
+        <p class="eyebrow">Where to trek</p>
+        <h2 class="h2">Trek by region</h2>
+        <p class="sub">Tap a region to filter the journeys below — or switch to the map.</p>
+      </div>
+      <div class="view-toggle" role="group" aria-label="View regions as tiles or map">
+        <button class="vt-btn active" data-view="tiles" aria-pressed="true">Tiles</button>
+        <button class="vt-btn" data-view="map" aria-pressed="false">Map</button>
+      </div>
+    </div>
+
+    <div class="region-tiles" id="regionTiles">
+      <button class="region-tile" data-region="everest" aria-pressed="false"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1fa768619-9df4-4178-b78d-1e296613996c.png" alt="Trekkers on the Everest Base Camp trail" loading="lazy" width="640" height="440"><span class="rt-shade"></span><span class="rt-info"><strong>Everest</strong><small class="rt-count" data-count-for="everest"></small></span><span class="rt-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+      <button class="region-tile" data-region="annapurna" aria-pressed="false"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/12b3da831-07ef-4718-918e-9e890831c35e.png" alt="Annapurna Base Camp sanctuary" loading="lazy" width="640" height="440"><span class="rt-shade"></span><span class="rt-info"><strong>Annapurna</strong><small class="rt-count" data-count-for="annapurna"></small></span><span class="rt-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+      <button class="region-tile" data-region="langtang" aria-pressed="false"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/196d28169-128d-4da0-9622-702344878c98.png" alt="Langtang Valley" loading="lazy" width="640" height="440"><span class="rt-shade"></span><span class="rt-info"><strong>Langtang</strong><small class="rt-count" data-count-for="langtang"></small></span><span class="rt-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+      <button class="region-tile" data-region="manaslu" aria-pressed="false"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1b1ee017e-6731-4045-b996-f1ac331a6053.png" alt="Manaslu Circuit" loading="lazy" width="640" height="440"><span class="rt-shade"></span><span class="rt-info"><strong>Manaslu</strong><small class="rt-count" data-count-for="manaslu"></small></span><span class="rt-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+      <button class="region-tile" data-region="mustang" aria-pressed="false"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/182831355-4138-4630-821e-a1c189e9393d.png" alt="Upper Mustang desert landscape" loading="lazy" width="640" height="440"><span class="rt-shade"></span><span class="rt-info"><strong>Mustang</strong><small class="rt-count" data-count-for="mustang"></small></span><span class="rt-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+      <button class="region-tile" data-region="short" aria-pressed="false"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1aaa55904-71ec-47cd-a664-ade9d97bb10e.png" alt="Short trek ridge walk at sunrise" loading="lazy" width="640" height="440"><span class="rt-shade"></span><span class="rt-info"><strong>Short Treks</strong><small class="rt-count" data-count-for="short"></small></span><span class="rt-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+    </div>
+
+    <div class="region-map" id="regionMap" hidden>
+      <svg viewBox="0 0 740 350" aria-hidden="true"><path class="map-outline" d="M28 150 C60 96 96 84 140 74 C190 62 236 44 292 34 C352 24 420 30 476 52 C540 76 606 108 668 148 C700 170 716 196 700 218 C676 246 636 252 596 268 C548 288 500 306 448 318 C392 330 332 330 276 314 C220 298 164 272 116 240 C80 216 44 190 28 150 Z"/></svg>
+      <button class="map-pin" data-region="mustang"  style="left:44%;top:32%"><span class="pin-dot"></span><span class="pin-label">Mustang <b class="pin-count" data-count-for="mustang"></b></span></button>
+      <button class="map-pin" data-region="annapurna" style="left:40%;top:54%"><span class="pin-dot"></span><span class="pin-label">Annapurna <b class="pin-count" data-count-for="annapurna"></b></span></button>
+      <button class="map-pin" data-region="manaslu"  style="left:50%;top:44%"><span class="pin-dot"></span><span class="pin-label">Manaslu <b class="pin-count" data-count-for="manaslu"></b></span></button>
+      <button class="map-pin" data-region="langtang" style="left:58%;top:38%"><span class="pin-dot"></span><span class="pin-label">Langtang <b class="pin-count" data-count-for="langtang"></b></span></button>
+      <button class="map-pin" data-region="everest"  style="left:78%;top:42%"><span class="pin-dot"></span><span class="pin-label">Everest <b class="pin-count" data-count-for="everest"></b></span></button>
+      <button class="map-pin" data-region="short"    style="left:62%;top:62%"><span class="pin-dot"></span><span class="pin-label">Short Treks <b class="pin-count" data-count-for="short"></b></span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STICKY TOOLBAR ===== -->
+<div class="toolbar" id="toolbar">
+  <div class="container toolbar-inner">
+    <p class="filter-count">Showing <b id="resultCount">12</b> of <b id="totalCount">12</b> treks</p>
+    <div class="toolbar-actions">
+      <div class="chips" id="chips"></div>
+      <button class="chip chip-preset" data-preset="easy">Easy &amp; slow</button>
+      <button class="chip chip-preset" data-preset="short">Short escapes</button>
+      <label class="field-sm"><span>Duration</span><select id="fDur"><option value="any">Any</option><option value="short">Under 8 days</option><option value="medium">8–13 days</option><option value="long">14+ days</option></select></label>
+      <label class="field-sm"><span>Difficulty</span><select id="fDiff"><option value="any">Any</option><option>Easy</option><option>Moderate</option><option>Challenging</option><option>Strenuous</option></select></label>
+      <label class="field-sm"><span>Sort</span><select id="sortSelect"><option value="popular">Most popular</option><option value="price_asc">Price ↑</option><option value="price_desc">Price ↓</option><option value="days_asc">Duration ↑</option><option value="days_desc">Duration ↓</option><option value="rating">Top rated</option></select></label>
+      <button class="btn btn-sm surprise-btn" id="surpriseBtn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>Surprise me</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PACKAGE GRID ===== -->
+<section class="section treks-section" id="packages">
+  <div class="container">
+    <div class="trek-grid" id="trekGrid">
+
+      <article class="trek-card reveal" tabindex="0" role="button" aria-haspopup="dialog" data-id="ebc" data-region="everest" data-days="14" data-elevation="5,364 m" data-difficulty="Challenging" data-rating="4.9" data-reviews="284" data-price="1290" data-old-price="1450" data-group="Max 12" data-departure="Oct 12, 2026" data-signature="true" data-pick-months="3,4,5" data-pick-why="Classic spring season — stable skies, blooming rhododendron forests and the most photographed mountain amphitheatre on earth." data-desc="The classic pilgrimage to the foot of the world's highest mountain, via Namche Bazaar, Tengboche Monastery and the Khumbu Icefall viewpoint." data-highlights='["Sunrise over Everest from Kala Patthar","Sherpa culture in Namche & Tengboche","Khumbu Icefall viewpoint at 5,364 m"]'>
+        <div class="trek-media"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1fa768619-9df4-4178-b78d-1e296613996c.png" alt="Everest Base Camp Trek" loading="lazy" width="640" height="480"><span class="save-badge">Save 11%</span><button class="heart-btn" aria-pressed="false" aria-label="Save Everest Base Camp Trek to wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button><span class="dep-chip">Next dep · Oct 12</span><div class="trek-hover"><span class="view-pill">View Trip</span></div></div>
+        <div class="trek-body"><div class="trek-top-row"><span class="region">Everest Region</span><span class="diff diff-challenging">Challenging</span></div><h3 class="trek-title">Everest Base Camp Trek</h3><p class="trek-meta">14 Days <span class="meta-dot"></span> 5,364 m <span class="meta-dot"></span> Max 12</p><div class="trek-rating"><span class="stars" data-rating="4.9"></span><b>4.9</b> (284 reviews)</div><div class="trek-foot"><p class="price"><s>$1,450</s> <strong>$1,290</strong><span class="per">/ person</span></p><span class="mini-cta">View Trip <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div></div>
+      </article>
+
+      <article class="trek-card reveal" tabindex="0" role="button" aria-haspopup="dialog" data-id="epass" data-region="everest" data-days="18" data-elevation="5,535 m" data-difficulty="Strenuous" data-rating="4.9" data-reviews="96" data-price="1890" data-old-price="2100" data-group="Max 10" data-departure="Oct 05, 2026" data-desc="The ultimate Everest challenge: Kongma La, Cho La and Renjo La in one epic loop for seasoned trekkers." data-highlights='["Three high passes above 5,300 m","Gokyo Ri sunrise over Everest & Cho Oyu","Quietest, wildest EBC variant"]'>
+        <div class="trek-media"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1fa768619-9df4-4178-b78d-1e296613996c.png" alt="Everest Three Passes Trek" loading="lazy" width="640" height="480"><span class="save-badge">Save 10%</span><button class="heart-btn" aria-pressed="false" aria-label="Save Everest Three Passes Trek to wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button><span class="dep-chip">Next dep · Oct 05</span><div class="trek-hover"><span class="view-pill">View Trip</span></div></div>
+        <div class="trek-body"><div class="trek-top-row"><span class="region">Everest Region</span><span class="diff diff-strenuous">Strenuous</span></div><h3 class="trek-title">Everest Three Passes Trek</h3><p class="trek-meta">18 Days <span class="meta-dot"></span> 5,535 m <span class="meta-dot"></span> Max 10</p><div class="trek-rating"><span class="stars" data-rating="4.9"></span><b>4.9</b> (96 reviews)</div><div class="trek-foot"><p class="price"><s>$2,100</s> <strong>$1,890</strong><span class="per">/ person</span></p><span class="mini-cta">View Trip <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div></div>
+      </article>
+
+      <article class="trek-card reveal" tabindex="0" role="button" aria-haspopup="dialog" data-id="gokyo" data-region="everest" data-days="12" data-elevation="5,357 m" data-difficulty="Challenging" data-rating="4.8" data-reviews="143" data-price="1390" data-old-price="1550" data-group="Max 12" data-desc="Turquoise glacial lakes and the best sunrise panorama in the Khumbu, away from the main EBC trail." data-highlights='["Gokyo's six turquoise lakes","Gokyo Ri 360° summit view","Less crowded than EBC"]'>
+        <div class="trek-media"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1c10c8850-772e-41c6-9193-076f55e9d3dc.png" alt="Gokyo Lakes Trek" loading="lazy" width="640" height="480"><span class="save-badge">Save 10%</span><button class="heart-btn" aria-pressed="false" aria-label="Save Gokyo Lakes Trek to wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button><div class="trek-hover"><span class="view-pill">View Trip</span></div></div>
+        <div class="trek-body"><div class="trek-top-row"><span class="region">Everest Region</span><span class="diff diff-challenging">Challenging</span></div><h3 class="trek-title">Gokyo Lakes Trek</h3><p class="trek-meta">12 Days <span class="meta-dot"></span> 5,357 m <span class="meta-dot"></span> Max 12</p><div class="trek-rating"><span class="stars" data-rating="4.8"></span><b>4.8</b> (143 reviews)</div><div class="trek-foot"><p class="price"><s>$1,550</s> <strong>$1,390</strong><span class="per">/ person</span></p><span class="mini-cta">View Trip <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div></div>
+      </article>
+
+      <article class="trek-card reveal" tabindex="0" role="button" aria-haspopup="dialog" data-id="abc" data-region="annapurna" data-days="11" data-elevation="4,130 m" data-difficulty="Moderate" data-rating="4.8" data-reviews="312" data-price="940" data-old-price="1090" data-group="Max 14" data-departure="Sep 20, 2026" data-desc="Into the Annapurna Sanctuary — a natural amphitheatre ringed by 7,000-metre peaks and Gurung villages." data-highlights='["360° mountain sanctuary","Gurung culture & hot springs","Perfect first Himalayan week"]'>
+        <div class="trek-media"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/12b3da831-07ef-4718-918e-9e890831c35e.png" alt="Annapurna Base Camp Trek" loading="lazy" width="640" height="480"><span class="save-badge">Save 14%</span><button class="heart-btn" aria-pressed="false" aria-label="Save Annapurna Base Camp Trek to wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button><span class="dep-chip">Next dep · Sep 20</span><div class="trek-hover"><span class="view-pill">View Trip</span></div></div>
+        <div class="trek-body"><div class="trek-top-row"><span class="region">Annapurna Region</span><span class="diff diff-moderate">Moderate</span></div><h3 class="trek-title">Annapurna Base Camp Trek</h3><p class="trek-meta">11 Days <span class="meta-dot"></span> 4,130 m <span class="meta-dot"></span> Max 14</p><div class="trek-rating"><span class="stars" data-rating="4.8"></span><b>4.8</b> (312 reviews)</div><div class="trek-foot"><p class="price"><s>$1,090</s> <strong>$940</strong><span class="per">/ person</span></p><span class="mini-cta">View Trip <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div></div>
+      </article>
+
+      <article class="trek-card reveal" tabindex="0" role="button" aria-haspopup="dialog" data-id="acircuit" data-region="annapurna" data-days="16" data-elevation="5,416 m" data-difficulty="Challenging" data-rating="4.8" data-reviews="178" data-price="1390" data-old-price="1590" data-group="Max 12" data-desc="The legendary circuit over the Thorong La — from subtropical valleys to Tibetan-style desert in one loop." data-highlights='["Thorong La pass at 5,416 m","Muktinath & Kali Gandaki gorge","Full culture + altitude spectrum"]'>
+        <div class="trek-media"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/12b3da831-07ef-4718-918e-9e890831c35e.png" alt="Annapurna Circuit Trek" loading="lazy" width="640" height="480"><span class="save-badge">Save 13%</span><button class="heart-btn" aria-pressed="false" aria-label="Save Annapurna Circuit Trek to wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button><div class="trek-hover"><span class="view-pill">View Trip</span></div></div>
+        <div class="trek-body"><div class="trek-top-row"><span class="region">Annapurna Region</span><span class="diff diff-challenging">Challenging</span></div><h3 class="trek-title">Annapurna Circuit Trek</h3><p class="trek-meta">16 Days <span class="meta-dot"></span> 5,416 m <span class="meta-dot"></span> Max 12</p><div class="trek-rating"><span class="stars" data-rating="4.8"></span><b>4.8</b> (178 reviews)</div><div class="trek-foot"><p class="price"><s>$1,590</s> <strong>$1,390</strong><span class="per">/ person</span></p><span class="mini-cta">View Trip <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div></div>
+      </article>
+
+      <article class="trek-card reveal" tabindex="0" role="button" aria-haspopup="dialog" data-id="mardi" data-region="annapurna" data-days="6" data-elevation="4,500 m" data-difficulty="Easy" data-rating="4.8" data-reviews="241" data-price="640" data-old-price="720" data-group="Max 12" data-pick-months="3,4,5" data-pick-why="Spring's rhododendron forests blaze red along this ridge — the prettiest short walk in the Annapurnas." data-desc="A short ridge trek with sunrise views of Machhapuchhre and the Annapurna massif — ideal first Himalaya." data-highlights='["Rhododendron forests in spring","Machhapuchhre sunrise ridge","Quiet trails, easy logistics"]'>
+        <div class="trek-media"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1aaa55904-71ec-47cd-a664-ade9d97bb10e.png" alt="Mardi Himal Trek" loading="lazy" width="640" height="480"><span class="save-badge">Save 11%</span><button class="heart-btn" aria-pressed="false" aria-label="Save Mardi Himal Trek to wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button><div class="trek-hover"><span class="view-pill">View Trip</span></div></div>
+        <div class="trek-body"><div class="trek-top-row"><span class="region">Annapurna Region</span><span class="diff diff-easy">Easy</span></div><h3 class="trek-title">Mardi Himal Trek</h3><p class="trek-meta">6 Days <span class="meta-dot"></span> 4,500 m <span class="meta-dot"></span> Max 12</p><div class="trek-rating"><span class="stars" data-rating="4.8"></span><b>4.8</b> (241 reviews)</div><div class="trek-foot"><p class="price"><s>$720</s> <strong>$640</strong><span class="per">/ person</span></p><span class="mini-cta">View Trip <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div></div>
+      </article>
+
+      <article class="trek-card reveal" tabindex="0" role="button" aria-haspopup="dialog" data-id="poonhill" data-region="short" data-days="5" data-elevation="3,210 m" data-difficulty="Easy" data-rating="4.9" data-reviews="412" data-price="490" data-old-price="560" data-group="Max 16" data-pick-months="12,1,2" data-pick-why="Crisp winter mornings, low-altitude warmth and the most famous sunrise in Nepal — perfect when the high trails sleep." data-desc="The classic short Himalayan sunrise: Dhaulagiri and Annapurna from Poon Hill, with cozy teahouses all the way." data-highlights='["Poon Hill sunrise panorama","Ghandruk Gurung village","Beginner-friendly altitude"]'>
+        <div class="trek-media"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1aaa55904-71ec-47cd-a664-ade9d97bb10e.png" alt="Poon Hill Trek" loading="lazy" width="640" height="480"><span class="save-badge">Save 13%</span><button class="heart-btn" aria-pressed="false" aria-label="Save Poon Hill Trek to wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button><div class="trek-hover"><span class="view-pill">View Trip</span></div></div>
+        <div class="trek-body"><div class="trek-top-row"><span class="region">Short Treks</span><span class="diff diff-easy">Easy</span></div><h3 class="trek-title">Ghorepani Poon Hill Trek</h3><p class="trek-meta">5 Days <span class="meta-dot"></span> 3,210 m <span class="meta-dot"></span> Max 16</p><div class="trek-rating"><span class="stars" data-rating="4.9"></span><b>4.9</b> (412 reviews)</div><div class="trek-foot"><p class="price"><s>$560</s> <strong>$490</strong><span class="per">/ person</span></p><span class="mini-cta">View Trip <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div></div>
+      </article>
+
+      <article class="trek-card reveal" tabindex="0" role="button" aria-haspopup="dialog" data-id="langtang" data-region="langtang" data-days="9" data-elevation="4,984 m" data-difficulty="Moderate" data-rating="4.9" data-reviews="198" data-price="780" data-old-price="850" data-group="Max 12" data-desc="The valley of glaciers — closest Himalaya to Kathmandu, with Tamang villages and Kyanjin Gompa's yak cheese." data-highlights='["Kyanjin Ri viewpoint","Tamang culture & monastery","Short drive, big mountains"]'>
+        <div class="trek-media"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/196d28169-128d-4da0-9622-702344878c98.png" alt="Langtang Valley Trek" loading="lazy" width="640" height="480"><button class="heart-btn" aria-pressed="false" aria-label="Save Langtang Valley Trek to wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button><div class="trek-hover"><span class="view-pill">View Trip</span></div></div>
+        <div class="trek-body"><div class="trek-top-row"><span class="region">Langtang Region</span><span class="diff diff-moderate">Moderate</span></div><h3 class="trek-title">Langtang Valley Trek</h3><p class="trek-meta">9 Days <span class="meta-dot"></span> 4,984 m <span class="meta-dot"></span> Max 12</p><div class="trek-rating"><span class="stars" data-rating="4.9"></span><b>4.9</b> (198 reviews)</div><div class="trek-foot"><p class="price"><s>$850</s> <strong>$780</strong><span class="per">/ person</span></p><span class="mini-cta">View Trip <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div></div>
+      </article>
+
+      <article class="trek-card reveal" tabindex="0" role="button" aria-haspopup="dialog" data-id="got" data-region="langtang" data-days="12" data-elevation="4,610 m" data-difficulty="Moderate" data-rating="4.9" data-reviews="163" data-price="1190" data-old-price="1350" data-group="Max 12" data-departure="Oct 05, 2026" data-pick-months="9,10,11" data-pick-why="Autumn's crystal air over the sacred lakes of Gosaikunda — prayer flags, frozen stillness, perfect trails." data-desc="The perfect autumn pairing: forested Langtang Valley followed by the sacred alpine lakes of Gosaikunda at 4,380 m." data-highlights='["Sacred Gosaikunda lakes","Langtang Valley + ridge combo","Autumn clarity, fewer crowds"]'>
+        <div class="trek-media"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1c10c8850-772e-41c6-9193-076f55e9d3dc.png" alt="Langtang Gosaikunda Trek" loading="lazy" width="640" height="480"><span class="save-badge">Save 12%</span><button class="heart-btn" aria-pressed="false" aria-label="Save Langtang Gosaikunda Trek to wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button><span class="dep-chip">Next dep · Oct 05</span><div class="trek-hover"><span class="view-pill">View Trip</span></div></div>
+        <div class="trek-body"><div class="trek-top-row"><span class="region">Langtang Region</span><span class="diff diff-moderate">Moderate</span></div><h3 class="trek-title">Langtang Gosaikunda Trek</h3><p class="trek-meta">12 Days <span class="meta-dot"></span> 4,610 m <span class="meta-dot"></span> Max 12</p><div class="trek-rating"><span class="stars" data-rating="4.9"></span><b>4.9</b> (163 reviews)</div><div class="trek-foot"><p class="price"><s>$1,350</s> <strong>$1,190</strong><span class="per">/ person</span></p><span class="mini-cta">View Trip <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div></div>
+      </article>
+
+      <article class="trek-card reveal" tabindex="0" role="button" aria-haspopup="dialog" data-id="manaslu" data-region="manaslu" data-days="16" data-elevation="5,106 m" data-difficulty="Strenuous" data-rating="4.7" data-reviews="156" data-price="1590" data-old-price="1790" data-group="Max 10" data-desc="Restricted-area wilderness around the eighth-highest mountain, over the Larkya La — teahouse trekking at its wildest." data-highlights='["Larkya La pass 5,106 m","Restricted-area permits handled","Tibetan-flavoured villages"]'>
+        <div class="trek-media"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1b1ee017e-6731-4045-b996-f1ac331a6053.png" alt="Manaslu Circuit Trek" loading="lazy" width="640" height="480"><span class="save-badge">Save 11%</span><button class="heart-btn" aria-pressed="false" aria-label="Save Manaslu Circuit Trek to wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button><div class="trek-hover"><span class="view-pill">View Trip</span></div></div>
+        <div class="trek-body"><div class="trek-top-row"><span class="region">Manaslu Region</span><span class="diff diff-strenuous">Strenuous</span></div><h3 class="trek-title">Manaslu Circuit Trek</h3><p class="trek-meta">16 Days <span class="meta-dot"></span> 5,106 m <span class="meta-dot"></span> Max 10</p><div class="trek-rating"><span class="stars" data-rating="4.7"></span><b>4.7</b> (156 reviews)</div><div class="trek-foot"><p class="price"><s>$1,790</s> <strong>$1,590</strong><span class="per">/ person</span></p><span class="mini-cta">View Trip <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div></div>
+      </article>
+
+      <article class="trek-card reveal" tabindex="0" role="button" aria-haspopup="dialog" data-id="tsum" data-region="manaslu" data-days="14" data-elevation="3,700 m" data-difficulty="Moderate" data-rating="4.8" data-reviews="87" data-price="1490" data-old-price="1650" data-group="Max 10" data-desc="The hidden valley of Tsum — a sacred Buddhist valley of mani walls, caves and the remote Mu Gompa." data-highlights='["Mu Gompa at valley's end","Sacred mani walls & caves","Untouched restricted valley"]'>
+        <div class="trek-media"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1b1ee017e-6731-4045-b996-f1ac331a6053.png" alt="Tsum Valley Trek" loading="lazy" width="640" height="480"><span class="save-badge">Save 10%</span><button class="heart-btn" aria-pressed="false" aria-label="Save Tsum Valley Trek to wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button><div class="trek-hover"><span class="view-pill">View Trip</span></div></div>
+        <div class="trek-body"><div class="trek-top-row"><span class="region">Manaslu Region</span><span class="diff diff-moderate">Moderate</span></div><h3 class="trek-title">Tsum Valley Trek</h3><p class="trek-meta">14 Days <span class="meta-dot"></span> 3,700 m <span class="meta-dot"></span> Max 10</p><div class="trek-rating"><span class="stars" data-rating="4.8"></span><b>4.8</b> (87 reviews)</div><div class="trek-foot"><p class="price"><s>$1,650</s> <strong>$1,490</strong><span class="per">/ person</span></p><span class="mini-cta">View Trip <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div></div>
+      </article>
+
+      <article class="trek-card reveal" tabindex="0" role="button" aria-haspopup="dialog" data-id="mustang" data-region="mustang" data-days="13" data-elevation="3,840 m" data-difficulty="Challenging" data-rating="4.9" data-reviews="127" data-price="1890" data-old-price="2150" data-group="Max 10" data-departure="Sep 06, 2026" data-pick-months="6,7,8" data-pick-why="Rain-shadow desert — while monsoon rains the rest of Nepal, Mustang keeps blue skies and the walled kingdom of Lo Manthang at its finest." data-desc="The forbidden kingdom of Lo — a rain-shadow desert of walled cities, cave monasteries and wind-carved cliffs." data-highlights='["Walled city of Lo Manthang","Rain-shadow: trek-able in monsoon","Cave monasteries of Chhoser"]'>
+        <div class="trek-media"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/182831355-4138-4630-821e-a1c189e9393d.png" alt="Upper Mustang Trek" loading="lazy" width="640" height="480"><span class="save-badge">Save 12%</span><span class="pick-badge">★ Pick of the Month</span><button class="heart-btn" aria-pressed="false" aria-label="Save Upper Mustang Trek to wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></button><span class="dep-chip">Next dep · Sep 06</span><div class="trek-hover"><span class="view-pill">View Trip</span></div></div>
+        <div class="trek-body"><div class="trek-top-row"><span class="region">Mustang Region</span><span class="diff diff-challenging">Challenging</span></div><h3 class="trek-title">Upper Mustang Trek</h3><p class="trek-meta">13 Days <span class="meta-dot"></span> 3,840 m <span class="meta-dot"></span> Max 10</p><div class="trek-rating"><span class="stars" data-rating="4.9"></span><b>4.9</b> (127 reviews)</div><div class="trek-foot"><p class="price"><s>$2,150</s> <strong>$1,890</strong><span class="per">/ person</span></p><span class="mini-cta">View Trip <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div></div>
+      </article>
+
+    </div>
+
+    <div class="loadmore-row"><button class="btn btn-ghost-dark" id="loadMore">Load more treks</button></div>
+
+    <div class="failsafe" id="failsafe" style="display:none">
+      <span class="failsafe-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
+      <h3>No treks match those filters</h3>
+      <p>No worries — our local experts match travelers to the perfect trail every day. Loosen a filter, or let fate decide.</p>
+      <div class="failsafe-row"><button class="btn btn-ghost-dark btn-sm" id="failsafeClear">Clear all filters</button><button class="btn btn-pine btn-sm" id="failsafeSurprise">Surprise Me</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PICK OF THE MONTH (static August 2026; JS swaps by month) ===== -->
+<section class="section trip-section" id="pick">
+  <div class="container trip-grid">
+    <div>
+      <p class="eyebrow eyebrow-light"><span id="pkMonth">Pick of the Month — August 2026</span></p>
+      <h2 class="h2 h2-light" id="pkTitle">Upper Mustang Trek</h2>
+      <div class="trip-meta">
+        <span class="t-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span id="pkDays">13 Days</span></span>
+        <span class="t-meta"><span class="diff diff-challenging" id="pkDiff">Challenging</span></span>
+        <span class="t-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg><span id="pkElev">Max 3,840 m</span></span>
+        <span class="t-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span id="pkRating">4.9 (127)</span></span>
+      </div>
+      <p class="trip-desc" id="pkDesc">The forbidden kingdom of Lo — a rain-shadow desert of walled cities, cave monasteries and wind-carved cliffs.</p>
+      <div class="why-box">
+        <span class="why-icon"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></span>
+        <div><strong>Why this month?</strong><p id="pkWhy">Rain-shadow desert — while monsoon rains the rest of Nepal, Mustang keeps blue skies and the walled kingdom of Lo Manthang at its finest.</p></div>
+      </div>
+      <div class="trip-ctas">
+        <button class="btn btn-light" id="pkExplore" data-id="mustang">Explore This Trek</button>
+        <p class="trip-price"><small>From</small><strong id="pkPrice">$1,890</strong><s id="pkOld">$2,150</s></p>
+      </div>
+    </div>
+    <div class="trip-media">
+      <img id="pkImg" src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/182831355-4138-4630-821e-a1c189e9393d.png" alt="Upper Mustang Trek" width="960" height="720">
+      <div class="trip-price-card"><small>From</small><strong id="pkPrice2">$1,890</strong><span>per person · all-inclusive</span></div>
+      <div class="trip-stamp"><svg viewBox="0 0 118 118"><circle class="stamp-bg" cx="59" cy="59" r="58"/><path id="stampCircle" fill="none" d="M59,59 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/><text class="stamp-text"><textPath href="#stampCircle" id="stampText">MONSOON PICK • PICK OF THE MONTH • </textPath></text></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BEST TIME ===== -->
+<section class="section seasons-section" id="seasons">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow">When to go</p><h2 class="h2">Best time to trek in Nepal</h2><p class="sub" id="seasonNote">It's August — monsoon. Rain-shadow Mustang &amp; Dolpo are at their best right now.</p></div>
+    <div class="season-note" id="seasonCallout"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><p><b>Local tip:</b> monsoon months shine in the rain-shadow deserts — and the trails are beautifully quiet.</p></div>
+    <div class="seasons-grid">
+      <div class="season-card"><span class="season-badge best">Best</span><h3>Spring</h3><small>Mar – May</small><p>Rhododendrons in bloom, warm valleys, clear mornings — the classic season.</p></div>
+      <div class="season-card"><span class="season-badge off">Off-season</span><h3>Summer / Monsoon</h3><small>Jun – Aug</small><p>Rain in the hills; leeches on trails — except the rain-shadow of Mustang &amp; Dolpo.</p></div>
+      <div class="season-card"><span class="season-badge best">Best</span><h3>Autumn</h3><small>Sep – Nov</small><p>Crystal skies, stable weather, festival season — the clearest mountain views.</p></div>
+      <div class="season-card"><span class="season-badge shoulder">Shoulder</span><h3>Winter</h3><small>Dec – Feb</small><p>Cold but crisp at lower altitudes; high passes sleep under snow.</p></div>
+    </div>
+    <div class="chart-card reveal">
+      <div class="chart-head">
+        <p class="chart-title">Temperature &amp; rainfall, month by month</p>
+        <div class="city-chips" role="group" aria-label="Choose a station">
+          <button class="chip active" data-city="kathmandu">Kathmandu</button>
+          <button class="chip" data-city="pokhara">Pokhara</button>
+          <button class="chip" data-city="namche">Namche</button>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <svg id="climateSvg" viewBox="0 0 720 240" role="img" aria-label="Monthly temperature and rainfall chart"></svg>
+        <div class="chart-tip" id="chartTip" hidden></div>
+      </div>
+      <table class="sr-only" id="climateTable"><caption>Typical monthly temperature (°C) and rainfall (mm)</caption></table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WEATHER ===== -->
+<section class="section weather-section" id="weather">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow">Right now</p><h2 class="h2">Mountain weather snapshot</h2><p class="sub">Typical August conditions — live feed coming soon.</p></div>
+    <div class="weather-grid">
+      <div class="weather-card"><div class="wx-top"><span class="wx-icon">⛅</span><strong>Lukla</strong></div><p class="wx-temp">14°</p><small>Cloudy · feels 12° · 78% hum · 6 km/h</small><button class="wx-link" data-region-link="everest">Everest treks →</button></div>
+      <div class="weather-card"><div class="wx-top"><span class="wx-icon">🌤</span><strong>Namche</strong></div><p class="wx-temp">11°</p><small>Partly cloudy · feels 9° · 62% hum · 4 km/h</small><button class="wx-link" data-region-link="everest">Everest treks →</button></div>
+      <div class="weather-card"><div class="wx-top"><span class="wx-icon">🌦</span><strong>Pokhara</strong></div><p class="wx-temp">26°</p><small>Showers · feels 29° · 84% hum · 8 km/h</small><button class="wx-link" data-region-link="annapurna">Annapurna treks →</button></div>
+      <div class="weather-card"><div class="wx-top"><span class="wx-icon">☀️</span><strong>Kathmandu</strong></div><p class="wx-temp">28°</p><small>Sunny · feels 31° · 72% hum · 5 km/h</small><button class="wx-link" data-region-link="langtang">Langtang treks →</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CROSS-SELL ===== -->
+<section class="section xsell-section">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow">More ways to see Nepal</p><h2 class="h2">Beyond trekking</h2></div>
+    <div class="xsell-grid">
+      <a class="cat-tile xsell-tile" href="package-list.html?category=bird-watching"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1c658ea57-deeb-4400-83ef-02020712c84c.png" alt="Bird watching in Nepal" loading="lazy" width="480" height="360"><span class="cat-shade"></span><span class="cat-info"><span><h3>Bird Watching</h3><small>870+ species</small></span><span class="cat-arrow">→</span></span></a>
+      <a class="cat-tile xsell-tile" href="package-list.html?category=bike-tours"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1dc701fcb-3b2d-4bce-892f-792c84e87d5e.png" alt="Mountain biking tours" loading="lazy" width="480" height="360"><span class="cat-shade"></span><span class="cat-info"><span><h3>Bike Tours</h3><small>Ridge &amp; valley rides</small></span><span class="cat-arrow">→</span></span></a>
+      <a class="cat-tile xsell-tile" href="package-list.html?category=heli-tours"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/178045681-7112-40fd-90e0-498f3bd73c92.png" alt="Helicopter tours" loading="lazy" width="480" height="360"><span class="cat-shade"></span><span class="cat-info"><span><h3>Heli Tours</h3><small>Everest at breakfast</small></span><span class="cat-arrow">→</span></span></a>
+      <a class="cat-tile xsell-tile" href="package-list.html?category=city-tours"><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1885ad880-8f91-402a-8117-348866c12eb8.png" alt="City heritage tours" loading="lazy" width="480" height="360"><span class="cat-shade"></span><span class="cat-info"><span><h3>City Tours</h3><small>Temples &amp; festivals</small></span><span class="cat-arrow">→</span></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section faq-section" id="faq">
+  <div class="container faq-wrap">
+    <div class="section-head"><p class="eyebrow">Good to know</p><h2 class="h2">Trekking FAQs</h2></div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Which permits do I need?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button><p class="faq-a">TIMS and region-specific permits (ACAP, Sagarmatha National Park, Manaslu/Mustang restricted-area). We arrange every permit for you — costs are included in our prices.</p></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How fit do I need to be?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button><p class="faq-a">Easy treks need only regular walks. Moderate = 5–6 hr days with a daypack. Challenging/Strenuous = prior multi-day hiking and good cardio. When in doubt, ask us — we'll match you honestly.</p></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">What's included in the price?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button><p class="faq-a">Licensed guide, permits, teahouse lodges, all meals on trek and airport transfers. Excluded: international flights, Nepal visa, personal gear, tips and travel insurance.</p></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Is travel insurance required?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button><p class="faq-a">Yes — it must cover helicopter evacuation up to 6,000 m. We'll help you check your policy before you fly.</p></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How do you handle altitude sickness?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button><p class="faq-a">Conservative ascent profiles, acclimatization days, daily oxygen-saturation checks on high treks, and guides trained in wilderness first aid. Your safety outruns any itinerary.</p></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Fixed departure or private trek?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button><p class="faq-a">Both. Join a fixed small-group departure (see "Next dep" chips) or go fully private on your dates — same price promise, no booking fees.</p></div>
+    </div>
+    <details class="about-expander">
+      <summary>About trekking in Nepal</summary>
+      <div class="facts-row"><span class="fact-chip">8 of 14 eight-thousanders</span><span class="fact-chip">70 m → 8,848 m range</span><span class="fact-chip">870+ bird species</span><span class="fact-chip">650+ butterfly species</span></div>
+      <p>Nepal packs the planet's greatest altitude range into a country smaller than Portugal — subtropical jungle, mid-hill rhododendron forests and the highest mountains on Earth. Trekking here is a teahouse tradition: you walk village-to-village, eating dal bhat and sleeping under roofs, not tents.</p>
+      <p>Two windows dominate: spring (March–May) for bloom and autumn (September–November) for clarity. In the monsoon between, the rain-shadow deserts of Mustang and Dolpo stay dry — the secret season locals love.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta">
+  <img class="cta-bg" src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1f373039c-6f87-4586-8f8d-1b7b2a7f55bc.png" alt="" loading="lazy">
+  <div class="cta-shade"></div>
+  <div class="cta-body container">
+    <h2 class="cta-title">Not sure which trek? Talk to a local expert.</h2>
+    <p class="cta-sub">Tell us your dates and dreams — we'll match you to the right trail, honestly.</p>
+    <div class="cta-buttons"><button class="btn btn-light" data-lead-link="https://wa.me/9779800000000?text=Namaste!%20I%27d%20like%20help%20choosing%20a%20trek.">Talk to an Expert</button><a class="btn btn-wa" href="https://wa.me/9779800000000" data-lead-link="https://wa.me/9779800000000"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg><span>Chat on WhatsApp</span></a></div>
+    <p class="cta-note">Free consultation · No booking fees · Replies within 2 hours</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER (shared) ===== -->
+<div class="footer-ridge"><svg viewBox="0 0 1440 76" preserveAspectRatio="none"><path fill="#141714" d="M0 76h1440V30l-90 18-120-34-140 26-160-40-150 34-140-24-160 36-140-28-120 22-120-30-100 20z"/></svg></div>
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a class="brand brand-footer" href="index.html"><span class="brand-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></span><span class="brand-text"><strong>Sagarmatha</strong><small>Treks &amp; Expeditions</small></span></a><p class="footer-blurb">A locally owned Nepali trekking company crafting safe, personal and responsible Himalayan journeys since 2011.</p><div class="badges"><span class="badge-chip">Govt. Licensed</span><span class="badge-chip">NMA Member</span><span class="badge-chip">TAN Member</span><span class="badge-chip">Tripadvisor 4.9/5</span></div></div>
+      <div class="footer-col"><h4>Company</h4><a href="index.html#about">About Us</a><a href="#">Our Team</a><a href="#">Responsible Tourism</a><a href="#contact">Contact</a></div>
+      <div class="footer-col"><h4>Explore</h4><a href="#regions">Everest</a><a href="#regions">Annapurna</a><a href="#regions">Langtang</a><a href="#regions">Mustang</a><a href="#regions">Manaslu</a></div>
+      <div class="footer-col"><h4>Resources</h4><a href="index.html#blog">Trekking Guide</a><a href="#">Travel Information</a><a href="index.html#blog">Blog</a><a href="#faq">FAQs</a></div>
+      <div class="footer-col footer-contact"><h4>Contact</h4><p class="f-line"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Thamel, Kathmandu, Nepal</p><p class="f-line"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>hello@exampletreks.com</p><p class="f-line"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>+977 9800000000</p><a class="btn btn-wa btn-sm" href="https://wa.me/9779800000000" data-lead-link="https://wa.me/9779800000000">Chat With Us</a><div class="emergency"><span class="em-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span><div><strong>24/7 Emergency Support</strong><small>+977 9800000000 · always on call</small></div></div></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Sagarmatha Treks &amp; Expeditions Pvt. Ltd. All rights reserved.</p><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div></div>
+  </div>
+</footer>
+
+<!-- ===== TREK MODAL (v2) ===== -->
+<div class="modal-overlay" id="trekModal" style="display:none" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal">
+    <div class="modal-hero"><img id="mImg" src="" alt=""><div class="modal-hero-shade"></div><button class="modal-close" id="mClose" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button><div class="modal-hero-text"><span class="region region-light" id="mRegion"></span><h3 id="mTitle"></h3></div></div>
+    <div class="modal-body">
+      <div class="modal-meta">
+        <span class="m-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span id="mDays"></span> Days</span>
+        <span class="m-meta" id="mDiffWrap"><span class="diff" id="mDiff"></span></span>
+        <span class="m-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>Max <span id="mElev"></span></span>
+        <span class="m-meta" id="mGroup"></span>
+        <span class="m-meta" id="mDep" style="display:none">Next departure: <b id="mDepVal"></b></span>
+        <span class="m-meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><b id="mRating"></b>&nbsp;<span id="mReviews"></span></span>
+      </div>
+      <p class="modal-desc" id="mDesc"></p>
+      <h4 class="modal-h4">Trip Highlights</h4>
+      <ul class="modal-highlights" id="mHighlights"></ul>
+      <div class="modal-foot">
+        <p class="price"><s id="mOld"></s> <strong id="mPrice"></strong><span class="per">/ person</span></p>
+        <div class="modal-foot-btns">
+          <button class="btn btn-ghost-dark btn-sm" id="mWish"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span id="mWishLabel">Save</span></button>
+          <a class="btn btn-ghost-dark btn-sm" id="mItin" href="package-detail.html">Full day-by-day itinerary →</a>
+          <a class="btn btn-wa btn-sm" id="mWa" href="#" data-lead-link="#">Request This Trek</a>
+        </div>
+      </div>
+      <p class="modal-includes">Includes: licensed guide · permits · teahouse lodges · all meals on trek · airport transfers<br><a class="modal-ta" href="#" rel="noopener">Verified reviews on TripAdvisor ↗</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LEAD MODAL (with skip link) ===== -->
+<div class="modal-overlay" id="leadModal" style="display:none" role="dialog" aria-modal="true" aria-labelledby="leadTitle">
+  <div class="modal lead-modal">
+    <button class="modal-close" id="lClose" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <div class="lead-body">
+      <span class="failsafe-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg></span>
+      <h3 id="leadTitle">Talk to a local expert</h3>
+      <p>Leave your details and we'll open WhatsApp for you — a real Himalayan guide replies within 2 hours.</p>
+      <form id="leadForm" novalidate>
+        <div class="lead-field"><label for="leadName">Name</label><input id="leadName" type="text" autocomplete="name" placeholder="Your name"></div>
+        <div class="lead-field"><label for="leadEmail">Email</label><input id="leadEmail" type="email" autocomplete="email" placeholder="you@example.com"></div>
+        <p class="lead-error" id="leadError" style="display:none"></p>
+        <button class="btn btn-pine" type="submit">Continue to WhatsApp</button>
+        <button class="lead-skip" type="button" id="leadSkip">Skip — open WhatsApp directly</button>
+      </form>
+      <p class="lead-note">No spam — just one reply from our Kathmandu office.</p>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" style="display:none"><span class="toast-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span><span id="toastMsg"></span></div>
+
+<script src="js/package-list.js"></script> 
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Header Preview — Sagarmatha Treks</title>
+
+  <!-- Fonts (same as index.html) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Design tokens + base classes -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Header-specific styles -->
+  <link rel="stylesheet" href="css/header.css" />
+
+  <!-- Small preview-only styles so you can see the sticky header working -->
+  <style>
+    .preview-body{padding-top:140px}
+    .preview-section{max-width:960px;margin:0 auto;padding:40px 28px}
+    .preview-section h2{font-family:"Fraunces",Georgia,serif;font-size:28px;margin-bottom:10px}
+    .preview-section p{color:var(--muted);max-width:620px}
+    .preview-spacer{height:2400px;background:repeating-linear-gradient(180deg,transparent 0 80px,rgba(47,107,79,.04) 80px 81px)}
+  </style>
+</head>
+<body>
+
+<!-- =========================================================
+     SITE HEADER — shared across all sub-pages
+     ========================================================= -->
+<header class="site-header" id="siteHeader">
+
+  <!-- ══ Announcement bar ══ -->
+  <div class="topbar" id="topbar">
+    <div class="container topbar-inner">
+      <p class="topbar-msg">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s2-2 2-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+        <span>Autumn 2026 departures are open — <a href="package-detail.html#departures">risk‑free booking</a>: 20% deposit, lifetime credit if you postpone.</span>
+      </p>
+      <div class="topbar-right">
+        <a href="mailto:hello@sagarmathatreks.com">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>hello@sagarmathatreks.com
+        </a>
+        <span class="topbar-div"></span>
+        <a href="tel:+9779800000000">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+977 9800000000 · 24/7
+        </a>
+        <span class="topbar-div"></span>
+        <button class="topbar-close" id="topbarClose" aria-label="Dismiss announcement">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ Main bar ══ -->
+  <div class="navbar">
+    <div class="container navbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 20 6-12 4 7 3-5 5 10Z"/></svg>
+        </span>
+        <span class="brand-text"><strong>Sagarmatha</strong><small>Treks &amp; Expeditions</small></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <ul class="nav-list">
+
+          <!-- DESTINATIONS : tabbed mega -->
+          <li class="nav-item" data-menu="destinations">
+            <button class="nav-link nav-trigger" aria-expanded="false" aria-haspopup="true">Destinations
+              <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          </li>
+
+          <!-- TREKS : column mega -->
+          <li class="nav-item" data-menu="treks">
+            <button class="nav-link nav-trigger" aria-expanded="false" aria-haspopup="true">Treks &amp; Climbing
+              <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          </li>
+
+          <!-- TOURS : dropdown -->
+          <li class="nav-item" data-menu="tours">
+            <button class="nav-link nav-trigger" aria-expanded="false" aria-haspopup="true">Tours
+              <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div class="drop" id="mega-tours" hidden>
+              <a href="package-list.html">Best of Nepal Tour <small>14 days</small></a>
+              <a href="package-list.html">Kathmandu · Pokhara · Chitwan <small>9 days</small></a>
+              <a href="package-list.html">Glimpse of Nepal <small>8 days</small></a>
+              <a href="package-list.html">Culture Blends Adventure <small>7 days</small></a>
+              <a href="package-list.html">Sunrise &amp; Sunset Tour <small>7 days</small></a>
+              <a class="drop-foot" href="package-list.html">View all tours →</a>
+            </div>
+          </li>
+
+          <!-- TRAVEL INFO : dropdown -->
+          <li class="nav-item" data-menu="info">
+            <button class="nav-link nav-trigger" aria-expanded="false" aria-haspopup="true">Travel Info
+              <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div class="drop" id="mega-info" hidden>
+              <a href="blog-list.html">Trekking blog</a>
+              <a href="blog-detail.html">Best time to trek in Nepal</a>
+              <a href="blog-detail.html">Packing checklist</a>
+              <a href="package-detail.html#faqs">Permits, visas &amp; FAQs</a>
+              <a href="package-detail.html#faqs">Insurance guide</a>
+            </div>
+          </li>
+
+          <!-- COMPANY : dropdown -->
+          <li class="nav-item" data-menu="company">
+            <button class="nav-link nav-trigger" aria-expanded="false" aria-haspopup="true">Company
+              <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div class="drop" id="mega-company" hidden>
+              <a href="index.html#about">About us</a>
+              <a href="index.html#about">Our guides &amp; team</a>
+              <a href="index.html#about">Responsible tourism</a>
+              <a href="package-detail.html#reviews">Trekker reviews</a>
+              <a href="index.html#contact">Contact</a>
+            </div>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="icon-btn" href="package-search.html" aria-label="Search treks">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </a>
+        <a class="wishlist-pill" href="index.html#treks">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.51 4.04 3 5.5l7 7Z"/></svg>
+          <span class="wl-text">Wishlist</span><span class="wl-count">0</span>
+        </a>
+        <a class="btn btn-pine btn-sm nav-cta" href="https://wa.me/9779800000000">Talk to an Expert</a>
+        <button class="mnav-toggle" id="mnavBtn" aria-expanded="false" aria-controls="mnavPanel">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ MEGA : Destinations (left rail + panels + promo) ══ -->
+  <div class="mega" id="mega-destinations" hidden>
+    <div class="container mega-inner">
+      <div class="mega-rail">
+        <button class="rail-tab active" data-panel="panel-everest">Everest Region <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+        <button class="rail-tab" data-panel="panel-annapurna">Annapurna Region <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+        <button class="rail-tab" data-panel="panel-langtang">Langtang Region <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+        <button class="rail-tab" data-panel="panel-manaslu">Manaslu Region <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+        <button class="rail-tab" data-panel="panel-mustang">Mustang Region <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+        <a class="rail-foot" href="package-list.html">All 56 treks <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+
+      <div class="mega-panels">
+        <div class="mega-panel active" id="panel-everest">
+          <div><h4 class="mega-h4">Signature treks</h4><ul class="mega-list">
+            <li><a href="package-detail.html">Everest Base Camp Trek <small>14 days</small></a></li>
+            <li><a href="package-list.html">Gokyo Lakes Trek <small>13 days</small></a></li>
+            <li><a href="package-list.html">Everest Three Passes Trek <small>20 days</small></a></li>
+            <li><a href="package-list.html">Gokyo → EBC with Heli Return <small>15 days</small></a></li>
+          </ul></div>
+          <div><h4 class="mega-h4">Shorter &amp; scenic</h4><ul class="mega-list">
+            <li><a href="package-list.html">Everest View Trek <small>7 days</small></a></li>
+            <li><a href="package-list.html">Everest Panorama Trek <small>9 days</small></a></li>
+            <li><a href="package-list.html">EBC Helicopter Tour <small>1 day</small></a></li>
+            <li><a href="package-list.html">Khumbu Luxury Lodge Trek <small>10 days</small></a></li>
+          </ul></div>
+          <a class="mega-more" href="package-list.html">View all 12 Everest adventures <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+
+        <div class="mega-panel" id="panel-annapurna">
+          <div><h4 class="mega-h4">Signature treks</h4><ul class="mega-list">
+            <li><a href="package-list.html">Annapurna Base Camp Trek <small>11 days</small></a></li>
+            <li><a href="package-list.html">Annapurna Circuit Trek <small>16 days</small></a></li>
+            <li><a href="package-list.html">Circuit + Tilicho Lake <small>17 days</small></a></li>
+            <li><a href="package-list.html">Nar Phu Valley Trek <small>17 days</small></a></li>
+          </ul></div>
+          <div><h4 class="mega-h4">Shorter &amp; scenic</h4><ul class="mega-list">
+            <li><a href="package-list.html">Mardi Himal Trek <small>6 days</small></a></li>
+            <li><a href="package-list.html">Ghorepani Poon Hill Trek <small>5 days</small></a></li>
+            <li><a href="package-list.html">Khopra Danda Trek <small>11 days</small></a></li>
+            <li><a href="package-list.html">Pokhara Day Hikes <small>1–2 days</small></a></li>
+          </ul></div>
+          <a class="mega-more" href="package-list.html">View all 15 Annapurna adventures <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+
+        <div class="mega-panel" id="panel-langtang">
+          <div><h4 class="mega-h4">Signature treks</h4><ul class="mega-list">
+            <li><a href="package-list.html">Langtang Valley Trek <small>9 days</small></a></li>
+            <li><a href="package-list.html">Langtang Gosaikunda Trek <small>12 days</small></a></li>
+            <li><a href="package-list.html">Langtang Helambu Trek <small>17 days</small></a></li>
+            <li><a href="package-list.html">Ganja La Pass Trek <small>14 days</small></a></li>
+          </ul></div>
+          <div><h4 class="mega-h4">Day hikes &amp; culture</h4><ul class="mega-list">
+            <li><a href="package-list.html">Shivapuri Hill Yoga Hike <small>1 day</small></a></li>
+            <li><a href="package-list.html">Nagarkot Sunrise Hike <small>1 day</small></a></li>
+            <li><a href="package-list.html">Tamang Heritage Trail <small>8 days</small></a></li>
+            <li><a href="package-list.html">Bhaktapur City Tour <small>1 day</small></a></li>
+          </ul></div>
+          <a class="mega-more" href="package-list.html">View all 8 Langtang adventures <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+
+        <div class="mega-panel" id="panel-manaslu">
+          <div><h4 class="mega-h4">Signature treks</h4><ul class="mega-list">
+            <li><a href="package-list.html">Manaslu Circuit Trek <small>16 days</small></a></li>
+            <li><a href="package-list.html">Manaslu + Tsum Valley <small>21 days</small></a></li>
+            <li><a href="package-list.html">Tsum Valley Trek <small>16 days</small></a></li>
+          </ul></div>
+          <div><h4 class="mega-h4">Culture &amp; extensions</h4><ul class="mega-list">
+            <li><a href="package-list.html">Soti Khola Cultural Walk <small>3 days</small></a></li>
+            <li><a href="package-list.html">Larkya La Extension <small>4 days</small></a></li>
+            <li><a href="package-list.html">Easy &amp; Slow Manaslu <small>18 days</small></a></li>
+          </ul></div>
+          <a class="mega-more" href="package-list.html">View all 6 Manaslu adventures <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+
+        <div class="mega-panel" id="panel-mustang">
+          <div><h4 class="mega-h4">Signature treks</h4><ul class="mega-list">
+            <li><a href="package-list.html">Upper Mustang Trek <small>13 days</small></a></li>
+            <li><a href="package-list.html">Damodar Kunda Trek <small>15 days</small></a></li>
+            <li><a href="package-list.html">Mustang Jeep Tour <small>10 days</small></a></li>
+          </ul></div>
+          <div><h4 class="mega-h4">Heritage walks</h4><ul class="mega-list">
+            <li><a href="package-list.html">Lo Manthang Cultural Stay <small>4 days</small></a></li>
+            <li><a href="package-list.html">Kagbeni → Chele Heritage Walk <small>3 days</small></a></li>
+            <li><a href="package-list.html">Muktinath Pilgrimage Hike <small>2 days</small></a></li>
+          </ul></div>
+          <a class="mega-more" href="package-list.html">View all 7 Mustang adventures <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <aside class="mega-promo">
+        <figure><img src="https://image.qwenlm.ai/public_source/0ebad543-7d64-4b52-9bd2-c69da9de10fc/1f373039c-6f87-4586-8f8d-1b7b2a7f55bc.png" alt="Himalayan panorama at dawn"></figure>
+        <h4>Confused? Let's talk.</h4>
+        <p>Tell us your days and budget — a local expert matches you to the right trail within 2 hours.</p>
+        <a class="btn btn-gold btn-sm" href="https://wa.me/9779800000000">Chat on WhatsApp</a>
+      </aside>
+    </div>
+  </div>
+
+  <!-- ══ MEGA : Treks & Climbing (columns + finder card) ══ -->
+  <div class="mega" id="mega-treks" hidden>
+    <div class="container mega-inner mega-inner-cols">
+      <div class="mega-cols">
+        <div><h4 class="mega-h4">Trek by duration</h4><ul class="mega-list">
+          <li><a href="package-search.html">Short &amp; weekend treks <small>&lt; 8 days</small></a></li>
+          <li><a href="package-search.html">Classic treks <small>8–13 days</small></a></li>
+          <li><a href="package-search.html">Long circuits <small>14+ days</small></a></li>
+          <li><a href="package-search.html">Easy &amp; slow treks <small>3 packs</small></a></li>
+          <li><a href="package-search.html">Luxury lodge treks <small>3 packs</small></a></li>
+        </ul></div>
+        <div><h4 class="mega-h4">Peak climbing</h4><ul class="mega-list">
+          <li><a href="package-list.html">Island Peak <small>20 days</small></a></li>
+          <li><a href="package-list.html">Mera Peak <small>18 days</small></a></li>
+          <li><a href="package-list.html">Lobuche East <small>18 days</small></a></li>
+          <li><a href="package-list.html">Yala Peak <small>14 days</small></a></li>
+          <li><a href="package-list.html">Ama Dablam Expedition <small>25 days</small></a></li>
+        </ul></div>
+        <div><h4 class="mega-h4">Helicopter &amp; day trips</h4><ul class="mega-list">
+          <li><a href="package-list.html">EBC Heli Tour with Landing <small>1 day</small></a></li>
+          <li><a href="package-list.html">Everest View Heli Trek <small>4 days</small></a></li>
+          <li><a href="package-list.html">Gokyo Heli Tour <small>5 days</small></a></li>
+          <li><a href="package-list.html">Sarangkot Sunrise Hike <small>1 day</small></a></li>
+          <li><a href="package-list.html">Chitlang Day Hike <small>2 days</small></a></li>
+        </ul></div>
+      </div>
+      <aside class="mega-promo">
+        <div class="finder-card">
+          <span class="finder-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span>
+          <h4>Find your trek</h4>
+          <p>Filter 56 journeys by region, duration, difficulty and price.</p>
+          <a class="btn btn-pine btn-sm" href="package-search.html">Open trek finder</a>
+        </div>
+        <a class="mega-more" href="package-list.html">Or browse every package <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </aside>
+    </div>
+  </div>
+
+  <!-- ══ Mobile drawer ══ -->
+  <div class="mnav" id="mnavPanel">
+    <div class="mnav-sec">
+      <button class="mnav-acc">Destinations <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div class="mnav-sub">
+        <a href="package-list.html">Everest Region</a><a href="package-list.html">Annapurna Region</a>
+        <a href="package-list.html">Langtang Region</a><a href="package-list.html">Manaslu Region</a>
+        <a href="package-list.html">Mustang Region</a>
+      </div>
+    </div>
+    <div class="mnav-sec">
+      <button class="mnav-acc">Treks &amp; Climbing <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div class="mnav-sub">
+        <a href="package-detail.html">Everest Base Camp Trek <small>14 days</small></a>
+        <a href="package-list.html">Annapurna Base Camp Trek <small>11 days</small></a>
+        <a href="package-list.html">Peak Climbing</a><a href="package-list.html">Helicopter Tours</a>
+        <a href="package-search.html">Trek Finder</a>
+      </div>
+    </div>
+    <div class="mnav-sec">
+      <button class="mnav-acc">Tours <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div class="mnav-sub">
+        <a href="package-list.html">Best of Nepal Tour <small>14 days</small></a>
+        <a href="package-list.html">Kathmandu · Pokhara · Chitwan <small>9 days</small></a>
+        <a href="package-list.html">Day Tours</a>
+      </div>
+    </div>
+    <div class="mnav-sec">
+      <button class="mnav-acc">Travel Info <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div class="mnav-sub">
+        <a href="blog-list.html">Trekking blog</a><a href="blog-detail.html">Packing checklist</a>
+        <a href="package-detail.html#faqs">FAQs</a>
+      </div>
+    </div>
+    <div class="mnav-sec">
+      <button class="mnav-acc">Company <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+      <div class="mnav-sub">
+        <a href="index.html#about">About us</a><a href="index.html#about">Responsible tourism</a>
+        <a href="package-detail.html#reviews">Reviews</a>
+      </div>
+    </div>
+    <a class="mnav-link" href="index.html#contact">Contact</a>
+    <div class="mnav-ctas">
+      <a class="btn btn-pine btn-sm" href="https://wa.me/9779800000000">Chat on WhatsApp</a>
+      <a class="btn btn-ghost-dark btn-sm" href="tel:+9779800000000">+977 9800000000</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     DEMO BODY — preview only, not part of the header component.
+     Delete this block when pasting the <header>…</header> into your sub-pages.
+     ═══════════════════════════════════════════════════════════ -->
+<main class="preview-body">
+  <section class="preview-section">
+    <h2>Header preview</h2>
+    <p>Scroll down to see the sticky blur bar + shadow. Hover <strong>Destinations</strong> for the tabbed mega, <strong>Treks &amp; Climbing</strong> for the column mega, <strong>Tours</strong> / <strong>Travel Info</strong> / <strong>Company</strong> for the small dropdowns. Shrink the window below 1100 px to test the mobile drawer. The wishlist badge reads from <code>localStorage('wishlist')</code>, so it stays in sync with <code>index.html</code>.</p>
+  </section>
+  <div class="preview-spacer" aria-hidden="true"></div>
+</main>
+
+
+<script src="js/header.js" defer></script>
+</body>
+</html>
