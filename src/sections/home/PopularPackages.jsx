@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 import PopularPackage from "./PopularPackage";
 
 // Gateway Treks API
-const API_URL = "/gateway-api/api/v1/popular-packages";
+const API_URL = "/api/v1/popular-packages";
 
 const PopularPackages = () => {
   const [packages, setPackages] = useState([]);
